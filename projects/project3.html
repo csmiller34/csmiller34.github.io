@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset=utf-8 />
+   <title>Portfolio | Craig Miller</title>
+   <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+   <link rel="stylesheet" href="/css/style.css" />
+
+</head>
+
+<body>
+   <div class="wrapper">
+      <header>
+         <a href="/">
+            <img src="/img/logo.svg" title="Craig Miller - UX Designer" alt="Craig Miller - UX Designer">
+         </a>
+         <p>Craig Miller - UX Design</p>
+         <nav role="navigation">
+            <ul>
+               <li>
+                  <a href="/">projects</a>
+               </li>
+               <li>
+                  <a href="/resume/">rèsumè</a>
+               </li>
+               <li>
+                  <a href="/about/">about</a>
+               </li>
+            </ul>
+         </nav>
+      </header>
+      <section>
+         <h2 class="content">Redesigning a Check Review Application</h2>
+            <aside>
+      <h1>Summary</h1>
+      <p>Conducted user research for a signature verification system, then incorporated that knowledge in the design of a related check review application.</p>
+      <h1>Roles</h1>
+      <p>user research, design, mock-up, css consulting</p>
+   </aside>
+   
+   <p>The goal of this project was to update an existing product that was already in use at multiple customer sites outside of North America. The existing product used old technology that was essentially contained within an HTML and delivered to the client. To assist with this refresh, budget was provided to visit a customer site to better understand how the application was being used by the customer to help inform changes in the redesign.</p> 
+
+   <p>This project resulted in the following deliverables:</p>
+
+   <ul>
+      <li>customer research and report</li>
+      <li>application UI design</li>
+    </ul>
+
+   <h5>Customer Research and Report</h5>
+
+   <p>The customer selected for user research was the fraud department of Laiki bank in Cyprus. Over the course of a business week, I had the opportunity to carry out an intensive user research investigation to understand how the product was being used, what the pain points were, and where we could make product improvements. Due to the length of the visit I was able to carry out a variety of information gather techniques, including:</p>
+   <ul>
+      <li>job shadowing</li>
+      <li>interviewing, and</li>
+      <li>exploratory usability testing</li>
+   </ul>
+
+   <p>Over several days, I sat with three employees as reviewed cheques for any signs of fraud. The system was configured so that each employee was automatically distributed a number of cheques which they needed to review for such things as missing or suspect information and signatures that did not match the signatures for the account of the cheque. During each session, I took notes and questions which I was able to follow up on following their batch of work.</p>
+
+   <p>Following the batch of work, I then interviewed each the employee reviewing the sorts of activities they performed to better understand the mental models both with how they understand their job and how our application fit into it.</p>
+
+   <p>With the help of their IT department, I was given clearance to run the application on a laptop equipped with Morae usability testing software. This enabled me to record sample sessions with two of the employees so that I could apply their comments (and complaints) in the context of the system. This provided me with a rich source of information that I could take back to the development team.</p>
+ 
+   <p>Although I discovered several issues during the site visit, the NCR representative and I understood that due to budget restraints, we needed to prioritize the issues to ensure that most severe issues would be addressed until the new application could be developed.</p>
+
+   <p>When I returned from the trip, I prepared a a report from my notes taken during the visit and then summarized the findings for a presentation for Product Management and the Development team. This presentation consisted of a PowerPoint stack containing statistics about the number of the </p>
+
+   <section class="portfolio-image">
+      <img id="mobile-flow" src="/img/project3/a/report.png" alt="Sample page from report">
+      <label for="mobile-flow" class="caption-image">Excerpt from report</label>
+   </section>
+
+    <section id="scroller3" class="portfolio-scroller">
+      <div class="arrow arrow-left hide-element" onclick="leftArrow(this)"></div>
+      <div class="/img-container" onscroll="scrollImageContainer()">
+        <img src="/img/project3/b/slide1.png" alt="Presentation slide 1">
+        <img src="/img/project3/b/slide2.png" alt="Presentation slide 2">
+        <img src="/img/project3/b/slide3.png" alt="Presentation slide 3">
+        <img src="/img/project3/b/slide4.png" alt="Presentation slide 4">
+        <img src="/img/project3/b/slide9.png" alt="Presentation slide 5">
+        <img src="/img/project3/b/slide10.png" alt="Presentation slide 6">
+        <img src="/img/project3/b/slide11.png" alt="Presentation slide 7">
+      </div>
+      <div class="arrow arrow-right" onclick="rightArrow(this)"></div>
+      <label for="scroller3" class="caption-scroller">Excerpt from presentation</label>
+   </section>
+
+   <h5>Application UI Design</h5>
+
+   <p>While changes to the existing application were added to the backlog, we began design on the new application. This new application differed from the old one in its underlying technology, a pure HTML application vs an HTML-wrapped windows OCX application, and it went beyond signature verification to other other kinds of cheque verification.</p>
+
+   <p>I began by meeting with stakeholders to understand the business and technical requirements for the new application in addition to applying the knowledge I developed during thte site visit. During these sessions, we reviewed multiple design approaches before setting on one that came to be known as the shopping cart approach. The accepted approach let users carry out three kinds of cheque reviews before accepting or rejecting an item. Since different customers used different kinds of review, for example, the site I visited just performed signature verification, the customer could configure which or all of the three kinds of reviews to present to the user.</p>
+
+   <section class="portfolio-image">
+      <img id="mobile-flow" src="/img/project3/c/screen1.png" alt="Sample screenshot from application">
+      <label for="mobile-flow" class="caption-image">Sample screen shot of UI</label>
+   </section>
+
+   <h5>Conclusion</h5>
+
+   <p>As a result of the customer visit, I was able to advocate change on behalf of the customer to help them with the current version of the application as well as research how they perform their jobs so that I could make informed decisions when we designed the next iteration of the application.</p>
+
+      </section>
+      <footer>
+         <p>
+            <small>©2018 Craig Miller</small>
+         </p>
+      </footer>
+   </div>
+   <a unselectable="on" class="go-to-top go-to-top-hidden">top</a>
+   <script src="/js/script.js"></script>
+   <script src="/js/scale.fix.js"></script>
+</body>
+
+</html>
