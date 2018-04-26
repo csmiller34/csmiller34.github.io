@@ -3,6 +3,7 @@
 
 <head>
    <meta charset=utf-8 />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Portfolio | Craig Miller</title>
    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
    <link rel="stylesheet" href="/css/style.css" />
@@ -12,17 +13,17 @@
 <body>
    <div class="wrapper">
       <header>
-         <a href="/">
-            <img src="/img/logo.svg" title="Craig Miller - UX Designer" alt="Craig Miller - UX Designer">
-         </a>
-         <p>Craig Miller - UX Design</p>
+         <!--a href="/">
+            <img src="/img/logo.svg" title="Craig Miller - UX Design" alt="Craig Miller - UX Designer">
+         </a-->
+         <div class="brand">Craig Miller - UX Designer</div>
          <nav role="navigation">
             <ul>
                <li>
                   <a href="/">projects</a>
                </li>
                <li>
-                  <a href="/resume/">rèsumè</a>
+                  <a href="/resume/">résumé</a>
                </li>
                <li>
                   <a href="/about/">about</a>
@@ -30,9 +31,10 @@
             </ul>
          </nav>
       </header>
-      <section>
-         <h2 class="content">Incorporating Responsive and Adaptive Design</h2>
-               <h1>Summary</h1>
+      <section class="Incorporating Responsive and Adaptive Design">
+         <h1 class="content">Incorporating Responsive and Adaptive Design</h1>
+         <aside>
+      <h1>Summary</h1>
       <p>Refactored an existing phone application's layout for tablet. Needed to be completed quickly with minimal development time.</p>
       <h1>Roles</h1>
       <p>design, mock-up, css development, javascript tweaking</p>
@@ -48,7 +50,7 @@
       <li>responsive CSS</li>
    </ul>
 
-   <h5>Application Flow Diagram</h5>
+   <h2>Application Flow Diagram</h2>
 
    <p>To determine the new workflow, I used a white board to first draw out the existing application flow and then, below it, sketch out alternatives that would both improve user efficiency by reducing unnecessary steps and meet the development time-line.</p>
 
@@ -60,7 +62,7 @@
 
    <img> <!-- INSERT DIAGRAM HERE -->
 
-   <h5>Application UI Design</h5>
+   <h2>Application UI Design</h2>
 
    <p>To design the new pages that would replace one or more existing ones, I reviewed the functionality of each screen and sketched out three different designs that incorporated each function. After some review with the development team, we settled on a single designs for Deposit View and Item View pages.</p>
 
@@ -68,7 +70,7 @@
 
    <img> <!-- INSERT DIAGRAM HERE -->
 
-   <h5>Responsive CSS</h5>
+   <h2>Responsive CSS</h2>
 
    <p>Once the new pages were designed and incorporated into JIRA stories for development to begin, I moved on the pages needing to incorporate responsive design. As part of the business requirements, we needed to ensure that existing customer deployments would not be affected by the retro-fitted adaptive/responsive pages. To meet this, I organized all the responsive changes into a new SCSS file (_responsive.scss) that left existing pages with their current HTML, class names, and styles. This new responsive flie contained the new media queries so that our application responded correctly to tablets of varying size in landscape and portrait orientations.</p>
 
@@ -78,7 +80,7 @@
 
    <img> <!-- INSERT DIAGRAM HERE -->
 
-   <h5>Conclusion</h5>
+   <h2>Conclusion</h2>
    
    <p>Both the newly designed pages (i.e., the adaptive part of the project) and the pages designed to be responsive were completed and the project was released on time. Our team was new with mobile development and we encountered several issues along the way, particularly around pop-overs and scrolling. However, the design proved solid and the new tablet pages were received well both internally by the support organization as well as the external audience.</p>
 
