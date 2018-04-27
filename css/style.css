@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Lustria:700,500,400,400italic);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,700,700italic);
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700');
 
 
 /* Scaffolding */
@@ -10,7 +10,7 @@ body {
    font-size: 1.5em;
    line-height: 1.5;
    font-weight: 400;
-   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
    color: #333;
 }
 .wrapper {
@@ -36,7 +36,7 @@ img {
 /* Typography */
 
 h1,h2,h3,h4,h5,h6 {
-   font-family: Lustria, Arial, sans-serif;
+   font-family: Bitter, Arial, sans-serif;
    margin-top: 0;
    margin-bottom: 2rem;
    font-weight: 400;
@@ -226,6 +226,7 @@ nav li a {
    line-height: 24px;
    height: 24px;
    font-size: 13px;
+   transition: all 0.2s ease-in-out;
 }
 
 nav li:first-child a {
@@ -294,7 +295,9 @@ img.pull-left {
    right: 10px;
    height: 40px;
    width: 40px;
-   background: #d0d0d0;
+   color: #777;
+   background: #f7f7f7;
+   border: 1px solid #eee;
    text-align: center;
    line-height: 40px;
    border-top-right-radius: 10px;
@@ -304,9 +307,14 @@ img.pull-left {
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* IE10+/Edge */
    user-select: none; /* Standard */
+   cursor: pointer;
 }
-
-/* Misc */
+.go-to-top:hover {
+   text-decoration: none;
+   color: #444;
+   background: #eee;
+   border: 1px solid #eee;
+}
 
 .go-to-top-hidden {
    height: 0 !important;
@@ -339,7 +347,7 @@ aside {
 }
 
 aside h1 {
-   font-family: "Open Sans", Arial, sans-serif;
+   font-family: "Raleway", Arial, sans-serif;
    font-size: 1.75rem;
    line-height: 1rem;
    letter-spacing: 0;
@@ -352,12 +360,124 @@ aside p {
 }
 
 aside p + h1 {
-   margin-top: 2rem;
+   margin-top: 3rem;
 }
 
 section.Projects a {
    text-transform: uppercase;
+   transition: all 0.2s ease-in-out;
 }
+
+.portfolio-summary {
+   display: block;
+   margin-bottom: 1rem;
+   padding-left: 6rem;
+   border: 1px solid #eee;
+   color: #777;
+   background-repeat: no-repeat;
+   background-position: 1.5rem 50%;
+   background-size: 25px 25px;
+   background-color: #f7f7f7;
+   height: 4rem;
+   line-height: 4rem;
+}
+
+.portfolio-summary:hover {
+   text-decoration: none;
+   color: #444;
+   background-color: #eee;
+}
+
+section.Projects a:nth-child(2) {
+  background-image: url("../img/project1.svg");
+}
+
+section.Projects a:nth-child(3) {
+  background-image: url("../img/project2.svg");
+}
+
+section.Projects a:nth-child(4) {
+  background-image: url("../img/project3.svg");
+  background-size: 40px;
+  background-position: 1rem 0.75rem;
+}
+
+section.Projects a:nth-child(5) {
+  background-image: url("../img/project4.svg");
+}
+
+section.portfolio-image {
+  padding-bottom: 3rem;
+}
+
+section.portfolio-image img {
+  display: inline-block;
+  border: 1px solid #eee;
+  padding: 1rem;
+  width: 500px;
+}
+section.portfolio-image:after {
+  content: " ";
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+section.portfolio-image .caption-image, section.portfolio-scroller label.caption-scroller {
+  display: block;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+}
+section.portfolio-scroller label.caption-scroller {
+  padding-top: 0.75rem;
+  margin-bottom: 2rem;
+}
+section.portfolio-scroller {
+  position: relative;
+}
+section.portfolio-scroller div.img-container {
+  border: 1px solid #eee;
+  padding: 0.5rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 12rem;
+  height: 400px;
+  width: calc(100% - 1rem);
+  transition: text-indent .25s ease-in-out;
+}
+section.portfolio-scroller img {
+  height: 400px;
+  margin: 0 0.25rem;
+  border: 1px solid #c5cacc;
+}
+section.portfolio-scroller div.arrow {
+  position: absolute;
+  top: calc(50% - 60px);
+  width: 0; 
+  height: 0; 
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent; 
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.25s ease-out;
+}
+section.portfolio-scroller div.arrow-left {
+  left: 1.5em;
+  border-right:20px solid #777; 
+}
+section.portfolio-scroller div.arrow-left:hover {
+  border-right-color: #777;
+  opacity: 1.0;
+}
+section.portfolio-scroller div.arrow-right {
+  right: 1.5em;
+  border-left: 20px solid #777;
+}
+section.portfolio-scroller div.arrow-right:hover {
+  border-left-color: #777;
+  opacity: 1.0;
+}
+
 
 /* Responsive Adjustments */
 
@@ -411,6 +531,7 @@ section.Projects a {
       line-height: 24px;
       height: 24px;
       font-size: 13px;
+      transition: all 0.2s ease-in-out;
    }
    nav li:first-child a {
       border-radius: 5px 0 0 5px;
@@ -468,6 +589,7 @@ section.Projects a {
       font-size: 13px;
       padding: 0 8px;
       width: 1em;
+      transition: all 0.2s ease-in-out;
    }
    .pagination li:first-child a {
       border-radius: 5px 0 0 5px;
