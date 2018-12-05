@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="blue">
+
+<head>
+<link rel="stylesheet " type="text/css " href="./multi-tenant_files/layout.css ">
+<link rel="stylesheet " type="text/css " href="./multi-tenant_files/navigation.css ">
+<link rel="stylesheet " type="text/css " title="styles " href="./multi-tenant_files/styles.css ">
+
+<style>
+   .reset-fonts, .reset-fonts1 {
+      visibility: hidden;
+   }
+   .align-top {
+      vertical-align: top;
+   }
+   .TDFormLabel {
+      width: 140px;
+      min-width: 140px;
+   }
+   .TDFormValue {
+      min-width: 240px; 
+      white-space: nowrap;
+   }
+
+   .BANKUID {
+      display: inline-block;
+      width: auto;
+      height: 3em;
+      border: 1px solid #c0c0c0;
+      line-height: 3em;
+      padding: 0.1em 2em 0 2em;
+      margin-right: 1em;
+      margin-bottom: 1em;
+      box-shadow: 1px 1px 3px #c0c0c0;
+      white-space: nowrap;
+   }
+   .BANKUID span {
+      padding: 0 1.0em;
+   }
+   .sublabel {
+      white-space: nowrap;
+   }
+   .select-option {
+      min-width: 12em;
+   }
+
+   .combobox.ui-widget.ui-widget-content {
+      border-top-left-radius: 3px !important;
+      border-bottom-left-radius: 3px !important;
+      padding-left: 0.8em;
+      width: 10em;
+      border-right: none;
+      box-sizing: border-box;
+      height:18px;
+   }
+   .combobox.ui-widget.ui-widget-content + button {
+      height: 18px;
+      width: 12px;
+      padding: 0 4px;
+      position: relative;
+      top: -1.5px;
+   }
+   .radio, .checkbox {
+      padding-right: 1.5em;
+      margin-left: -0.25em;
+   }
+  
+   .jscolor {
+      width: 6.2em;
+      height: 18px;
+      padding: 0 0.8em;
+      border-radius: 3px;
+      font-size: 1em;
+      border: 1px solid #c5c5c5;
+      box-sizing: border-box;
+   }
+
+   .BANKUID input[type="button"] {
+      font-size: 1em;
+      width: 120px;
+   }
+
+   .button-background {
+      width: 100%;
+      min-width: 640px;
+      height: 4em;
+   }
+   .TDFormLabel, .TDFormValue, TDFormError {
+      height: 20px;
+   }
+
+</style>
+<script src="multi-tenant_files/jscolor.min.js "></script>
+<link rel="stylesheet " href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css ">
+      <script src="https://code.jquery.com/jquery-1.12.4.js "></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js "></script>
+    
+
+
+</head>
+
+
+<body class="BodyNoNav">
+
+         <table cellpadding="0" cellspacing="0" class="PageTable">
+            <tbody>
+                  <tr>
+                  <td>
+                     <table class="TableForm">
+                        <tbody>
+                           <tr>
+                              <td class="TDFormValue align-top" colspan="2">
+                                 <div class="BANKUID">
+                                    <span class="BANKUID--default"><input type="button" value="Default" class="frame-button--default"></span>
+                                    <span class="BANKUID--label"><input type="button" value="Active" class="frame-button--active"></span>
+                                 </div>
+                                 <span class="FormValue sublabel">
+                                    <input type="button" value="Reset to Defaults" class="Leftvar reset-fonts1">
+                                 </span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="TDFormValue align-top">
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <td class="TDFormLabel align-top">
+                                             <span class="FormValue sublabel">Font:</span>
+                                          </td>
+                                          <td class="TDFormValue align-top">
+                                             <input id="defaultButtonFont" class="combobox button-font-default--family" type="input" name="tags" value="Verdana" />
+                                             <script>
+                                                var defaultButtonFontList = ["Arial", "Tahoma", "Verdana", "Courier New"];
+                                                var $inputb1 = $("#defaultButtonFont").autocomplete({
+                                                   source: defaultButtonFontList,
+                                                   minLength: 0
+                                                }).addClass("ui-widget ui-widget-content ui-corner-left");
+                                                $("<button type='button'>&nbsp;</button>").attr("tabIndex", -1).attr(
+                                                      "title", "Show Popular Choices").insertAfter($inputb1).button({
+                                                      icons: {
+                                                         primary: "ui-icon-triangle-1-s"
+                                                      },
+                                                      text: false
+                                                   })
+                                                   .removeClass("ui-corner-all").addClass(
+                                                      "ui-corner-right ui-button-icon").click(function () {
+                                                      if ($inputb1.autocomplete("widget").is(":visible")) {
+                                                         $inputb1.autocomplete("close");
+                                                         return;
+                                                      }
+                                                      $(this).blur();
+                                                      $inputb1.autocomplete("search", "");
+                                                      $inputb1.focus();
+                                                   });
+                                             </script>
+                                          </td>
+                                          <td class="TDFormError"></td>
+                                       </tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top">
+                                             <span class="FormValue sublabel">Font size:</span>
+                                          </td>
+                                          <td class="TDFormValue align-top">
+                                             <input id="defaultButtonSize" class="combobox button-font-default--size" type="input" name="tags" value="1.0em" />
+                                             <script>
+                                                var defaultButtonSizeList = ["1.0em", "1.1em", "1.2em", "1.3em", "1.4em",
+                                                   "1.5em"
+                                                ];
+                                                var $inputb2 = $("#defaultButtonSize").autocomplete({
+                                                   source: defaultButtonSizeList,
+                                                   minLength: 0
+                                                }).addClass("ui-widget ui-widget-content ui-corner-left");
+                                                $("<button type='button'>&nbsp;</button>").attr("tabIndex", -1).attr(
+                                                      "title", "Show Popular Choices").insertAfter($inputb2).button({
+                                                      icons: {
+                                                         primary: "ui-icon-triangle-1-s"
+                                                      },
+                                                      text: false
+                                                   })
+                                                   .removeClass("ui-corner-all").addClass(
+                                                      "ui-corner-right ui-button-icon")
+                                                   .click(function () {
+                                                      if ($inputb2.autocomplete("widget").is(":visible")) {
+                                                         $inputb2.autocomplete("close");
+                                                         return;
+                                                      }
+                                                      $(this).blur();
+                                                      $inputb2.autocomplete("search", "");
+                                                      $inputb2.focus();
+                                                   });
+                                             </script>
+                                          </td>
+                                          <td class="TDFormError"></td>
+                                       </tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top">
+                                             <span class="FormValue sublabel">Width:</span>
+                                          </td>
+                                          <td class="TDFormValue align-top">
+                                             <input class="combobox button-default--width" type="input" name="tags" value="120px" />
+                                             <script>
+                                                var defaultWidth = ["100px", "120px", "130px", "140px"];
+                                                var $input8 = $(".button-default--width").autocomplete({
+                                                   source: defaultWidth,
+                                                   minLength: 0
+                                                }).addClass("ui-widget ui-widget-content ui-corner-left");
+                                                $("<button type='button'>&nbsp;</button>").attr("tabIndex", -1).attr(
+                                                      "title",
+                                                      "Show Popular Choices").insertAfter($input8).button({
+                                                      icons: {
+                                                         primary: "ui-icon-triangle-1-s"
+                                                      },
+                                                      text: false
+                                                   })
+                                                   .removeClass("ui-corner-all").addClass(
+                                                      "ui-corner-right ui-button-icon").click(
+                                                      function () {
+                                                         if ($input8.autocomplete("widget").is(":visible")) {
+                                                            $input8.autocomplete("close");
+                                                            return;
+                                                         }
+                                                         $(this).blur();
+                                                         $input8.autocomplete("search", "");
+                                                         $input8.focus();
+                                                      });
+                                             </script>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top">
+                                             <span class="FormValue sublabel">Corner radius:</span>
+                                          </td>
+                                          <td class="TDFormValue align-top">
+                                             <input class="combobox button-default--corner-radius" type="input" name="tags" value="0" />
+                                             <script>
+                                                var defaultCornerRadius = ["0", "4px", "8px"];
+                                                var $input6 = $(".button-default--corner-radius").autocomplete({
+                                                   source: defaultCornerRadius,
+                                                   minLength: 0
+                                                }).addClass("ui-widget ui-widget-content ui-corner-left");
+                                                $("<button type='button'>&nbsp;</button>").attr("tabIndex", -1).attr(
+                                                      "title",
+                                                      "Show Popular Choices").insertAfter($input6).button({
+                                                      icons: {
+                                                         primary: "ui-icon-triangle-1-s"
+                                                      },
+                                                      text: false
+                                                   })
+                                                   .removeClass("ui-corner-all").addClass(
+                                                      "ui-corner-right ui-button-icon").click(
+                                                      function () {
+                                                         if ($input6.autocomplete("widget").is(":visible")) {
+                                                            $input6.autocomplete("close");
+                                                            return;
+                                                         }
+                                                         $(this).blur();
+                                                         $input6.autocomplete("search", "");
+                                                         $input6.focus();
+                                                      });
+                                             </script>
+                                          </td>
+                                       </tr>
+                                       <tr><td colspan="3">&nbsp;</td></tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top">
+                                             <span class="FormValue sublabel">Default font color:</span>
+                                          </td>
+                                          <td class="TDFormValue align-top">
+                                             <input id="button-font-default--color" class="jscolor button-font-default--color" value="000000" autocomplete="off" style="background-image: none; background-color: rgb(171, 37, 103); color: rgb(255, 255, 255);">
+                                             <script>
+                                                function setTextColor(picker) {
+                                                   document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
+                                                }
+                                             </script>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top">
+                                             <span class="FormValue sublabel">Default Font style:</span>
+                                          </td>
+                                          <td>
+                                             <label class="checkbox"><input type="checkbox" class="default-bold"> Bold</label>
+                                             <label class="checkbox"><input type="checkbox" class="default-italic"> Italic</label>
+                                             <label class="checkbox"><input type="checkbox" class="default-underline"> Underline</label>
+                                             <label class="checkbox"><input type="checkbox" class="default-uppercase"> Uppercase</label>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top">
+                                             <span class="FormValue sublabel">Default Border:</span>
+                                          </td>
+                                          <td class="TDFormValue align-top">
+                                             <input class="combobox button-default--border-width" type="input" name="tags" value="1px" />
+                                             <script>
+                                                var defaultBorderWidth = ["0", "1px", "2px", "3px"];
+                                                var $input7 = $(".button-default--border-width").autocomplete({
+                                                   source: defaultBorderWidth,
+                                                   minLength: 0
+                                                }).addClass("ui-widget ui-widget-content ui-corner-left");
+                                                $("<button type='button'>&nbsp;</button>").attr("tabIndex", -1).attr(
+                                                      "title",
+                                                      "Show Popular Choices").insertAfter($input7).button({
+                                                      icons: {
+                                                         primary: "ui-icon-triangle-1-s"
+                                                      },
+                                                      text: false
+                                                   })
+                                                   .removeClass("ui-corner-all").addClass(
+                                                      "ui-corner-right ui-button-icon").click(
+                                                      function () {
+                                                         if ($input7.autocomplete("widget").is(":visible")) {
+                                                            $input7.autocomplete("close");
+                                                            return;
+                                                         }
+                                                         $(this).blur();
+                                                         $input7.autocomplete("search", "");
+                                                         $input7.focus();
+                                                      });
+                                             </script>
+                                             <input class="combobox button-default--border-style" type="input" name="tags" value="solid" />
+                                             <script>
+                                                var defaultBorderStyle = ["solid", "dotted", "dashed", "inset", "outset"];
+                                                var $input88 = $(".button-default--border-style").autocomplete({
+                                                   source: defaultBorderStyle,
+                                                   minLength: 0
+                                                }).addClass("ui-widget ui-widget-content ui-corner-left");
+                                                $("<button type='button'>&nbsp;</button>").attr("tabIndex", -1).attr(
+                                                      "title",
+                                                      "Show Popular Choices").insertAfter($input88).button({
+                                                      icons: {
+                                                         primary: "ui-icon-triangle-1-s"
+                                                      },
+                                                      text: false
+                                                   })
+                                                   .removeClass("ui-corner-all").addClass(
+                                                      "ui-corner-right ui-button-icon").click(
+                                                      function () {
+                                                         if ($input88.autocomplete("widget").is(":visible")) {
+                                                            $input88.autocomplete("close");
+                                                            return;
+                                                         }
+                                                         $(this).blur();
+                                                         $input88.autocomplete("search", "");
+                                                         $input88.focus();
+                                                      });
+                                             </script>
+                                             <input id="button-default--border-color" class="jscolor button-default--border-color" value="979897" autocomplete="off" style="background-image: none; background-color: rgb(171, 37, 103); color: rgb(255, 255, 255);">
+                                             <script>
+                                                function setTextColor(picker) {
+                                                   document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
+                                                }
+                                             </script>
+                                             
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top">
+                                             <span class="FormValue sublabel">Default background:</span>
+                                          </td>
+                                          <td class="TDFormValue align-top" colspan="2">
+                                             <input id="button-background-default--color1" class="jscolor button-background-default--color1" value="ffffff" autocomplete="off" style="background-image: none; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+                                             <script>
+                                                function setTextColor(picker) {
+                                                   document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
+                                                }
+                                             </script>
+                                              / 
+                                             <input id="button-background-default--color2" class="jscolor button-background-default--color2" value="cfcfcf" autocomplete="off" style="background-image: none; background-color: rgb(207, 207, 207); color: rgb(0, 0, 0);">
+                                             <script>
+                                                function setTextColor(picker) {
+                                                   document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
+                                                }
+                                             </script>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top" colspan="3">
+                                             <span class="FormValue sublabel">&nbsp;</span>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top">
+                                             <span class="FormValue sublabel">Active font color:</span>
+                                          </td>
+                                          <td class="TDFormValue align-top">
+                                             <input id="button-font-active--color" class="jscolor button-font-active--color" value="000000" autocomplete="off" style="background-image: none; background-color: rgb(171, 37, 103); color: rgb(255, 255, 255);">
+                                             <script>
+                                                function setTextColor(picker) {
+                                                   document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
+                                                }
+                                             </script>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top">
+                                             <span class="FormValue sublabel">Active font style:</span>
+                                          </td>
+                                          <td>
+                                             <label class="checkbox"><input type="checkbox" class="hover-bold"> Bold</label>
+                                             <label class="checkbox"><input type="checkbox" class="hover-italic"> Italic</label>
+                                             <label class="checkbox"><input type="checkbox" class="hover-underline"> Underline</label>
+                                             <label class="checkbox"><input type="checkbox" class="hover-uppercase"> Uppercase</label>
+                                          </td>
+                                    </tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top">
+                                             <span class="FormValue sublabel">Active Border:</span>
+                                          </td>
+                                          <td class="TDFormValue align-top">
+                                             <input class="combobox button-active--border-width" type="input" name="tags" value="1px" />
+                                             <script>
+                                                var activeBorderWidth = ["0", "1px", "2px", "3px"];
+                                                var $input17 = $(".button-active--border-width").autocomplete({
+                                                   source: activeBorderWidth,
+                                                   minLength: 0
+                                                }).addClass("ui-widget ui-widget-content ui-corner-left");
+                                                $("<button type='button'>&nbsp;</button>").attr("tabIndex", -1).attr(
+                                                      "title",
+                                                      "Show Popular Choices").insertAfter($input17).button({
+                                                      icons: {
+                                                         primary: "ui-icon-triangle-1-s"
+                                                      },
+                                                      text: false
+                                                   })
+                                                   .removeClass("ui-corner-all").addClass(
+                                                      "ui-corner-right ui-button-icon").click(
+                                                      function () {
+                                                         if ($input17.autocomplete("widget").is(":visible")) {
+                                                            $input17.autocomplete("close");
+                                                            return;
+                                                         }
+                                                         $(this).blur();
+                                                         $input17.autocomplete("search", "");
+                                                         $input17.focus();
+                                                      });
+                                             </script>
+                                             <input class="combobox button-active--border-style" type="input" name="tags" value="solid" />
+                                             <script>
+                                                var activeBorderStyle = ["solid", "dotted", "dashed", "inset", "outset"];
+                                                var $input188 = $(".button-active--border-style").autocomplete({
+                                                   source: activeBorderStyle,
+                                                   minLength: 0
+                                                }).addClass("ui-widget ui-widget-content ui-corner-left");
+                                                $("<button type='button'>&nbsp;</button>").attr("tabIndex", -1).attr(
+                                                      "title",
+                                                      "Show Popular Choices").insertAfter($input188).button({
+                                                      icons: {
+                                                         primary: "ui-icon-triangle-1-s"
+                                                      },
+                                                      text: false
+                                                   })
+                                                   .removeClass("ui-corner-all").addClass(
+                                                      "ui-corner-right ui-button-icon").click(
+                                                      function () {
+                                                         if ($input188.autocomplete("widget").is(":visible")) {
+                                                            $input188.autocomplete("close");
+                                                            return;
+                                                         }
+                                                         $(this).blur();
+                                                         $input188.autocomplete("search", "");
+                                                         $input188.focus();
+                                                      });
+                                             </script>
+                                             <input id="button-active--border-color" class="jscolor button-active--border-color" value="979897" autocomplete="off" style="background-image: none; background-color: rgb(171, 37, 103); color: rgb(255, 255, 255);">
+                                             <script>
+                                                function setTextColor(picker) {
+                                                   document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
+                                                }
+                                             </script>
+                                             
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top">
+                                             <span class="FormValue sublabel">Active background:</span>
+                                          </td>
+                                          <td class="TDFormValue align-top" colspan="2">
+                                             <input id="button-background-active--color1" class="jscolor button-background-active--color1" value="cfcfcf" autocomplete="off" style="background-image: none; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+                                             <script>
+                                                function setTextColor(picker) {
+                                                   document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
+                                                }
+                                             </script>
+                                              / 
+                                             <input id="button-background-active--color2" class="jscolor button-background-active--color2" value="ffffff" autocomplete="off" style="background-image: none; background-color: rgb(207, 207, 207); color: rgb(0, 0, 0);">
+                                             <script>
+                                                function setTextColor(picker) {
+                                                   document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
+                                                }
+                                             </script>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="TDFormLabel align-top" colspan="3">
+                                             <span class="FormValue sublabel">&nbsp;</span>
+                                          </td>
+                                       </tr>
+                                     </tbody>
+                                 </table>
+                              </td>
+                              <td class="TDFormError">&nbsp;</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+
+   <script>
+      function $cm(elem) {
+         return document.querySelector(elem);
+      }
+
+      $('.checkbox').click(function() { updateFrameFont(); })
+      $('.radio').click(function() { updateFrameFont(); })
+
+
+      var frameFont_DefaultFont = "verdana",
+         frameFont_DefaultSize = "1.0 em",
+         frameFont_DefaultColor = "000000",
+         frameFont_LabelFont = "verdana",
+         frameFont_LabelSize = "1.0em",
+         frameFont_LabelColor = "000000",
+         frameFont_LabelWeight = "bold",
+         frameFont_LabelStyle = "normal",
+         frameFont_DefaultButtonFont = "verdana",
+         frameFont_DefaultButtonSize = "1.0em",
+         frameFont_DefaultButtonColor = "000000",
+         frameFont_DefaultButtonBorderWidth = "1px",
+         frameFont_DefaultButtonBorderStyle = "solid",
+         frameFont_DefaultButtonBorderColor = "979897",
+         frameFont_DefaultButtonRadius = "0",
+         frameFont_DefaultButtonWidth = "120px",
+         framefont_defaultButtonBackgroundColor = "background: #cfcfcf; background: -moz-linear-gradient(top, #cfcfcf 0%, #ffffff 100%); background: -webkit-linear-gradient(top, #cfcfcf 0%,#ffffff 100%); background: linear-gradient(to bottom, #cfcfcf 0%,#ffffff 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfcfcf', endColorstr='#ffffff',GradientType=0 );";
+         frameFont_ActiveButtonFont = "verdana",
+         frameFont_ActiveButtonSize = "1.0em",
+         frameFont_ActiveButtonColor = "000000",
+         frameFont_ActiveButtonBorderWidth = "1px",
+         frameFont_ActiveButtonBorderStyle = "solid",
+         frameFont_ActiveButtonBorderColor = "979897",
+         framefont_activeButtonBackgroundColor = "background: #cfcfcf; background: -moz-linear-gradient(top, #ffffff 0%, #cfcfcf 100%); background: -webkit-linear-gradient(top, #ffffff 0%,#cfcfcf 100%); background: linear-gradient(to bottom, #ffffff 0%,#cfcfcf 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cfcfcf',GradientType=0 );";
+
+
+      $('.combobox').on('blur keyup paste change', function (e) {
+         updateFrameFont();
+         if (e.keyCode == 13) {
+            $('ul.ui-menu').hide();
+         }
+      })
+      $('ul.ui-menu').on('click', function () {
+         updateFrameFont();
+      })
+
+      $('.jscolor').on('blur keyup paste change', function (e) {
+         updateFrameFont();
+         if (e.keyCode == 13) {
+            this.jscolor.hide();
+         }
+      })
+
+      document.querySelector('.jscolor').onkeyup = function (e) {
+         if (e.keyCode == 13) {
+            this.jscolor.hide()
+         }
+      }
+
+      function updateFrameFont() {
+
+         defaultBold = $('.default-bold').prop('checked')?'bold':'normal';
+         defaultItalic = $('.default-italic').prop('checked')?'italic':'normal';
+         defaultUnderline = $('.default-underline').prop('checked')?'underline':'none';
+         defaultUppercase = $('.default-uppercase').prop('checked')?'uppercase':'none';
+
+
+         frameFont_DefaultButtonFont = $cm('.button-font-default--family').value;
+         frameFont_DefaultButtonSize = $cm('.button-font-default--size').value;
+         frameFont_DefaultButtonColor = $cm('.button-font-default--color').value;
+         frameFont_DefaultButtonRadius = $cm('.button-default--corner-radius').value;
+         frameFont_DefaultButtonWidth = $cm('.button-default--width').value;
+         frameFont_DefaultButtonBorderWidth = $cm('.button-default--border-width').value;
+         frameFont_DefaultButtonBorderStyle = $cm('.button-default--border-style').value;
+         frameFont_DefaultButtonBorderColor = $cm('.button-default--border-color').value;
+         framefont_defaultButtonBackgroundColor = "background: #" + $cm('.button-background-default--color2').value + "; background: -moz-linear-gradient(top, #" + $cm('.button-background-default--color1').value + " 0%, #" + $cm('.button-background-default--color2').value + " 100%); background: -webkit-linear-gradient(top, #" + $cm('.button-background-default--color1').value + " 0%,#" + $cm('.button-background-default--color2').value + " 100%); background: linear-gradient(to bottom, #" + $cm('.button-background-default--color1').value + " 0%,#" + $cm('.button-background-default--color2').value + " 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#" + $cm('.button-background-default--color1').value + "', endColorstr='#" + $cm('.button-background-default--color2').value + "',GradientType=0 );";
+
+         hoverBold = $('.hover-bold').prop('checked')?'bold':'normal';
+         hoverItalic = $('.hover-italic').prop('checked')?'italic':'normal';
+         hoverUnderline = $('.hover-underline').prop('checked')?'underline':'none';
+         hoverUppercase = $('.hover-uppercase').prop('checked')?'uppercase':'none';
+
+         frameFont_ActiveButtonFont = $cm('.button-font-default--family').value;
+         frameFont_ActiveButtonSize = $cm('.button-font-default--size').value;
+         frameFont_ActiveButtonColor = $cm('.button-font-active--color').value;
+         frameFont_ActiveButtonBorderWidth = $cm('.button-active--border-width').value;
+         frameFont_ActiveButtonBorderStyle = $cm('.button-active--border-style').value;
+         frameFont_ActiveButtonBorderColor = $cm('.button-active--border-color').value;
+         framefont_activeButtonBackgroundColor = "background: #" + $cm('.button-background-active--color2').value + "; background: -moz-linear-gradient(top, #" + $cm('.button-background-active--color1').value + " 0%, #" + $cm('.button-background-active--color2').value + " 100%); background: -webkit-linear-gradient(top, #" + $cm('.button-background-active--color1').value + " 0%,#" + $cm('.button-background-active--color2').value + " 100%); background: linear-gradient(to bottom, #" + $cm('.button-background-active--color1').value + " 0%,#" + $cm('.button-background-active--color2').value + " 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#" + $cm('.button-background-active--color1').value + "', endColorstr='#" + $cm ('.button-background-active--color2').value + "',GradientType=0 )"  + ';font-weight:' + hoverBold + ';font-style:' + hoverItalic + ';text-transform:' + hoverUppercase  + ';background:' + ";text-decoration:" + hoverUnderline
+
+
+         var defaultButton = "font-size:" + frameFont_DefaultButtonSize + ";font-family:" + frameFont_DefaultButtonFont +
+            ",sans; color:#" + frameFont_DefaultButtonColor + ";" + framefont_defaultButtonBackgroundColor +"; border-radius:" + frameFont_DefaultButtonRadius + "; border-width:" + frameFont_DefaultButtonBorderWidth + "; border-style:" + frameFont_DefaultButtonBorderStyle + "; border-color:#" + frameFont_DefaultButtonBorderColor + ";width:" + frameFont_DefaultButtonWidth + ';font-weight:' + defaultBold + ';font-style:' + defaultItalic + ';text-transform:' + defaultUppercase + ";text-decoration:" + defaultUnderline;
+         document.querySelector('.frame-button--default').setAttribute('style', defaultButton);
+
+         var activeButton = "font-size:" + frameFont_DefaultButtonSize + ";font-family:" + frameFont_DefaultButtonFont +
+            ",sans; color:#" + frameFont_ActiveButtonColor + ";" + framefont_activeButtonBackgroundColor +"; border-radius:" + frameFont_DefaultButtonRadius + "; border-width:" + frameFont_ActiveButtonBorderWidth + "; border-style:" + frameFont_ActiveButtonBorderStyle + "; border-color:#" + frameFont_ActiveButtonBorderColor + ";width:" + frameFont_DefaultButtonWidth;
+         document.querySelector('.frame-button--active').setAttribute('style', activeButton);
+
+      }
+      updateFrameFont();
+
+   </script>
+   </body>
+</html>

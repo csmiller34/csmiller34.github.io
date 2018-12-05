@@ -1,0 +1,1664 @@
+
+.NCRMainStyleSheet {}
+* {
+   outline: 0;
+}
+BODY    { margin: 0px; font-family: Verdana; font-size: 0.7em;}
+FORM    { margin: 0px; padding: 0px; }
+TH      { font-size: 0.9em; vertical-align: bottom; }
+TD		{ font-size: 1em; }
+P {padding: 0; margin: 0;}
+FONT    { font-size: 0.9em; }
+IMG		{ border: none; }
+#Form\:criteriaList INPUT,
+#Form\:servicesCriteriaGrid INPUT,
+#Form\:startDateInput INPUT,
+#Form\:stopDateInput INPUT,
+#RecoResultsCollectionForm\:DurationGrid INPUT,
+#RecoResultsCollectionForm\:StartTimeColumn INPUT {
+    height: 18px !important; 
+    box-sizing: border-box;
+    border-width: 1px;
+    border-color: gray;
+}
+
+INPUT   {  font-family: verdana; font-size: 0.9em; font-weight: normal; }
+INPUT[type=button], INPUT[type=submit]  {
+   border: 1px solid #979897;
+   border-radius: 5px;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   border-radius: 0;
+   background: #feffff; /* Old browsers */
+   background: -moz-linear-gradient(top, #feffff 0%, #cfcfcf 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(top, #feffff 0%,#cfcfcf 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(to bottom, #feffff 0%,#cfcfcf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#cfcfcf',GradientType=0 ); /* IE6-9 */
+}
+
+INPUT[disabled="disabled"][type='text'], TEXTAREA[disabled="disabled"] {
+  color: #000;
+}
+
+INPUT[disabled="disabled"][type='text']::-ms-value, TEXTAREA[disabled="disabled"]::-ms-value {
+  opacity: 0.4;  filter: alpha(opacity=40);
+}
+
+
+INPUT[type=button]:disabled, INPUT[type=submit]:disabled  {
+ border: 1px solid #979897;
+ background-color: #D5D5D5;
+}
+INPUT[type=button]:active, INPUT[type=submit]:active  {
+   border: 1px solid #979897;
+   border-radius: 5px;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   border-radius: 0;
+   background: #cfcfcf; /* Old browsers */
+   background: -moz-linear-gradient(top, #cfcfcf 0%, #feffff 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(top, #cfcfcf 0%,#feffff 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(to bottom, #cfcfcf 0%,#feffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfcfcf', endColorstr='#feffff',GradientType=0 ); /* IE6-9 */
+}
+
+TEXTAREA{ font-family: verdana; font-size: 0.9em; }
+SELECT  { font-family: verdana; font-size: 0.9em; }
+
+* HTML IFRAME { padding-left: 2px; padding-right: 2px; }
+.empty  { text-align: left; }
+
+.ThumbNail { border: 1px solid #666666; width: 80px; height: 70px; }
+
+/* Title Styles */
+.TableTitle    { width: 100%; }
+.TDTitle       { padding-top: 10px;}
+.TDSubTitle    { padding: 0; padding-left: 10px; padding-bottom: 2px; text-align: left;}
+.TextTDTitle   { font-size: 1.4em; font-weight: bold; }
+.TextEditItemTitle   { font-size: 1.4em; font-weight: bold; color: white}
+.TextTDTitleLite   { font-size: 1.4em; }
+.TextTDSubTitle{ }
+
+/* Help Styles */
+.TableHelp     { width: 100%; }
+.TDHelpIcon    { float: left; position: relative; top: 6px; left: 3px; width: 4px; height: 4px; background-image: url('icon_bullet.gif'); background-repeat: no-repeat; }
+.TDHelp        { }
+.TextTDHelp    { }
+.TextTDHelp IMG{ height: 14px; width: 14px; position: relative; top: -1px;}
+* HTML .TextTDHelp IMG{ top: 0; }
+
+/* Content Seperator Styles */
+/* .TableSeperator{ position: relative; top: -3px; width: 100%; border-bottom: 1px solid #333333; } */
+.TableSeperator{ margin-bottom: 3px; width: 100%; border-bottom: 1px solid #333333; clear: both;}
+.TableSeperatorSpacing{ font-size: 0.6em; }
+.TDSeperator   { }
+
+/* Welcome Page Styles */
+.TableSplash   { width: 97%; background-image: url('welcomesplash_bg.gif'); background-repeat: repeat-x; height: 211px; }
+.TableHotLinks { width: 174px; padding-left: 2px; }
+.TableMessages { width: 100%; border: 1px solid #cdcdcd; }
+.TDMessageIcon  { width: 18px; height: 15px; text-align: right; padding-left: 10px; }
+.TDMessageText  { text-align: left;  padding-left: 2px; padding-right: 10px; }
+.WelcomeSubTitle{ color: #666666; font-size: 1.1em; font-weight: bold; float: left; position: relative; left: 2px; top: 6px; background-color: #fff;}
+
+/* Summary Table Styles */
+.TableSummary  { width: 100%; border: 1px solid #999999; padding-top: 2px; padding-bottom: 1px; margin-top: 5px;}
+.TableSummary2  { width: 50px; border: 1px solid #999999; padding-top: 2px; padding-bottom: 1px; margin-top: 5px;}
+.TableSort  { width: 100%; margin-top: 5px; margin-bottom: 5px;}
+.TableSummaryCT  { border: 1px solid #999999; padding-top: 2px; padding-bottom: 1px; margin-top: 5px;}
+.TransactionTableSummary { width: 100%; }
+.TDSummaryLabel{ padding-left: 5px; padding-right: 5px; height: 15px; }
+.TDTransactionSummaryLabel{ padding-left: 5px; padding-right: 5px; height: 15px; width: 100px; white-space: nowrap}
+.TRTransactionSummaryTop .TDTransactionSummaryLabel{ border-bottom: 1px solid #c0c0c0}
+.TDSummaryValue{ padding-left: 5px; padding-right: 5px; height: 15px; text-align: right;}
+.TDSummaryGroup{ padding-left: 5px; padding-right: 5px; height: 15px;}
+.TDSummaryGroupC{ padding-left: 5px; padding-right: 5px; height: 15px; margin-left:auto; margin-right:auto; position:relative; text-align:center;}
+.TDSummaryGroupFR{ padding-left: 5px; padding-right: 5px; height: 15px; text-align: right; float: right;}
+.TDTransactionSummaryValue { padding-left: 5px; padding-right: 5px; height: 15px; text-align: left; width: 300px; white-space: nowrap;}
+.TRTransactionSummaryTop  .TDTransactionSummaryValue { border-bottom: 1px solid #c0c0c0;}
+.TDSummaryValueL{ padding-left: 5px; padding-right: 5px; height: 15px; text-align: left;}
+.TDDetailsLeft { width: 30%; text-align: left; border: 1px solid #999999; vertical-align: top;}
+.TDImageRight  { width: 70%; text-align: right; border: 1px solid #999999; vertical-align: top;}
+.TDDetailsLeft2{ width: 35%; text-align: left; border: 1px solid #999999; vertical-align: top;}
+.TDImageRight2 { width: 65%; text-align: right; border: 1px solid #999999; vertical-align: top;}
+.SummaryLabel  { font-weight: bold; color: #333333; ; white-space: nowrap;}
+.SummaryLabelL { float: left; width: 100%; font-weight: bold; color: #333333; text-align: left; }
+.SummaryLabelR { float: left; width: 100%; font-weight: bold; color: #333333; text-align: right; }
+
+.SummaryLabelLEFT { background-color:#cdcdcd; padding:0.5em; padding-left:0.5em; padding-right:0.5em; font-weight:bold; color:#333333; white-space:nowrap; text-align:left}
+.SummaryLabelRIGHT { background-color: #cdcdcd; padding:0.5em; padding-left:0.5em; padding-right:0.5em; font-weight:bold; white-space:nowrap; text-align:right}
+.SummaryValueRIGHT { color: #666666; padding:0.5em; padding-left:0.5em; padding-right:0.5em; text-align: right; width: 150px;}
+.SummaryValueLEFT { color: #666666; padding:0.5em; padding-left:0.5em; padding-right:0.5em; text-align: left;  width: 150px;}
+
+.SummaryValue  { color: #666666; text-align: right; white-space: nowrap; }
+.SummaryValuePadded {color: #666666; text-align: right; white-space: nowrap; margin-left: 30px;}
+.SummaryValueInput  { color: #333333; text-align: right; border:1px solid #999999; }
+.SummaryTransactionValueInput  { color: #333333; border:1px solid #999999; }
+.SummaryValueInputChanged  { color: #333333; text-align: right; border:1px solid red; }
+.SummaryValueL { color: #666666; text-align: left; }
+.SummaryValueFR  { color: #666666; float: right; text-align: right; white-space: nowrap;}
+
+/* Create New Wizard Styles */
+.WizardOuter      {  width: 98%; margin-top: 5px; padding-bottom: 10px; border:1px solid #ccc; }
+.WizardOuter td {text-align: left;}
+.WizardBar        { width: 98%; margin-top: 20px; height: 25px; }
+.WizardBar .TDFormValue img {width:5px;}
+.WizardBar p { margin: 0; padding: 0; }
+.WizardPanel { border:1px solid red;}
+
+.TDWizardTitle    { padding-right: 5px; height: 25px; background-image: url('wizard_titleback.gif'); white-space: nowrap; background-repeat: repeat-x; border-left: 1px solid #cdcdcd; border-right: 1px solid #cdcdcd;}
+.WizardTitle      { padding-left: 5px; font-size: 1.2em; font-weight: bold; font-variant: small-caps; }
+
+.TDWizardEnd      { width: 95%; height: 25px; background-image: url('wizard_endback.gif'); background-repeat: repeat-x; border-right: 1px solid #cdcdcd; text-align: left; }
+.TDWizardEnd   img   {  }
+
+.WizardSteps 		{ width: 100%; }
+.TDWizardStep 	{ text-align: left;}
+.WizardStep 		{ font-weight: bold; font-size: 1.2em; }
+
+
+/* Form Table Styles */
+.TableForm     { width: 100%; }
+.QueryForm     { width: 100%; border: 1px solid #999999; padding-left: 2px; padding-right: 2px; padding-top: 0px; padding-bottom: 0px;}
+.TableFormColumn { width: 100%; padding-left: 5px; padding-right: 35px; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;}
+.TableFormColumnNarrow { width: 100%; padding-left: 0; padding-right: 5px; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;}
+.TableFormColumnFilters {padding-top: 3px;}
+.alignLeft .TableFormColumnNarrow { width: auto; }
+.TableFormRow { padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;}
+.TableFormLeft     { width: 100%; }
+.TableFormLeft   th  { text-align: left; }
+.TDFormLabel   { width: 230px; text-align: left; padding-top: 2px; padding-bottom: 2px;}
+.TDFormLabelNew   { width: 238px; text-align: left; padding-top: 2px; padding-bottom: 2px;}
+.TDFormRadio   { width: 10px;  padding-top: 2px; padding-bottom: 2px; }
+.TDFormLabel2   { width: 240px;  padding-top: 2px; padding-bottom: 2px; }
+.TDFormLabel3   { width: 400px;  padding-top: 2px; padding-bottom: 2px; }
+.TDFormLabel4   { width: 550px;  padding-top: 2px; padding-bottom: 2px; }
+.TDFormLabelWide   { width: 350px;  padding-top: 2px; padding-bottom: 2px; }
+.TDFormLabelTop{ width: 230px; vertical-align: top; text-align: left; padding-top: 2px; padding-bottom: 2px; }
+.TDFormLabelTopNew{ width: 240px; vertical-align: top; text-align: left; padding-top: 65px; padding-bottom: 2px; }
+.TDFormValueInfo    { width: 20px; text-align: right;  padding-top: 2px; padding-bottom: 2px; }
+.TDFormValue   { width: 180px; text-align: left; padding-top: 2px; padding-bottom: 2px;}
+.TDFormValue2  { width: 180px; text-align: left; padding-top: 2px; padding-bottom: 2px; max-width:none;}
+.TDFormValueNew   { width: 180px; text-align: left; padding-top: 2px; padding-bottom: 2px;position: absolute;}
+.TDFormValueNewForPanel   { width: 185px; text-align: left; padding-top: 65px; padding-bottom: 2px;position: absolute;}
+.TDFormAreaLabel{ width: 230px;  padding-top: 2px; padding-bottom: 2px; }
+.TDFormValue1   { width: 260px;  padding-top: 2px; padding-bottom: 2px; }
+.TDFormValueWide   { width: 350px;  padding-top: 2px; padding-bottom: 2px; }
+.TDFormValueSmall   { width: 110px;  padding-top: 2px; padding-bottom: 2px; }
+.TDFormValueNoWrap { white-space: nowrap;  padding-top: 2px; padding-bottom: 2px; }
+.TDFormValueNoWrapNew { white-space: nowrap;  padding-top: 4px; padding-bottom: 4px;position: absolute; }
+.FormWhiteSpace{white-space: pre-wrap;height: 120px;}
+.TDFormError   {  padding-top: 2px; padding-bottom: 2px;}
+.TDFormError1  {  padding-top: 2px; padding-bottom: 2px; max-width:none;}
+.TDFormError2   {  padding-top: 2px; padding-bottom: 2px; max-width:none; text-align: left;}
+.FormLabel     { font-weight: bold; /* padding-top: 2px; */ /* padding-bottom: 2px; */}
+.FormLabelNoWrap     { font-weight: bold; white-space: nowrap; }
+.FormLabelNoWrap2     { font-weight: bold; white-space: nowrap; padding-right: 20px; }
+.FormLabelAlertLink { width: 100px; }
+.FormLabelTight  { font-weight: bold; height: 18px; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px; }
+.FormLabelL    { font-weight: bold; text-align: left; }
+.FormLabelDisabled { font-weight: bold; color: #999999; }
+.FormLabelNoWrapDisabled { font-weight: bold; color: #999999; white-space: nowrap;}
+.FormLabelArea { font-weight: bold; float: left; vertical-align: top; height: 55px; }
+.FormLabelTopAlign { font-weight: bold; width: 175px; vertical-align: top;}
+.FormLabelWide { font-weight: bold; width: 200px;}
+.FormLabelOffset { font-weight: bold; padding-left: 2px; }
+.FormValue     { }
+.ParameterInputDate     { height: 18px !important;box-sizing: border-box;border-width: 1px; border-color: gray;}  
+.FormValueAlertDropdown { width: 170px; }
+.FormValueDepositFilter { width: 13rem; min-width: 13rem; }
+.FormValueNoWrap { white-space: nowrap; }
+.FormValueTight { height: 14px; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px; }
+.FormValueCN   { width: 300px;  }
+.FormValueInfo { height: 16px; width: 16px; }
+.FormDisplay   { float: left; width: 100%; text-align: right; }
+.FormOutput   { float: right; width: 100%; text-align: right; }
+.FormText	   { }
+.FormTextFloatLeft	{ float: left; }
+.FormTextDisabled { color: #999999; }
+.FormTextDisabledNoWrap { color: #999999; white-space: nowrap; }
+.FormError     { font-weight: bold; color: red; }
+.FormError2     { font-weight: bold; color: red; float: right;}
+.FormLink {padding-left: 2px; white-space: nowrap;}
+.InvalidInput { border: 2px solid #AA0000; }
+INPUT.ErrorFlag{ border: 2px solid #AA0000; }
+INPUT.WarnFlag{ border: 2px solid #0026FF; }
+.FormNoEdit { BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND: #fff; COLOR: #000; BORDER-TOP: medium none; BORDER-RIGHT: medium none; height: 20px; float: left;}
+
+/* Style for IE browsers for consistency between versions */
+#Form\:CheckboxPanel { /* maintain wrapping of checkbox label from old user experience on Custom Field for Account page */
+   display:inline-block \9;
+   width: 163px \9;
+}
+#Form\:SampleImages .FormValue {
+/*   border-color: #F0F0F0 \9; */
+   border-color: #f0f0f0 \9;
+}
+/* Styles for item fields on Edit Item page*/
+/* Note: height doesn't work for select element in IE, so we set height:17px which seems the default height for select box in IE, so that select box will be visually same size as other input boxes. */
+.EditItemField {height: 12px;}
+.EditItemFieldError {height: 12px; border: 2px solid #AA0000;}
+.EditItemFieldWarn {height: 12px; border: 2px solid #0026FF;}
+
+.EditItemDateGroup {height: 12px; white-space:nowrap;}
+.EditItemFieldWithIcon, .EditItemFieldWithIconError, .EditItemFieldWithIconWarn { vertical-align: 4px; width: 98px; }
+.EditItemFieldWithIconError {height: 12px; border: 2px solid #AA0000;}
+.EditItemFieldWithIconWarn {height: 12px; border: 2px solid #0026FF;}
+.EditItemDateGroup INPUT[type=text] { min-width: 116px }
+.EditItemDateGroup INPUT[type=image] { height: 16px; position: relative; top: -3px \9;}
+.EditItemDateGroup INPUT:last-child { height: 16px; position: relative; top: 0;}
+
+.PickerDateGroup {height: 12px; white-space:nowrap;}
+.PickerDateGroup INPUT:first-child {width: 115px;}
+.PickerDateGroup INPUT:last-child { height: 16px; position: relative; top: 4px; left: 1px}
+
+.AlertDecisionLeft { width: 180px; float: left; vertical-align: top; padding-left: 0px; padding-right: 0px;}
+.AlertDecisionRight { width: 100%; float: right; vertical-align: top; padding-left: 0px; padding-right: 0px;}
+.AlertComment { height: 85px; width: 280px; overflow: auto; vertical-align: top; padding-left: 0px; padding-right: 0px; resize:none;}
+.AlertHistory { height: 80px; width: 480px; overflow: auto; vertical-align: top; padding: 0;}
+.AlertHistoryStart { list-style-type: none; padding-left: 0; margin-left: 0; margin-top: 0; margin-bottom: 0; }
+.AlertHistoryDetails { margin-top: 0; margin-bottom: 0.5em; background: url("icon_bullet.gif") no-repeat left 0.5em; padding-left: 1em;}
+.AlertHistoryDetails span { font-style: italic; }
+.AlertHistoryComment {font-style: italic; padding-right: 1em;}
+
+
+.RadioButton   { white-space: nowrap; width: auto; padding: 0px; border-spacing: 0px; border-collapse: separate;}
+.CheckBox   { white-space: nowrap; width: auto; padding: 1px; border-spacing: 0px; border-collapse: separate;}
+.RadioButton LABEL { white-space: nowrap; padding-right:10px; }
+.RadioButton TD { white-space: nowrap; }
+
+/* List Table Styles */
+.TableList     { width: 100%; border: 1px solid #999999; }
+.TableListMedium	{width: 100%; border: 1px solid #999999; }
+.TableListNarrow { border: 1px solid #999999; min-width: 25%;}
+.TRList        { background-color: #FFFFFF; }
+.TRListField   { background-color: #FFFFFF; vertical-align: top }
+.TRListAlt     { background-color: #FFFFFF; }
+.TRListReject        { background-color: #FFFFFF; color: #800000; font-style: italic; font-weight: bold;  }
+.TRListAltReject     { background-color: #FFFFFF; color: #800000; font-style: italic; font-weight: bold;  }
+.TDListHeader  { background-color: #cdcdcd;  padding: 1px; padding-left: 7px; padding-right: 7px; text-align: center;}
+.TransactionListHeader  { background-color: #cdcdcd;  padding: 1px; padding-left: 15px; padding-right: 15px; white-space: nowrap; }
+.TDListData    { border-bottom: 1px solid #DDDDDD; }
+.TDTransactionListData    { border-bottom: 1px solid #DDDDDD; white-space: nowrap; padding-left: 9px; padding-right: 9px;}
+.TDListData P  { text-align: center; }
+.ListHeader    { width: 100%; text-align: left; }
+.ListHeaderError    { width: 100%; text-align: left; color: red;}
+.ListHeaderNoWrap    { width: 100%; text-align: left; white-space: nowrap;}
+.ListHeaderNum { width: 100%; text-align: right; }
+.ListHeaderNumError { width: 100%; text-align: right; color: red;}
+.ListHeaderDate{ width: 100%; text-align: center; }
+.ListHeaderDateError{ width: 100%; text-align: center; color: red;}
+.ListHeaderCtrl{ width: 100%; text-align: center; }
+.ListHeaderCtrlError{ width: 100%; text-align: center; color: red;}
+
+/* NSF - No sorting/filtering. */
+.ListHeaderNSF     { float: left; text-align: left; }
+.ListHeaderNSFNoWrap     { float: left; text-align: left; white-space: nowrap; }
+.ListHeaderNumNSF{ float: right; text-align: right;}
+.ListHeaderNumPadded  { float: right; text-align: right; padding-right: 2px;}
+.ListHeaderDateNSF { float: left; width: 100%; text-align: center; }
+.ListHeaderCtrlNSF { float: left; width: 100%; text-align: center; }
+
+.ListData      { float: left; text-align: left; padding: 1px; padding-left: 6px; padding-right: 6px;  }
+.ListDataNoBrk { float: left; text-align: left; padding: 1px; padding-left: 6px; padding-right: 6px; white-space: nowrap; }
+.ListDataErr   { float: left; text-align: left; color: red; padding: 1px; padding-left: 6px; padding-right: 6px;  }
+.ListDataNum   { float: right; text-align: right; padding: 1px; padding-left: 6px; padding-right: 6px; }
+.ListInputNum  { float: right; text-align: right; padding: 1px; margin-left:6px; margin-right:6px; }
+.ListDataBlack { float: left; text-align: left; color:black; padding: 1px; padding-left: 6px; padding-right: 6px;  }
+.ListDataBlackNoBr { float: left; text-align: left; color:black; padding: 1px; padding-left: 6px; padding-right: 6px;  white-space: nowrap;}
+.ListDataNumGoodValue   { float: right; text-align: right; padding: 1px; padding-left: 6px; padding-right: 6px; font-weight: bold; color: #1d6f35;}
+.ListDataNumBadValue   { float: right; text-align: right; padding: 1px; padding-left: 6px; padding-right: 6px; font-weight: bold; color: red;}
+.ListDataNumRejectValue   { float: right; text-align: right; padding: 1px; padding-left: 6px; padding-right: 6px; font-weight: bold; color: #800000; font-style: italic;}
+.ListDataBold  { font-weight: bold; }
+
+.ListDataNumSelected   { background-color: #DCF1FF; float: right; text-align: right; padding: 1px; padding-left: 6px; padding-right: 6px; width: 90%; height: 13px;}
+.ListDataNumSelectedGoodValue   { background-color: #DCF1FF; float: right; text-align: right; padding: 1px; padding-left: 6px; padding-right: 6px; font-weight: bold; color: #1d6f35; width: 90%; height: 13px;}
+.ListDataNumSelectedBadValue   { background-color: #DCF1FF; float: right; text-align: right; padding: 1px; padding-left: 6px; padding-right: 6px; font-weight: bold; color: red; width: 90%; height: 13px;}
+.ListDataNumSelectedRejectValue   { background-color: #DCF1FF; float: right; text-align: right; padding: 1px; padding-left: 6px; padding-right: 6px; font-weight: bold; color:#800000; font-style: italic; width: 90%; height: 13px;}
+
+.ListDataNumErr{ float: right; text-align: right; padding: 1px; padding-left: 6px; padding-right: 6px; color: red; }
+.ListDataDate  { float: left; width: 100%; text-align: center; padding: 1px; padding-left: 6px; padding-right: 6px;  }
+.ListDataDateNoBrk  { float: right; text-align: center; width: 100%; padding: 1px; padding-left: 6px; padding-right: 6px; white-space: nowrap; }
+.ListDataDateErr{ float: left; width: 100%; text-align: center; padding: 1px; padding-left: 6px; padding-right: 6px;  color: red; }
+.ListDataCtrl  { width: 100%; text-align: center; padding: 1px; padding-left: 6px; padding-right: 6px; }
+.ListDataReject { text-align: center; color: #800000; font-style: italic; font-weight: bold; }
+.ListDataCtrl td {white-space: nowrap; text-align: center; }
+.ListDataCtrl INPUT { margin-left: 2px; margin-right: 2px; }
+.ListDataCtrl IMG   { width: 16px; height: 16px; margin-left: 2px; margin-right: 2px; }
+A                   { color: #003366; }
+A:Hover             { color: #336699; }
+
+.ListDataCtrl .ItemIcon { float: left; width: 28px; height: 13px; }
+.ListDataCtrl .FolderIcon { float: right; width: 16px; height: 16px; }
+
+/* Drop Zone styles */
+.DropZoneLabel 		{ float: left; width: 100%; text-align: center; height: 20px; font-weight: bold; color: #333333; background-color: #F0F0F0; }
+.DropZoneMouseOver	{ float: left; width: 100%; text-align: center; height: 20px; font-weight: bold; color: #000000; background-color: #b8df7a; }
+.DropZoneLabel INPUT { position: relative; top: 2px;  }
+.DropZoneMouseOver INPUT { position: relative; top: 2px;  }
+
+.DropZoneData 		{ float: left; position: relative; top: 2px; text-align: left; padding: 1px; padding-left: 6px; padding-right: 6px;  }
+.DropZoneDataNoBrk	{ float: left; position: relative; top: 2px; text-align: left; padding: 1px; padding-left: 6px; padding-right: 6px; white-space: nowrap;  }
+.DropZoneDataErr	{ float: left; position: relative; top: 2px; text-align: left; color: red; padding: 1px; padding-left: 6px; padding-right: 6px;  }
+.DropZoneNum  		{ float: right; position: relative; top: 2px; text-align: right; padding: 1px; padding-left: 6px; padding-right: 6px; }
+.DropZoneNumErr		{ float: right; position: relative; top: 2px; text-align: right; padding: 1px; padding-left: 6px; padding-right: 6px; color: red; }
+.DropZoneNumGood	{ float: right; position: relative; top: 2px; text-align: right; padding: 1px; padding-left: 6px; padding-right: 6px; color: #1d6f35; }
+
+/* Audit Log Details Styles */
+.TableLinkedData { width: 100%; border: 1px solid #666666; padding-top: 2px; padding-bottom: 1px; }
+.TDLinkedData    { padding-left: 5px; padding-right: 5px; width: 33%; }
+.LinkedDataLabel { font-weight: bold; color: #333333; padding-right: 7px; }
+.LinkedDataValue { }
+
+.TDAuditSummaryHeader        { width: 45%; font-size: 0.9em; border: 1px solid #999999; padding-top: 2px; padding-bottom: 1px; background-color: #cdcdcd; border-bottom: none; }
+.TDAuditSummaryHeader SPAN   { font-weight: bold; }
+.TDAuditObjectHeader         { width: 55%; font-size: 0.9em; border: 1px solid #999999; padding-top: 2px; padding-bottom: 1px; background-color: #cdcdcd; border-bottom: none; }
+.TDAuditObjectHeader SPAN    { font-weight: bold; }
+.TDAuditObjectHeader FONT    { font-weight: normal; font-style: italic; color: #333333; }
+
+.TDAuditSummary      { width: 45%; font-size: 1em; border: 1px solid #999999; background-color: #F0F0F0; }
+.TableAuditSummary   { width: 100%; }
+.TableAuditSummary TD{ font-size: 0.9em; }
+.AuditSummaryLabel   { font-weight: bold; color: #333333; }
+.AuditSummaryData    { }
+.AuditSummarySubData { font-style: italic; }
+
+.TDAuditObject    { width: 55%; border: 1px solid #999999; }
+.TableAuditObject { width: 100%; }
+.TableAuditObject TD { font-size: 0.9em; }
+.AuditObjectLabel { }
+.AuditObjectData  { }
+
+.TDAuditChangeLogHeader      { width: 100%; font-size: 0.9em; border: 1px solid #999999; padding-top: 2px; padding-bottom: 1px; background-color: #cdcdcd; border-bottom: none; }
+.TDAuditChangeLogHeader SPAN { font-weight: bold; }
+.TDAuditChangeLog { width: 100%; border: 1px solid #999999; }
+
+.TableAuditChangeLog        { width: 100%; }
+.TableAuditChangeLog TD     { font-size: 0.9em; }
+.TDAuditChangeLogListHeader { background-color: #F0F0F0; text-align: left; width: 33%; }
+.TDAuditChangeLogListHeader SPAN { color: #333333; }
+.TDAuditChangeLogListData   { width: 33%; border-top: 1px solid #cdcdcd; }
+.TDAuditChangeLogListData SPAN { }
+
+/* Subtitle Styles */
+.TableSubTitle { width: 100%; padding-top: 5px; }
+.SubTitle      { font-weight: bold; }
+.GoodValue     { font-weight: bold; color: #1d6f35; }
+.BadValue      { font-weight: bold; color: red; }
+.RejectValue   { color: #800000; font-style: italic; font-weight: bold; }
+.SubTitleLink  { float: right; position: relative; top: -1px; text-align: right; }
+
+/* Page Message Styles */
+.TableMessage    { width: 100%; background-color: #F0F0F0; }
+.TDMessage       { width: 100%; background-color: #F0F0F0; text-align: left;}
+.TDMessage TABLE { width: 100%; }
+.MessageError    { color: red;  font-weight: bold; font-size: 1em;}
+.ScannerMessageError    { color: red;  font-weight: bold; font-size: 1em; padding-left: 3px;}
+.ECTDMessage .MessageError    { font-size: 0.9em;}
+.MessageInfo     { color: #008800;  font-weight: bold; }
+.MessageWarn    { color: red;  font-weight: bold; }
+.MessageHighlight   { background-color: #DCF1FF; padding-left: 1px;}
+.MessageDFDHighlight   { background-color: #DCF1FF; padding-left: 1px;}
+
+/* Error Page Styles */
+.TableError    { width: 100%; background-color: #F0F0F0; border: 1px solid #cdcdcd; }
+.TableError1   { width: 100%; }
+.AppTableError { width: 100%; background-color: #FFFFFF; border: 1px solid #cdcdcd; }
+.TableErrorJam { width: 100%; background-color: #F0F0F0; border: 1px solid #880000; }
+.TableLowInk   { width: 100%; background-color: #F0F0F0; border: 1px solid #880000; }
+.TDError       { width: 100%; }
+.Error         { color: #880000; font-size: 0.8em; font-weight: normal; }
+.AppError      { color: #880000; font-size: 1.2em; font-weight: normal; }
+.ErrorSubTitle { color: #880000; font-size: 0.9em; font-weight: normal; margin-left: 5px; margin-right: 5px; padding-bottom: 2px; }
+.ErrorContact  { margin-left: 40px; border: 1px solid #000000; margin-top: 12px; padding: 5px; }
+.ErrorContact td {padding-right: 10px; padding-left: 5px; }
+.ErrorData     { margin-left: 40px; width: 600px; border: 1px solid #000000; color: #880000; font-size: 0.8em; font-weight: normal; padding: 5px 10px 5px 5px; }
+
+/* Report Styles -- these are only used on REPORT PAGES */
+.RPTitleFloat        { font-size: 0.9em; font-weight: bold; float: left; position:relative; left: 2px; top: -8px; background-color: #FFFFFF; padding-left: 2px; padding-right: 2px; }
+.RPSummaryLeft       { border: 1px solid #999999; vertical-align: top; text-align: left; padding-left: 5px; padding-right: 5px; }
+.RPSummaryMiddle     { width: 5px; }
+.RPSummaryRight      { border: 1px solid #999999; vertical-align: top; text-align: left; padding-left: 5px; padding-right: 5px; }
+.RPSummaryTable      { width: 100%; position: relative; top: -6px; background-image: url('bg_report_summary.gif'); background-repeat: repeat; border-bottom: 1px solid #666666; border-right: 1px solid #666666; }
+.RPSummaryTable TABLE{ width: 100%; }
+.RPSummaryTable TD   { vertical-align: top; }
+.RPSummaryLabel      { font-weight: bold; font-size: 0.9em; }
+.RPSummaryValue      { font-size: 0.9em; }
+.RPSummaryValueAccountCurrency      { font-size: 0.9em; }
+.RPSummaryNumValue   { font-size: 0.9em; text-align: right; width: 100%; }
+.RPSummarySpacer     { width: 20px; height: 1px; }
+
+.RPTableList    { width: 100%; border: 1px solid #999999; }
+.RPTRList       { }
+.RPTRListAlt    { background-color: #F0F0F0; }
+.RPTDListHeader { background-color: #cdcdcd; padding-left: 7px; padding-right: 7px;  }
+.RPTDListData   { padding-left: 7px; padding-right: 7px; }
+.RPTDListData P { text-align: center; }
+.RPListHeader   { float: left; text-align: left;}
+.RPListData     { text-align: left;}
+.RPListHeaderNum{ float:left; text-align: right; }
+.RPListDataNum  { text-align: right; }
+.RPListHeaderDate{ float:left; text-align: center; }
+.RPListDataDate { text-align: center; }
+
+/* Button Styles */
+.TableButton   { width: 100%; }
+INPUT.Left     { font-size: 1.0em; width: 120px; margin-right: 10px; float: left; }
+INPUT.Left     { font-size: 1.0em; width: 120px; margin-right: 10px; float: left; }
+INPUT.LeftShort     { font-size: 1.0em; width: 80px; margin-right: 10px; float: left; }
+INPUT.LeftLong     { font-size: 1.0em; width: 150px; margin-right: 10px; float: left; }
+INPUT.LeftVeryLong     { font-size: 1.0em; width: 225px; margin-right: 10px; float: left; }
+INPUT.LeftGood { font-size: 1.0em; width: 100px; margin-right: 10px; float: left; font-weight: bold; color: #1d6f35; }
+INPUT.LeftBad  { font-size: 1.0em; width: 100px; margin-right: 10px; float: left; font-weight: bold; color: red; }
+INPUT.Right    { font-size: 1.0em; width: 120px; margin-left: 10px; float: right; }
+INPUT.Center   { font-size: 1.0em; width: 120px; float: left; }
+INPUT.Middle   { font-size: 1.0em; width: 100px; margin-left: 10px; float: none; }
+INPUT.LeftVar  { font-size: 1.0em; margin-right: 10px; float: left; }
+INPUT.RightVar { font-size: 1.0em; margin-left: 10px; float: right; }
+#EditCheckForm\:EditItemButtonPanel INPUT.LeftVar { width: auto; min-width: 95px; }
+#EditCheckForm\:EditItemButtonPanel INPUT.RightVar { width: auto; min-width: 95px; }
+
+
+/* Edit Check Layer Styles */
+/* PWE-19951, we use width: auto; width: xxxpx\9 for .EditSimplePage, .EditRemittancePage, .EditBranchPage, .EditBranchPage
+ * so that firefox and chrome will use �width: auto�. Only Internet Explorer (versions 9 and below) will understand and obey � width: xxxpx\9;
+ */
+.EditSimplePage { float: left; position: relative; top: -1px; left: -1px; z-index: 100; width: auto; width: 830px\9; border: 2px solid black; background-color: #FFFFFF; }
+.EditRemittancePage { float: left; position: relative; top: -1px; left: -1px; z-index: 100; width: auto; width: 860px\9; border: 2px solid black; background-color: #FFFFFF; }
+.EditBranchPage { float: left; position: relative; top: -1px; left: -1px; z-index: 100; width: auto; width: 830px\9; border: 2px solid black; background-color: #FFFFFF; }
+.EditRemotePage { float: left; position: relative; top: -1px; left: -1px; z-index: 100; width: auto; width: 830px\9; background-color: #FFFFFF; }
+.EditItemImageAreaWidth {width: 700px; height:1px;}
+.TRCurrentItem { background-color: #FFFFCC; }
+
+.ECTDMessage     { background-color: #F0F0F0; width: 100%; }
+
+.EditCheckTitleBar { width: 100%; background-color: #003366; }
+.EditCheckTitleBar TD { width: 100%; color: #FFFFFF; text-align: right; }
+.EditCheckTitleBar A  { text-decoration: none; color: #FFFFFF; }
+.EditCheckTitleBar A:Hover { color: #FFFFFF; }
+
+.EditCheckFlags      { border: 1px solid #880000; }
+.EditCheckFlags TD   { padding: 0.3em 0.5em 0.3em 0.5em;}
+.EditCheckFlags IMG  { display: none; }
+.EditCheckFlags INPUT{ margin-left: 10px; position: relative; top: 2px; width: 13px; height: 13px} 
+@media screen and (-webkit-min-device-pixel-ratio:0) {.EditCheckFlags INPUT:not(*:root)}
+* HTML .EditCheckFlags INPUT{ top: 0; } 
+.EditCheckFlags A:focus    { outline: none;}
+#EditCheckForm\:EditItemErrorFlags > tbody > tr > td { vertical-align: top; }
+
+.ErrorFlagText       { font-size: 0.9em; color: #880000; }
+.ErrorFlagTextNoBrk  { font-size: 0.9em; color: #880000; white-space: nowrap;}
+.WarnFlagText       { font-size: 0.9em; color: #0026FF; }
+.ErrorFlagIcon       { position: relative; top: 1px;}
+
+.ReviewCheckFlags      { width: 100%; padding-left: 5px; padding-right: 5px; border: 1px solid #1d6f35; }
+.ReviewCheckFlags TD   { height: 20px; }
+.ReviewCheckFlags IMG  { float: left; padding-left: 2px; padding-right: 2px; position: relative; top: 3px; }
+.ReviewCheckFlags INPUT{ float: left; position: relative; top: 1px;}
+* HTML .ReviewCheckFlags INPUT{ top: 0; }
+.ReviewCheckFlags SPAN { float: left; padding-right: 2px; position: relative; top: 4px; height: 20px; }
+.ReviewCheckFlags A    { float: left; padding-right: 2px; position: relative; top: 4px; height: 20px; }
+.ReviewFlagText       { font-size: 0.9em; color: #1d6f35; }
+.ReviewFlagIcon       { position: relative; top: 1px;}
+
+
+
+
+
+.TDFieldValue  { width: 140px; vertical-align: top;}
+
+/**
+ *  When drawing the fields at the bottom of the Edit Item page, use fixed spacing between the
+ *  field values and allow the labels underneath to wrap.
+ *
+ *  NOTE: These commented lines should replace the ones below for if this field style is desired.
+ *
+
+.TDFieldValue table  {
+   table-layout: fixed;
+   width: 92px;
+}
+.FieldLabel    { color: #333333; font-weight: bold; font-size: 0.9em; }
+
+ *
+**/
+
+/**
+ * When drawing the fields at the bottom of the Edit Item page, use allow the spacing between the
+ * field values to vary and do not wrap the labels underneath.
+ */
+.TDFieldValue table  {
+}
+.FieldLabel,.FieldLabelNoWidth { color: #333333; font-weight: bold; font-size: 1em; white-space: nowrap;}
+
+.TDFieldValue table tbody tr td {
+   white-space: pre-wrap; /* css-3 */
+   word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.EditCheckHeader  { width: 100%; padding: 0px; margin: 0px; }
+.EditCheckTypes   { }
+.EditCheckImgCtrl { }
+
+.TableImgCtrl  { float: right; position: relative; top: 5px; border: 1px solid #666666; }
+.TableImgCtrl INPUT { width: 25px; height: 25px; }
+
+.ImageFrame	   { border: 1px solid #666666; }
+.CheckColumn .TableBasic .TableBasic { border: 1px solid #666666; }
+
+.list-column-top		{ vertical-align: top;}
+/* Scanner Options (shows on deposit details page) */
+.ScannerOptionsTable     { float: right; font-size: 1.2em; border-left: 1px solid #666666; border-top: 1px solid #666666; border-right: 1px solid #666666; }
+.ScannerOptionsTitle     { color: #000000; }
+.ScannerOptionsTable INPUT { width: 17px; height: 17px; }
+.ScannerSelectInst   { font-size: 1.2em; }
+
+/* Ajax Loader Dialogue */
+#AjaxLoader     { float: left; position: absolute; z-index: 1000; top: 0; left: 0; width: 130px; border: 1px solid #333333; background-color: #FFFFFF; }
+#AjaxLoader P   { float: left; margin: 0px; padding: 5px; padding-left: 10px; padding-right: 10px; width: 106px; vertical-align: middle; border: 2px dotted #DDDDDD; }
+* HTML #AjaxLoader P   { width: 100%; }
+#AjaxLoader SPAN{ float: left; position: relative; left: 5px; top: 2px; }
+#AjaxLoader IMG { float: left; position: relative; top: 1px; }
+#AjaxLoaderDriver { float: left; position: absolute; z-index: 1000; top: 0; left: 0; width: 180px; padding: 20px; border: 2px solid #333333; background-color: #FFFFFF; }
+p span.AjaxLoaderDriverNoWrapText { padding: 5px; text-align: left; white-space: nowrap; }
+
+/* Tool Tip styles */
+.ToolTip { border: 1px solid #999966; background-color: #ffffcc; text-align: left; white-space: nowrap; }
+.ToolTipText { color: #000000; text-decoration: none; font-weight: normal;}
+
+.rich-tool-tip {
+	position: fixed;
+}
+
+/* Miscellaneous */
+.DisplayNone   { display: none; }
+.FakeOutput    { border: none; width: 100%;}
+.TDLeft        { width: 50%; text-align: left; }
+.TDRight       { width: 50%; text-align: right; }
+.Table2Columns { width: 100%; }
+.TableBasic    { width: 100%; }
+.CheckColumn    { width: 100%; height: 100%; vertical-align: top;}
+.CheckColumn TD  { width: 100%; }
+.CheckColumn TR  { height: 100%; }
+.CheckColumn TABLE  { width: 100%; }
+.TableInlineLeft { display: inline; float: left; }
+.TableInlineRight { display: inline; float: right; }
+.TableBorder   { border: 1px solid #999999; vertical-align: top; }
+.TitleFloat    { font-size: 0.9em; font-weight: bold; float: left; position:relative; left: 3px; top: -8px; background-color: #FFFFFF; padding-left: 2px; padding-right: 2px; }
+.Center        { width: 100%; float: left; text-align: center; }
+.TableUser	   { width: 33%; }
+.TableHalfWidth{ width: 50%; }
+.FullWidth     { width: 100%; }
+.Top           { vertical-align: top; }
+.RSALogo       { width: 100%; text-align: right; padding-right: 10px; padding-top: 2px; }
+.RSALogo IMG   { }
+.DownloadLink  { width: 300px; text-align: center; }
+.DownloadLink A{ font-size: 12px; font-weight: bold; }
+.TransactionDetailsColumn { vertical-align: top; padding-top: 2px;}
+.TransactionDetailsColumn span span { margin-top: 5px;}
+.TransactionListColumn { padding-right: 5px; *>padding-right: 0; width: 290px;}
+.RemittanceListColumn { padding-right: 0; width: 320px; vertical-align: top;}
+.SaveButton { margin-left: 5px; padding-left: 10px; padding-right: 10px;}
+
+/* Added by cm June 22 */
+.TransactionTDListData { border-bottom: 1px solid #c0c0c0; }
+.bar {
+   position: relative;
+   BORDER-RIGHT: #999999 1px solid;
+   BORDER-TOP: #999999 1px solid;
+   OVERFLOW: auto;
+   BORDER-LEFT: #999999 1px solid;
+   WIDTH: 300px;
+   BORDER-BOTTOM: #999999 1px solid;
+   HEIGHT: 330px;
+   *>height: 300px;
+   margin-right: 5px;
+
+ }
+
+.dropdownButton {
+	float: right;
+	margin-left: 1em;
+	margin-top: 0.075em;
+}
+
+.tablenav {
+  /* position: absolute;
+   bottom: 0;
+   left: 0;*/
+/*   margin-left: 2px; */
+   width: 302px;
+   background: #cdcdcd;
+   padding: 0 2px;
+/*  height: 20px;  */
+}
+
+/* Firefox (all versions) hack
+*>.tablenav {
+   width: 186px;
+}*/
+
+.navbuttonprev {
+   width: 20px;
+}
+
+.navbuttonnext {
+   width: 20px;
+}
+
+.navctrl {
+   text-align: center;
+   width: 100%;
+}
+ .navctrl select {
+   margin-left: 5px;
+   margin-right: 5px;
+ }
+
+ .TransactionColumns {
+   width: 100%;
+ }
+ .CouponColumn {
+   padding-top: 5px;
+   vertical-align: top;
+   height: auto;
+ }
+.couponItemContainer {
+    max-height: 300px;
+    overflow-y: auto;
+	overflow-x: hidden;
+    display: block;
+}
+* html .couponItemContainer { height: expression( this.scrollHeight > 320 ? "320px" : "auto" ); } /* sets max-height for IE */
+
+.columnList_area {
+   BORDER: #999999 1px solid;
+   background-color: #ffffff;
+   text-align:left;
+   width: 120px;
+   position: relative;
+   top: 5px;
+}
+
+.columnList_area tbody tr:first td {
+   BORDER: #00aa00 1px solid;
+   height: 10px;
+}
+
+.rich-mpnl-header {
+	background-color: #003366;
+	background-image: none;
+	border-width: 3px;
+	border-color: #003366;
+}
+
+.rich-std-header-row  .dr-sdt-cbody{
+height:50px;
+}
+.rich-sdt-column-cell{
+height: 40px;
+text-align: left;
+}
+.rich-sdt-header-cell{
+text-align: left;
+}
+
+.rich-sdt{
+    border-style: solid;
+}
+
+.noMaskClass .rich-mpnl-mask-div {
+    display:none;
+}
+.highlightCoupon {
+   	width: 80px;
+	border-top: 3px solid #DCF1FF;
+	border-bottom: 3px solid #DCF1FF;
+	border-left: 6px solid #DCF1FF;
+	border-right: 6px solid #DCF1FF;
+}
+.lowlightCoupon {
+   width: 80px;
+   border-top: 3px solid #ffffff;
+   border-bottom: 3px solid #ffffff;
+   border-left: 6px solid #ffffff;
+   border-right: 6px solid #ffffff;
+}
+.RemittanceViewFilter {
+   float:right;
+   white-space: nowrap;
+   margin-top: -7px;
+}
+.DefineRemittanceCouponContainer { border: 1px solid #666; margin: 2px; }
+.DefineRemittanceCouponImageManipulation { border: 1px solid #666; margin: 2px; }
+.customFrame {
+   width: 100%;
+}
+.customFrame td {
+   padding: 0 7px 5px 5px;
+}
+.customFrame td iframe {
+
+   width: 100%;
+}
+
+#EditNotesPage {
+   z-index: 100;
+   position: absolute;
+   top: 10px;
+   left: 100px;
+   BORDER: #003366 2px solid;
+   WIDTH: 480px;
+   BACKGROUND-COLOR: #ffffff;
+}
+
+
+/* Currency Exchange (a.k.a. FX) Rate Confirmation pop-up Styles */
+
+#FXOptionsPage {
+   z-index: 100;
+   position: absolute;
+   top: 10px;
+   left: 100px;
+   BORDER: #003366 2px solid;
+   WIDTH: 580px;
+   BACKGROUND-COLOR: #ffffff;
+}
+
+.FXOptionsTitleBar { width: 100%; background-color: #003366; }
+.FXOptionsTitleBar TD { width: 100%; color: #FFFFFF; text-align: right; }
+.FXOptionsTitleBar A  { text-decoration: none; color: #FFFFFF; }
+.FXOptionsTitleBar A:Hover { color: #FFFFFF; }
+
+.FXOptionsBorder {
+   margin: #003366 2px solid;
+}
+
+#RecoResultsCollectionPage {
+   z-index: 100;
+   position: absolute;
+   top: 350px;
+   left: 600px;
+   BORDER: #003366 2px solid;
+   MAX-HEIGHT: 435px;
+   WIDTH: 500px;
+   BACKGROUND-COLOR: #ffffff;
+}
+.RecoResultsTitleBar { width: 100%; background-color: #003366; text-align: left; font-size: 1.4em; font-weight: bold; }
+.RecoResultsTitleBar TD { width: 100%; color: #FFFFFF; text-align: left; }
+.RecoResultsTitleBar A  { text-decoration: none; color: #FFFFFF; }
+.RecoResultsTitleBar A:Hover { color: #FFFFFF; }
+
+.RecoResultsBorder {
+   margin: #003366 2px solid;
+}
+
+#CSReceiveThrottlingTimePage {
+   z-index: 100;
+   position: absolute;
+   top: 350px;
+   left: 600px;
+   BORDER: #003366 2px solid;
+   MAX-HEIGHT: 435px;
+   WIDTH: 500px;
+   BACKGROUND-COLOR: #ffffff;
+}
+.CSReceiveThrottlingTimeTitleBar { width: 100%; background-color: #003366; text-align: left; font-size: 1.4em; font-weight: bold; }
+.CSReceiveThrottlingTimeTitleBar TD { width: 100%; color: #FFFFFF; text-align: left; }
+.CSReceiveThrottlingTimeTitleBar A  { text-decoration: none; color: #FFFFFF; }
+.CSReceiveThrottlingTimeTitleBar A:Hover { color: #FFFFFF; }
+
+#DoubleFeedOptionsPage {
+   display: none;
+   position: absolute;
+   z-index: 100;
+   top: 10px;
+   margin-top: 5px;
+   width: 540px;
+   left: 100px;
+   BORDER: #003366 2px solid;
+   BACKGROUND-COLOR: #ffffff;
+}
+
+#fade {
+   display: none;
+   position: absolute;
+   left: 0%;
+   top: 0%;
+   background-color: #4c4c4c;
+   -moz-opacity: 0.7;
+   opacity: .70;
+   filter: alpha(opacity=70);
+   width: 100%;
+   height: 100%;
+   z-index: 90; /* makes the div the second most top layer, so it�ll lay on top of everything else EXCEPT for divs with a higher z-index (meaning the #overlay ruleset) */
+}
+
+#topfade {
+   display: none;
+   position: absolute;
+   left: 0%;
+   top: 0%;
+   background-color: #4c4c4c;
+   -moz-opacity: 0.7;
+   opacity: .70;
+   filter: alpha(opacity=70);
+   width: 100%;
+   height: 100%;
+   z-index: 10000; /* makes the div the second most top layer, so it�ll lay on top of everything else EXCEPT for divs with a higher z-index (meaning the #overlay ruleset) */
+}
+
+#LastTenAlertsPage {
+   z-index: 100;
+   position: absolute;
+   top: 10px;
+   left: 100px;
+   BORDER: #003366 2px solid;
+   WIDTH: 650px;
+   BACKGROUND-COLOR: #ffffff;
+}
+
+.EditNotesBorder {
+   margin: 0 5px 5px 5px;
+}
+
+
+
+.notes {
+   height: 200px;
+   border: 1px solid #999999;
+   overflow: none;
+   overflow-y: scroll;
+   padding: 0;
+   margin: 5px 0;
+   display:block;
+}
+
+.notes table {
+   table-layout: fixed;
+   width:445px
+}
+
+.addnotetext {
+   margin: 2px 0;
+   width: 100%;
+   height: 45px;
+   resize: none;
+}
+
+.addnotebutton {
+	FONT-SIZE: 1em; WIDTH: 100px
+}
+
+.noteentry {
+   padding: 10px 5px;
+   border-top: 1px solid #999999;
+   word-wrap: break-word;
+}
+.firstline {
+   color: #666666;
+   padding-bottom: 4px;
+   display:block;
+}
+.NoteLine{
+word-wrap: break-word;
+}
+
+.TDReportExportedTransactionLabel{
+	width: 100%;
+	vertical-align:top;
+}
+
+.ReportExportedTransactionLabel{
+	font-size:11px;
+	color: #800;
+	white-space: nowrap;
+}
+
+.CharsLeft {
+   display: none;
+   margin-left: 15px;
+   color: #666666;
+}
+
+.NotesInformation      { width: 100%; border: 1px solid #999999; }
+.NotesInformation TD   { height: 20px; background-color: #ffffe0}
+.NotesInformation IMG  { float: left; padding-left: 2px; padding-right: 2px; position: relative; top: 3px; }
+.NotesInformation INPUT{ float: left; position: relative; top: 1px;}
+* HTML .NotesInformation INPUT{ top: 0; }
+.NotesInformation SPAN { float: left; padding-right: 2px; position: relative; top: 4px; height: 20px; }
+.NotesInformation A    { float: left; padding-right: 2px; position: relative; top: 4px; height: 20px; }
+.NotesInformationText       { font-size: 0.9em; color: #000000; }
+
+.notenotificationLeft {
+	MARGIN-TOP: 2px; margin-right: 2px; float: left;
+}
+.notenotificationRight {
+	MARGIN-TOP: 2px; MARGIN-RIGHT: 2px; float: right;
+}
+
+.notes_on {
+	FONT-SIZE: 1em; WIDTH: 100px;
+      margin: 0;
+      color: #003366;
+	FONT-WEIGHT: bold;
+}
+.notes_off {
+	FONT-SIZE: 1em; WIDTH: 100px;
+      margin: 0;
+      color: #000000;
+	FONT-WEIGHT: normal;
+}
+
+#AdjustAmountPage {
+   z-index: 100;
+   position: absolute;
+   BORDER: #003366 2px solid;
+   WIDTH: 400px;
+   BACKGROUND-COLOR: #ffffff;
+}
+
+.AdjustAmountBorder {
+   padding: 0px 5px 0px 5px;
+   width: 100%;
+}
+
+.AdjustAmountDepositInfo {
+	border: 1px solid #999999;
+	width: 100%;
+}
+
+.AdjustAmountTitleBar {
+	background-color: #003366;
+	width: 100%;
+}
+
+#ItemHistoryPage {
+   z-index: 100;
+   position: absolute;
+   top: 10px;
+   left: 100px;
+   BORDER: #003366 2px solid;
+   WIDTH: 800px;
+   BACKGROUND-COLOR: #ffffff;
+}
+
+.ItemHistoryTitleBar {
+	background-color: #003366;
+	width: 100%;
+}
+
+.ItemHistoryBorder {
+   padding: 0px 5px 0px 5px;
+   width: 100%;
+}
+
+.ItemHistoryRecoTable {
+   padding: 0px 5px 0px 5px;
+   BACKGROUND-COLOR: #EBDDE2;
+   vertical-align:top;
+}
+
+.ItemHistoryRecoTable td {
+   padding: 1px 10px 1px 0;
+}
+
+#Form\:ImageAndRecoResult td{
+   vertical-align: top;
+}
+
+.ItemHistoryRecoFieldValue { font-size: 0.9em; white-space: nowrap; width: 80px; float: left; color: #000;}
+
+.ProcessError  {color: #880000; font-size: 1.1em;}
+.ProcessError div {padding: 5px;}
+.ProcessError div span {float: left; width: 135px; font-weight: bold; }
+
+.TierTable  { width: 100%; border: 1px solid #999999; padding-top: 2px; padding-bottom: 1px; margin-top: 5px; vertical-align: top; text-align:top;}
+.TierCell  { width: 100%; border-bottom: 1px solid #DCF1FF;text-align:left;white-space: nowrap;}
+.TierCellDisabled  { width: 100%; border-bottom: 1px solid #DCF1FF;text-align:left;white-space: nowrap;color:#999999; }
+.TierImageCell {border-bottom: 1px solid #DCF1FF;text-align:left;}
+.TierHeader { float: left; width: 100%; text-align: left; background-color: #cdcdcd}
+.TierColumnLeft        { width: 25%; text-align: left; vertical-align: top}
+.TierColumnRight       { width: 75%; text-align: left; vertical-align: top}
+.TierDetailTable {width:65%}
+
+/* Limit and threshold tables styles */
+.ConstraintLabel                 { float:left; text-align:left; white-space:nowrap; }
+.ConstraintLabelDisabled         { float:left; text-align:left; color:#999999; white-space:nowrap; }
+.ConstraintNumericValueDisabled  { float:right; text-align:right; color:#999999; }
+.ConstraintNumericValue          { float:right; text-align:right; }
+.ConstraintNumericValueOverride  { float:right; text-align:right; font-weight: bold; color:blue; }
+.ConstraintNumericValueExceeded  { float:right; text-align:right; font-weight: bold;color:red; }
+
+/* EnrollChallengeResponse styles */
+.PageMessage {
+	background: url("info.png") no-repeat scroll 5px 6px #FFFFEF;
+	border: 1px solid #C0C0C0;
+	color: #333333;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 20px;
+	padding: 5px 15px 5px 30px;
+	display:inline-block;
+	margin-top: 1em;
+	margin-bottom: 5px;
+}
+.alignRight {
+	float: right;
+	color: #555555;
+}
+
+.alignLeft {
+	float: left;
+	color: #ff0000;
+}
+
+.alignCenter {
+	width: 100%;
+}
+
+.UserLimitScrolls {
+	border:1px solid #999999;
+    padding:5px;
+    overflow:auto;
+    display:block;
+    width:100%;
+    height:200px;
+}
+
+/* Styles that can be used to hide unwanted elements on pages accessed via sso.
+ * Just move the reference to any element you want hidden from remote users outside
+ * of this comment block.
+ *
+ * NewDeposit page.
+ *
+#Form\:RemoteCancelButton {display:none}
+ *
+ * RemoteEditItem page.
+ *
+#EditCheckForm\:PreviousNextControl {display:none}
+#EditCheckForm\:RemoteDeleteButton {display:none}
+#EditCheckForm\:RemoteNextErrorButton {display:none}
+#EditCheckForm\:RemoteCancelButton {display:none}
+#EditCheckForm\:RemoteSaveButton {display:none}
+#EditCheckForm\:MarkAsDeleteButton { display: none; }
+#EditCheckForm\:RejectItemButton { display: none; }
+#EditCheckForm\:NextErrorButton { display: none; }
+#EditCheckForm\:RemoteNextErrorButton { display: none; }
+#EditCheckForm\:ViewHistory { display: none; }
+.EditCheckTypes { display: none; } // Item type dropdown
+.EditCheckImgCtrl { display: none; } // All image manipulation buttons
+#EditCheckForm\:ZoomInButton { display: none; }
+#EditCheckForm\:ZoomOutButton { display: none; }
+#EditCheckForm\:SignatureButton { display: none; }
+#EditCheckForm\:EndorsementButton { display: none; }
+#EditCheckForm\:FirstDepositButton { display: none; }
+#EditCheckForm\:RotateRightButton { display: none; }
+#EditCheckForm\:RotateLeftButton { display: none; }
+#EditCheckForm\:ImageFrontButton { display: none; }
+#EditCheckForm\:ImageBackButton { display: none; }
+#EditCheckForm\:ReverseVideoButton { display: none; }
+#EditCheckForm\:SwitchImageTypeButton { display: none; }
+ *
+ * ShowDeposit page.
+ *
+#Form\:ShowDepositBalancingArea {display:none}  // Top area of show deposit up to item table.
+#Form\:ShowDepositTitleArea {display:none}
+#Form\:ShowDepositTopLine {display:none}
+#Form\:ShowDepositTableTitle {display:none}
+#Form\:ShowDepositTopButtons {display:none}
+
+#Form\:SaveButton {display:none}  // Other buttons.
+#Form\:EndDeleteDepositButton {display:none}
+#Form\:RejectDepositButton {display:none}
+#Form\:AgedDeleteDepositButton {display:none}
+#Form\:EditDepositButton {display:none}
+#Form\:AssignDepositButton {display:none}
+#Form\:DisApproveButton {display:none}
+#Form\:ApproveButton {display:none}
+#Form\:DepositNotesButton {display:none}
+#Form\:DepositNotesButtonOff {display:none}
+#Form\:CompleteButton {display:none}
+#Form\:ReOpenButton {display:none}
+#Form\:StartDepositButton {display:none}
+#Form\:ReportButton {display:none}
+#Form\:TransferButton {display:none}
+#Form\:ReturnToSSOButton {display:none}
+#Form\:DepositNotesButton {display:none}
+.notenotificationRight {display: none}
+ *
+ *
+/*
+ * UserSearch page.
+ */
+/* #Form\:NewUserButton {display : none;} /* Create new user button at bottom of users list.*/
+/* #Form\:userList .ListDataCtrl INPUT[id$="DeleteUserIcon"] {display : none;}  /* Delete icon for each user on user results list.*/
+
+
+
+ /* Style for auto complete control. */
+.rich-sb-ext-decor-2 { background-color:#fff; border-color:#999; }
+.rich-sb-overflow { overflow:hidden; }
+.rich-sb-shadow { display:none; }
+.rich-sb-int-sel { background-color:#DCF1FF; background-image: none; font-family:Verdana,sans-serif; }
+.rich-sb-cell-padding{ padding:2px 3px 2px 5px; }
+.rich-sb-int{ font-family:Verdana,sans-serif; }
+
+ /* Style for spinner control. */
+.input.rich-spinner-input { background-color: #fff; }
+
+ /* Style for field values on edit item layer. */
+.CheckColumn .TDFieldValue { width: auto;}
+.CheckColumn .TableForm  { width: 1px; }
+.CheckColumn .TableFormLeft  { width: 100%; }
+.CheckColumn .Top TD  { width: 1px; }
+.CheckColumn .Top TABLE  { width: 1px; }
+.CheckColumn .Top .TableBasic  { width: 100%; }
+.CheckColumn .Top .TableSeperator  { width: 100%; }
+
+/* Styles used for the rich tab table in edit item layer.*/
+   .rich-tab-inactive {
+      background-color: #d0d0d0;
+      border-color: #ccc;
+      background-image: none;
+   }
+   .rich-tab-active {
+      background-color: #fff;
+      border-color: #ccc;
+      background-image: none;
+      font-weight:bold;
+   }
+   .rich-tab-header {
+      font-family: verdana,sans;
+   }
+   .rich-tabpanel-content {
+      border-bottom-color: #ccc;
+      border-right-color: #ccc;
+      border-left-color: #ccc;
+      font-family: Verdana,sans-serif;
+      padding: 0;
+   }
+   .rich-tab-bottom-line {
+      border-bottom-color: #ccc;
+   }
+   .rich-tabhdr-side-cell {
+      border-top-color: #ccc;
+   }
+   .ui-widget .rich-tabpanel-content input[type=button] {
+      font-size: 1em !important;
+   }
+
+
+/* Fix height of drop downs */
+#Form\:criteriaList select,
+#Form\:servicesCriteriaGrid select,
+#Form\:startDateInput select,
+#Form\:stopDateInput select,
+#RecoResultsCollectionForm\:DurationGrid select,
+#RecoResultsCollectionForm\:StartTimeColumn select {
+    height: 18px !important;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-color: gray;
+}
+
+select[multiple="multiple"] { height: auto; }
+select { min-height: 18px; height: 18px; position: relative; padding: 0;}
+select { min-height: 16px \9; }
+select[size="10"] { height: auto;}
+select[size="25"] { height: auto;}
+select[size="8"] { height: auto;}
+
+
+/* Make sure that edit item popup will scroll browser window. */
+.rich-mpnl-panel { position: absolute }
+
+#wait-dialog-invisible {
+	display:none; position:absolute; width: 100%; height: 100%; opacity: 0.4; filter: alpha(opacity=40); background: #4c4c4c; z-index:3000;
+}
+
+.overlaycenter {
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px; /* margin is -0.5 * dimension */
+    margin-top: -25px;
+    font-weight:bold;
+    color: white;
+    font-family: Verdana;
+    font-size: 1.2em;
+}
+
+/* JQuery UI Modal styles */
+
+.ui-dialog .ui-widget-header {
+  border: 1px solid #003366;
+  background: #003366;
+}
+.ui-dialog .ui-dialog-titlebar {
+  padding: 0.2em !important;
+}
+.ui-widget  {
+  font-family: Verdana,Arial,sans-serif !important;
+  font-size: 1em;
+}
+.ui-widget-header {
+  font-family: Verdana, inheritArial,sans-serif !important;
+  font-size: 1.3em;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    border: 1px solid #004080;
+    background: #DCF1FF;
+    color: #000000;
+}
+.ui-dialog .ui-widget-content {
+  background: #fff !important;
+  color: #333 !important;
+  padding: 0.475em !important;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+  font-family: Verdana,Arial,sans-serif !important;
+  font-size: 0.9em !important;
+}
+.ui-widget input[type=button] {
+  font-size: 1em !important;
+}
+
+.ui-dialog .FieldLabel, .ui-dialog .FieldLabelNoWidth {
+  color: #333333;
+  font-size: 0.9em;
+}
+.ui-dialog .ListDataBlackNoBr {
+   font-size: 0.9em;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+  border-radius: 0 !important;
+}
+/*
+.ui-dialog-titlebar .ui-button {
+   border: none !important;
+   background: none !important;
+}
+*/
+.ui-icon-closethick {
+  background-image: url("ui-icons_777777_256x240.png") !important;
+}
+
+.alignLeft .EditCheckFlags .ui-widget-content a {
+  color: #aa0000 !important;
+  font-size: 0.9em;
+}
+
+/* JQuery UI Autocomplete styles */
+
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+	overflow-x: hidden;
+   background: #fff !important;
+   font-size: 1em !important;
+   z-index: 110001;
+}
+
+.ui-autocomplete .ui-menu-item {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Verdana,Arial,sans-serif !important;
+   font-size: 1em !important;
+}
+
+.ui-autocomplete .ui-state-focus, .ui-autocomplete .ui-widget-content .ui-state-focus, .ui-autocomplete .ui-widget-header .ui-state-focus {
+    background: #DCF1FF;
+    font-weight: bold;
+    color: #000;
+}
+.ui-dialog  .ui-autocomplete {
+    padding: 0 !important;
+}
+/* JQuery UI Datepicker styles */
+
+.ui-widget-content {
+    background: #eeeeee;
+}
+.ui-widget-content .ui-icon {
+    background-image: url("ui-icons_777777_256x240.png");
+}
+.ui-widget-header .ui-icon {
+    background-image: url("ui-icons_ffffff_256x240.png");
+}
+.ui-widget-header .ui-state-default {
+	background-image: url("ui-bg_glass_100_f6f6f6_1x400.png");
+}
+.ui-datepicker .ui-datepicker-title select {
+    font-size: 0.65em !important;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    top: 0;
+    margin-top: 0;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev-hover,.ui-datepicker  .ui-datepicker-header .ui-datepicker-next-hover {
+   cursor: pointer;
+   background: none;
+   border: none;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev-hover {
+   left: 2px;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next-hover {
+   right: 2px;
+}
+.ui-widget-header {
+    border: 1px solid #003366;
+    background: #003366;
+}
+.ui-datepicker {
+	  font-size: 1.1em;
+}
+.ui-datepicker-current {
+   color: #000;
+}
+.ui-datepicker .ui-state-default, .ui-datepicker .ui-widget-content .ui-state-default {
+    background: #fff;
+    color: #666;
+}
+.ui-datepicker .ui-widget-content button.ui-state-default {
+      color: #000;
+      font-weight: normal;
+      background: -moz-linear-gradient(top, rgba(252,252,252,1) 1%, rgba(235,235,235,1) 48%, rgba(221,221,221,1) 50%, rgba(207,207,207,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(252,252,252,1)), color-stop(48%,rgba(235,235,235,1)), color-stop(50%,rgba(221,221,221,1)), color-stop(100%,rgba(207,207,207,1)));
+    background: -webkit-linear-gradient(top, rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%);
+    background: -ms-linear-gradient(top, rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%);
+    background: linear-gradient(to bottom, rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cfcfcf',GradientType=0 );
+    opacity: 1;
+}
+.ui-datepicker .ui-state-active, .ui-datepicker .ui-widget-content .ui-datepicker .ui-state-active {
+    background: #003366;
+    color: #fff;
+}
+.ui-datepicker .ui-state-hover, .ui-datepicker .ui-widget-content .ui-state-hover, .ui-datepicker .ui-state-focus, .ui-datepicker .ui-widget-content .ui-state-focus {
+   border: 1px solid #333;
+   background: #DCF1FF;
+   color: #333;
+}
+.ui-datepicker .ui-state-highlight, .ui-datepicker .ui-widget-content .ui-state-highlight {
+    border: 2px solid #003366;
+}
+
+.ui-datepicker-calendar tr td {
+    height: 28px;
+	font-size: 1.1em;
+}
+
+body .ui-timepicker-div dl dt {
+	font-size: 0.85em;
+	font-weight: bold;
+}
+
+body .ui-datepicker .ui-datepicker-title {
+	font-size: 0.85em;
+	font-weight: bold;
+}
+
+body .ui-timepicker-div .ui_tpicker_time .ui_tpicker_time_input {
+	border: none;
+}
+
+body .ui-timepicker-div .ui-slider-horizontal {
+	background: #fff;
+   width: (100% - 5px);
+}
+
+body .ui-timepicker-div .ui-slider-horizontal .ui-slider-handle  {
+	background: -moz-linear-gradient(top, rgba(252,252,252,1) 1%, rgba(235,235,235,1) 48%, rgba(221,221,221,1) 50%, rgba(207,207,207,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(252,252,252,1)), color-stop(48%,rgba(235,235,235,1)), color-stop(50%,rgba(221,221,221,1)), color-stop(100%,rgba(207,207,207,1)));
+    background: -webkit-linear-gradient(top, rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%);
+    background: -ms-linear-gradient(top, rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%);
+    background: linear-gradient(to bottom, rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cfcfcf',GradientType=0 );
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button {
+   min-width: 60px;
+}
+
+/* JQuery drag and drop */
+.dropZone, .RemittanceListColumn .dropZoneTop, .RemittanceListColumn .dropZoneBottom { 
+    border: 2px solid #036;
+    background: #DCF1FF;
+    font-weight: bold;
+    color: #000;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.TransactionDetailsColumn .dropZoneTop {
+    border-top: 2px solid #036;
+    background: #DCF1FF;
+    font-weight: bold;
+    color: #000;
+	display: block;c
+	height: 100%;
+	width: 100%;
+}
+.TransactionDetailsColumn .dropZoneBottom {
+    border-bottom: 2px solid #036;
+    background: #DCF1FF;
+    font-weight: bold;
+    color: #000;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.droppableItem {
+	float: left;
+	width: 100%;
+}
+.noDropItem {
+	float: left;
+	width: 100%;
+}
+.dragContainer {
+    width: 234px;
+	background-color: #f3f8ff;
+}
+
+.dragIcon {
+	height: 31px;
+	width: 23px;
+    background-size: 23px 31px;
+	background-repeat: no-repeat;
+    background-position: left 50%;
+	position: absolute;
+	background-image: url("icon_drag-in-progress.png");
+}
+.dragGood { background-image: url("icon_drag-good.png"); }
+.dragBad{ background-image: url("icon_drag-bad.png"); }
+
+.dragCheckImg {
+	font: 1em normal Verdana,Arial,Sans;
+    height: 28px;
+    line-height: 31px;
+	text-align: left;
+	padding-left: 30px;
+	border-top: 1px solid #c2d9f8;
+	border-right: 1px solid #c2d9f8;
+	border-bottom: 2px solid #c2d9f8;
+}
+.dragCheckImg  img {
+	height: 15px;
+	width: auto;
+	margin-right: 0.5em;
+	vertical-align: middle;
+}
+/* System Tools Preference */
+#Preference .FormLabel { font-size: 0.9em; padding-right: 1em; }
+.easytree-title { font-size: 1em; }
+.easytree-title:hover { color: #000; background-color: #DCF1FF; border: none; }
+.easytree-title a:hover { color: #000; background-color: #DCF1FF;}
+ul.easytree-container { font-family: verdana, arial, helvetica;	font-size: 1em; border: none;}
+span.easytree-active a, span.easytree-active span.easytree-title { background-color: #003366 !important; }
+
+/* jquery auto complete combo box styles */
+.custom-combobox {
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-left:10px;
+  margin-right:20px;
+}
+
+.custom-combobox-toggle {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   margin-left: -1px;
+   padding: 0;
+   width:20px;
+   border: 1px solid #979897;
+   border-radius: 5px;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   border-radius: 0;
+   background: -moz-linear-gradient(top,  rgba(252,252,252,1) 1%, rgba(235,235,235,1) 48%, rgba(221,221,221,1) 50%, rgba(207,207,207,1) 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(252,252,252,1)), color-stop(48%,rgba(235,235,235,1)), color-stop(50%,rgba(221,221,221,1)), color-stop(100%,rgba(207,207,207,1))); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%); /* Chrome10+,Safari5.1+ */
+   background: -ms-linear-gradient(top,  rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%); /* IE10+ */
+   background: linear-gradient(to bottom,  rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%); /* W3C */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cfcfcf',GradientType=0 ); /* IE6-9 */
+}
+
+.custom-combobox-input {
+   	width:140px;
+    height: 13px;
+}
+@-moz-document url-prefix() { .custom-combobox-input { height: 15px; } }
+
+.custom-combobox .ui-icon-triangle-south {
+	background-position: -64px -16px;
+}
+
+.custom-combobox .ui-state-default .ui-icon {
+	background-image: url("ui-icons_000000_256x240.png");
+}
+
+/* IE7 don't understand :, so we replace with its html encoding code 3A */
+#Form\3ASelectFont {
+   float: right;
+   height: 18px;
+   margin-left: 10px;
+   margin-top: 2px;
+}
+
+/* jsp page specific styles */
+.DefineRemittanceCoupon .ui-autocomplete {
+  max-height: 100px;
+  margin-left:10px;
+  margin-right:10px;
+  overflow-y: auto;   /* prevent horizontal scrollbar */
+  overflow-x: hidden; /* add padding to account for vertical scrollbar */
+  z-index:1000 !important;
+  width:162px;
+}
+
+.DefineRemittanceCoupon .ui-autocomplete .ui-menu-item {
+  font-size: 0.9em !important;
+}
+
+.full-tab-container {
+    width: 800px !important;
+}
+
+/* Misc visuals
+----------------------------------*/
+
+.Confirmpopup.ui-dialog .ui-dialog-buttonpane button  {
+   font-family: verdana;
+   font-size: 1.1em !important;
+   font-weight: normal;
+   width: 95px;
+   color: #000;
+   border: 1px solid #979897;
+   border-radius: 5px;
+   padding: 0;
+   border-radius: 0;
+   background: -moz-linear-gradient(top,  rgba(252,252,252,1) 1%, rgba(235,235,235,1) 48%, rgba(221,221,221,1) 50%, rgba(207,207,207,1) 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(252,252,252,1)), color-stop(48%,rgba(235,235,235,1)), color-stop(50%,rgba(221,221,221,1)), color-stop(100%,rgba(207,207,207,1))); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%); /* Chrome10+,Safari5.1+ */
+   background: -ms-linear-gradient(top,  rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%); /* IE10+ */
+   background: linear-gradient(to bottom,  rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%); /* W3C */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cfcfcf',GradientType=0 ); /* IE6-9 */
+}
+
+.Confirmpopup .ui-widget-content {
+                border: none;
+}
+
+.Confirmpopup.ui-dialog .ui-widget-content {
+    line-height: 2em;
+}
+
+.Confirmpopup.ui-dialog .ui-dialog-buttonpane {
+    margin-top: 0;
+}
+
+.Confirmpopup.ui-dialog {
+    border: 1px solid #cccccc;
+    width:  auto !important;
+}
+
+.Confirmpopup .ui-button-text-only .ui-button-text {
+    padding: .2em 1em;
+}
+
+/*---------------Style for New Delete Confirmation Dialog-------------------*/
+
+.ui-dialog.confirmBoxStyle .ui-dialog-buttonpane {
+    margin-top: 0;
+    border: 0;
+}
+
+.ui-dialog.confirmBoxStyle {
+	background: #fff;
+	padding: 2em 2em 0.5em 2em;
+	border: 1px solid #222;
+}
+
+.confirmBoxStyle BUTTON {
+	margin-top: 0;
+}
+
+.ui-dialog.confirmBoxStyle + .ui-widget-overlay {
+	background-color: #fff;
+}
+
+.ui-dialog.confirmBoxStyle BUTTON {
+	border: 1px solid #979897;
+	font-size: 1em !important;
+	color: #000;
+	font-weight: normal;
+	width: 80px;
+	border-radius: 5px;
+	border-radius: 0;
+	background: -moz-linear-gradient(top, rgba(252,252,252,1) 1%, rgba(235,235,235,1) 48%, rgba(221,221,221,1) 50%, rgba(207,207,207,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(252,252,252,1)), color-stop(48%,rgba(235,235,235,1)), color-stop(50%,rgba(221,221,221,1)), color-stop(100%,rgba(207,207,207,1)));
+	background: -webkit-linear-gradient(top, rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%);
+	background: -ms-linear-gradient(top, rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%);
+	background: linear-gradient(to bottom, rgba(252,252,252,1) 1%,rgba(235,235,235,1) 48%,rgba(221,221,221,1) 50%,rgba(207,207,207,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cfcfcf',GradientType=0 );
+}
+
+.ui-dialog.confirmBoxStyle .ui-dialog-titlebar {
+    display:none;
+}
+
+
+.ui-dialog.confirmBoxStyle BUTTON:focus {
+      border: 2px solid #000;
+      outline: 1px dotted #000;
+      outline-offset: -4px;
+}

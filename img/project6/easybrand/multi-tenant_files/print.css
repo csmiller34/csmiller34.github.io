@@ -1,0 +1,18 @@
+/* This style sheet is used for printing only.  It will hide navigation and unnecessary layout styles (buttons, lines etc) */
+/* Header Styles */
+#Header		     { visibility: hidden; }
+
+/* Sub Header Styles */
+
+#SubHeader	     { visibility: hidden; }
+
+/* Page Styles */
+.BodyNav          { }
+
+/* Footer Styles */
+#Footer        { visibility: hidden; }
+
+/* Misc */
+.TableButton { visibility: hidden; }
+.TableSeperator { visibility: hidden; }
+#TransportMessage { visibility: hidden; }

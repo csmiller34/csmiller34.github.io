@@ -1,0 +1,44 @@
+
+/* Header Styles */
+#Header		     { background: #fff; padding: 1em;}
+#Header TABLE	 { width: 100%; }
+#Header	TD	     { width:50%; }
+#Header A	     { float: right; color: #000; padding-right: 10px; }
+
+/* Header Button Table Styles */
+.HeaderButton    { float: right; width: 600px; padding-left:10px; }
+.HeaderButton IMG{ float: right; width: 10px; }
+
+/* Sub Header Styles */
+/* --- warning: adjusting things or adding items here may affect the navigation items */
+#SubHeader	     { height: 35px; background-image: url('navBar_bg.gif'); background-repeat: repeat-x; }
+#SubHeader TABLE { width: 100%; }
+#SubHeader .Left { width: 60%; vertical-align: top; }
+#SubHeader .Right{ width: 40%; text-align: right; }
+#SubHeader .User { position: relative; top: -2px; margin: 0px; padding-right: 10px; font-weight: bold; color: #333333; }
+#SubHeader .UserRoles { font-weight:  normal; font-style: italic; font-family: Arial; }
+#SubHeader .DriverStatusUnknown { float: right; text-align: right; text-decoration: none; position: relative; top: -2px; margin: 2px; padding-right: 10px; padding-left: 10px; font-weight: bold; border: 5px; border-color:#000000; color: #000000; background-color: #FFFF33; }
+#SubHeader .DriverStatusUnknown A { text-decoration: none; }
+#SubHeader .DriverStatusDown { float: right; text-align: right; text-decoration: none; position: relative; top: -2px; margin: 2px; padding-right: 10px; padding-left: 10px; font-weight: bold; border: 5px; border-color:#000000; color: #000000; background-color: #FF3333; }
+#SubHeader .DriverStatusDown A { text-decoration: none; }
+#SubHeader .DriverStatusUp { float: right; text-align: right; text-decoration: none; position: relative; top: -2px; margin: 2px; padding-right: 10px; padding-left: 10px; font-weight: bold; border: 5px; border-color:#000000; color: #000000; background-color: #33FF33; }
+#SubHeader .DriverStatusUp A { text-decoration: none; }
+
+/* Page Styles */
+.BodyNav          { background-image: url('bg.gif'); background-repeat: repeat-y; height: 100%; }
+.BodyNoNav        { }
+.TransactionListColumn { width: 165px; padding: 0px; vertical-align: top;}
+.TransactionDetailsColumn { padding: 0px; vertical-align: top;}
+.TransactionTableSummary  { width: 100%; border: 0; padding-top: 2px; padding-bottom: 1px;}
+.TransactionTDListData    { border-bottom: 1px solid #DDDDDD; padding-left: 0; padding-right: 0}
+
+#Page 	          { width: 100%; }
+#Page .PageTable  { width: 100%; padding-left: 12px; padding-right: 12px; }
+#Page .TDSide     { width: 120px; padding: 0px; vertical-align: top; }
+#Page .TDPageCtnt { width: 100%; vertical-align: top; }
+
+/* Footer Styles */
+#Footer        { position: relative; width: 100%; }
+#Footer TABLE  { float: right; padding-right: 10px; }
+#Footer TD     { }
+#Footer SPAN   { color: #999999; }

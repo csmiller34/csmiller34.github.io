@@ -4,13 +4,11 @@
     <title>menu</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-        <g id="Artboard" transform="translate(-4.000000, -7.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
-            <g id="menu" transform="translate(5.000000, 7.000000)">
-                <path d="M0,13 L14,13" id="Line-Copy-2"></path>
-                <path d="M0,7 L14,7" id="Line-Copy"></path>
-                <path d="M0,1 L14,1" id="Line-Copy-3"></path>
-            </g>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="menu" stroke="#FFFFFF" stroke-width="2">
+            <path d="M0,13 L16,13" id="Line-Copy-2"></path>
+            <path d="M0,7 L16,7" id="Line-Copy"></path>
+            <path d="M0,1 L16,1" id="Line-Copy-3"></path>
         </g>
     </g>
 </svg>

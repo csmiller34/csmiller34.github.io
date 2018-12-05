@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i');
-@import url('//fonts.googleapis.com/icon?family=Material+Icons');
 
 /* Scaffolding */
 * {
@@ -48,10 +47,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-   font-size: 3.0rem;
+   font-size: 2.5rem;
    line-height: 1;
    letter-spacing: -.1rem;
    border-bottom: 1px solid #cccc;
+   padding-top: 1rem;
    padding-bottom: 1rem;
 }
 
@@ -61,10 +61,15 @@ h2 {
    letter-spacing: -.1rem;
 }
 
+ul + h3, table + h2, table + h3 {
+   margin-top: 3rem;
+}
+
 h3 {
    font-size: 2.0rem;
    line-height: 1;
    letter-spacing: -.1rem;
+   font-weight: 500;
 }
 
 h4 {
@@ -85,12 +90,26 @@ ul + h5, figure + h5 {
    margin-top: 3rem;
 }
 
+figure + p {
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+}
+
+figure + figure {
+   margin-top: 2rem;
+}
+
 .Résumé h5 {
    float: left;
    margin-left: -22rem;
    width: 21rem;
-   background: #e9ecef;
    padding: 0.5rem 1rem;
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3e8ed+0,e9ecef+100 */
+   background: #e9ecef; /* Old browsers */
+   background: -moz-linear-gradient(top, #ededed 0%, #e9ecef 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(top, #ededed 0%,#e9ecef 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(to bottom, #ededed 0%,#e9ecef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#e9ecef',GradientType=0 ); /* IE6-9 */
 }
 
 .Résumé {
@@ -148,12 +167,11 @@ h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 a {
-   color: #6491b2;
+   color: #00f;
    text-decoration: none;
 }
 
 a:hover, a:active {
-   color: #4f738d;
    text-decoration: underline;
 }
 
@@ -168,7 +186,7 @@ a:hover small {
    color: #777;
 }
 
-strong {
+.strong {
    color: #222;
    font-weight: 700;
 }
@@ -229,6 +247,7 @@ pre>code {
 table {
    width: 100%;
    border-collapse: collapse;
+   border: 1px solid #e5e5e5;
 }
 
 th, td {
@@ -244,6 +263,12 @@ dt {
 
 th {
    color: #444;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9fdff+0,e9ecef+100 */
+background: #e9ecef; /* Old browsers */
+background: -moz-linear-gradient(top, #f9fdff 0%, #e9ecef 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f9fdff 0%,#e9ecef 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f9fdff 0%,#e9ecef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', endColorstr='#e9ecef',GradientType=0 ); /* IE6-9 */
 }
 
 /* Header / Sidebar Top */
@@ -253,11 +278,14 @@ th {
    left: 0; 
    right: 0;
    height: 50px; 
-   box-shadow: 0 1px 5px #aaa;
    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
    z-index: 8000; 
-   background: #2E4051;
-}
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#576673+0,2e4051+100 */
+background: #2E4051; /* Old browsers */
+background: -moz-linear-gradient(top, #435362 0%, #2e4051 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #435362 0%,#2e4051 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #435362 0%,#2e4051 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#435362', endColorstr='#2e4051',GradientType=0 ); /* IE6-9 */}
 
 header {
    position: fixed;
@@ -332,14 +360,29 @@ nav li a {
    color: #fff;
    text-transform: uppercase;
    float: right;
-   background: url("/img/menu.svg") no-repeat right 48%;
    padding-right: 2.5rem;
+   transition: all 0.2s ease-in-out;
+}
+
+.mobile-menu img {
+   position: absolute;
+   right: 0.3rem;
+   top: 1.75rem;
+}
+
+.mobile-menu > img:last-child {
+   opacity: 1;
+   transition: all 0.2s ease-in-out;
 }
 
 .mobile-menu:hover, .mobile-menu:active {
    color: #F1B51C;
-   text-transform: uppercase;
    text-decoration: none;
+   background-size: 0 0, 18px auto;
+}
+
+.mobile-menu:hover > img:last-child, mobile-menu:active > img:last-child {
+   opacity: 0;
 }
 
 nav li a:hover,
@@ -432,7 +475,7 @@ img.pull-left {
    border-bottom: 30px solid #e9ecef;
    opacity: 0.5;
  }
-ul + h2 {
+ figure + h2, ul + h2, figure + h3, ul + h3 {
   margin-top: 4rem;
 }
 
@@ -448,12 +491,24 @@ ol li {
    padding-left: 0.5rem;
 }
 
+ol + figure {
+   margin-top: 2rem;
+}
+
 aside {
-   padding: 1.25rem 1rem;
+   padding: 0.5rem 1rem;
    margin: 0 0 0.5rem 1.25rem;
    float: right;
    width: 25rem;
-   background: #e9ecef;
+   box-shadow: 0 1px 4px #00000044;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9fdff+0,e9ecef+100 */
+background: #e9ecef; /* Old browsers */
+background: -moz-linear-gradient(top, #f9fdff 0%, #e9ecef 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f9fdff 0%,#e9ecef 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f9fdff 0%,#e9ecef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', endColorstr='#e9ecef',GradientType=0 ); /* IE6-9 */
+
 }
 
 aside h1 {
@@ -490,7 +545,7 @@ aside img {
    transition: all 0.2s ease-in-out;
    box-shadow: 0 1px 6px #00000033;
    background-repeat: no-repeat;
-   background-position: 1rem 50%;
+   background-position: 1rem 1.25rem;
    background-size: 25px 25px; 
    min-width: 200px;
    max-width: 300px;
@@ -499,7 +554,7 @@ aside img {
    padding: 1rem 1rem 1rem 5rem;
 }
 
-.card label {
+label {
    font-weight: 600;
 }
 
@@ -523,8 +578,6 @@ aside img {
 
 .card:nth-child(3) {
   background-image: url("../img/project3.svg");
-  background-size: 36px;
-  background-position: 1rem calc(50% + 18px); 
 }
 
 .card:nth-child(4) {
@@ -536,15 +589,15 @@ aside img {
 }
 
 .card:nth-child(6) {
-  background-image: url("../img/project4.svg");
+  background-image: url("../img/project6.svg");
 }
 
 .card:nth-child(7) {
-  background-image: url("../img/project4.svg");
+  background-image: url("../img/project7.svg");
 }
 
 .card:nth-child(8) {
-  background-image: url("../img/project4.svg");
+  background-image: url("../img/project8.svg");
 }
 */
 .portfolio-item-image {
@@ -618,15 +671,18 @@ figcaption {
 
 .iframe-holder {
    position: relative;
-   width: 590px;
-   height: 430px;
+   width: 570px;
+   height: 420px;
    margin-bottom: 5rem;
    border: 1px solid #ccc;
+   background: url("/img/loading.png") no-repeat 50% 50%;
+}
+.iframe-holder.easybrand {
+   padding: 1rem;
+   height: 520px;
+   background: none;
 }
 .iframe-holder iframe {
-   position: absolute;
-   top: 0;
-   left: -30px;
    width: 100%;
    height: 100%;
 }
@@ -634,17 +690,19 @@ figcaption {
    position: absolute;
    bottom: -30px;
 }
+.iframe-holder.easybrand figcaption {
+   left: 0;
+   bottom: -25px;
+}
 .pager-container {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   margin-bottom: 0.5rem;
 }
 
 .pager {
    text-align: center;
    align-self: center;
-   padding-left: 4rem;
 }
 
 .current-page {
@@ -685,11 +743,26 @@ figcaption {
 .siema3a .siema-btn {
    top: 200px;
 }
+.siema3b .siema-btn {
+   top: 200px;
+}
+.siema4a .siema-btn {
+   top: 200px;
+}
+.siema4b .siema-btn {
+   top: 180px;
+}
 .siema5a .siema-btn {
+   top: 200px;
+}
+.siema5b .siema-btn {
    top: 220px;
 }
-.siema7a .siema-btn {
-   top: 210px;
+.siema5c .siema-btn {
+   top: 200px;
+}
+.siema6a .siema-btn {
+   top: 150px;
 }
 .siema-btn.siema-active {
    opacity: 1.0;
@@ -714,16 +787,15 @@ figcaption {
 }
 
 .lum-lightbox-image-wrapper:after {
-   content: "\e5cd";
+   content: " ";
+   background: url("../img/cancel.svg") no-repeat;
+   background-size: 36px;
+   height: 36px;
+   width: 36px;
    position: absolute;
+   top: 1rem;
    right: 0;
-   top: -1rem;
-   font-size: 4rem;
-   color: #ffffff;
-   font-weight: 900;
    cursor: pointer;
-   font-family: 'Material Icons';
-   text-shadow: 0 0 6px #000;
 }
 
 .lightbox-gallery {
@@ -742,6 +814,52 @@ figcaption {
    font-weight: 600;
 }
 
+
+.welcome {
+   padding-top: 5rem;
+   padding-left: 10rem;
+   padding-right: 10rem;
+}
+
+.table-800 {
+   max-width: 800px;
+}
+
+.table-methodology th, .table-methodology td {
+   text-align: center;
+}
+
+.table-methodology img {
+   width: 18px;
+   height: 18px;
+}
+
+.table-side-head {
+   margin-top: 3rem;
+}
+
+.table-side-head th, .table-side-head td  {
+   vertical-align: top;
+}
+
+.table-side-head th {
+   border-bottom: 1px solid #fff;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9fdff+0,e9ecef+100 */
+background: #f9fdff; /* Old browsers */
+background: -moz-linear-gradient(left, #f9fdff 0%, #e9ecef 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #f9fdff 0%,#e9ecef 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #f9fdff 0%,#e9ecef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', endColorstr='#e9ecef',GradientType=1 ); /* IE6-9 */
+}
+
+.table-side-head p {
+   margin-top: 0;
+}
+
+.table-500 {
+   max-width: 500px;
+}
+
 /* Responsive Adjustments */
 
 @media print, screen and (max-width:1300px) {
@@ -749,7 +867,7 @@ figcaption {
       width: 960px;
    }
    .card-group {
-      grid-template-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto;
    }
 
    .phone {
@@ -766,7 +884,7 @@ figcaption {
       width: 900px;
    }
    .card-group {
-      grid-template-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto;
    }
    .phone-attribute {
       height: 50px;
@@ -847,15 +965,6 @@ figcaption {
    .pagination li a.active:hover {
       background: #f8f8f8;
    }
-   /* Footer / Sidebar */
-   footer {
-      font-size: 14px;
-      text-align: center;
-      width: 275px;
-      float: left;
-      position: fixed;
-      bottom: 50px;
-   }
    img.avatar {
       border-radius: 40px;
       -webkit-border-radius: 40px;
@@ -886,14 +995,6 @@ figcaption {
    header a small {
       display: inline;
    }
-   footer {
-      text-align: center;
-      max-width: 100%;
-      position: static;
-      width: 200px;
-      margin: 3em auto 0 auto;
-      float: none;
-   }
    .card-group {
       grid-template-columns: auto auto auto;
    }   
@@ -905,6 +1006,7 @@ figcaption {
    }
    .tablet {
       width: 360px;
+      margin-bottom: 1rem;
    }
 }
 
@@ -914,6 +1016,9 @@ figcaption {
    }   
    .mobile-menu {
       display: block;
+   }
+   .card-group {
+      grid-template-columns: auto auto;
    }
    nav ul {
       display: none;
@@ -1011,7 +1116,13 @@ figcaption {
    .Résumé h5 + h6 {
      margin-top: 0;
    }
-   
+}
+
+@media print, screen and (max-width: 600px) {
+   .welcome {
+      padding-left: 0;
+      padding-right: 0;
+   }
 }
 
 @media print, screen and (max-width:648px) {
@@ -1041,10 +1152,9 @@ figcaption {
    header a small {
       display: inline;
    }
-   footer {
-      text-align: center;
-      max-width: 400px;
-      margin: 0 auto;
+   .welcome {
+      padding-left: 0;
+      padding-right: 0;
    }
 }
 
@@ -1059,9 +1169,3 @@ figcaption {
    }
  
 }
-
-body.welcome section {
-   padding-left: 10rem;
-   padding-right: 10rem;
-}
-

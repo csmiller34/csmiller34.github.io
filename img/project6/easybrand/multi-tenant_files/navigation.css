@@ -1,0 +1,100 @@
+/* Navigation Styles */
+#Nav               { float: left; width: 800px; height: 35px; }
+#Nav UL            { position: relative; top: 0; left: 8px; width: 100%; list-style-type: none;  height: 35px; margin: 0px; padding: 0px; }
+#Nav LI            { float: left; display: block; text-align: center; }
+#Nav SPAN          { line-height: 35px;; padding-left: 10px; padding-right: 10px; margin: 0px; text-transform: uppercase; }
+#Nav IMG           { position: relative; height: 35px; width: 5px; display: none; }
+#Nav A		       { position: relative; background-repeat: repeat-x; height: 35px; display: block; font-family:Tahoma; text-decoration: none; color: #000000; font-size: 1.0em; }
+* HTML #Nav A      { display: inline; }
+#Nav A:Hover       {  }
+
+#Nav .StartOn      {  } 
+#Nav A.NavOn       {  color: black; font-weight: bold; }
+#Nav A:Hover.NavOn {  }
+#Nav .EndOn	       {  } 
+
+#Nav .StartOff     {  } 
+#Nav A.NavOff      {  color: black;  }
+#Nav A:Hover.NavOff{ color: #000000; text-decoration: underline; }
+#Nav .EndOff       {   } 
+
+/* Side Navigation Styles */
+#SideNav           { width: 120px; height: 100%; position: relative; left: -12px; }
+body*#SideNav    { left: 0; }
+#SideNav UL        { width: 100%; list-style-type: none;  height: 25px; margin: 0px; padding: 0px; padding-top: 10px; padding-bottom: 30px; }
+#SideNav LI        { display: block; margin-bottom: 5px; }
+#SideNav SPAN      { position: relative; top: 5px; margin: 0px; }
+#SideNav A         { position: relative; height: 25px; display: block; font-family: Tahoma; text-decoration: none; color: #000000; font-size: 1.0em; }
+#SideNav A:Hover   {  }
+
+#SideNav .StartOn  { background-image: url('spacer.gif'); width: 5px; } 
+#SideNav A.NavOn   { background-color: #70BE60; font-weight: bold; }
+#SideNav A:Hover.NavOn {  }
+#SideNav .EndOn	    { background-image: url('spacer.gif'); width: 5px; } 
+
+#SideNav .StartOff { background-image: url('spacer.gif'); width: 5px; } 
+#SideNav A.NavOff  { }
+#SideNav A:Hover.NavOff{ background-color: #70BE60; }
+#SideNav .EndOff   { background-image: url('spacer.gif'); width: 5px; } 
+
+/* FILTER STYLES */
+.TableHeader       { position: relative; }
+.HeaderLink        { }
+.HeaderLink P      { margin: 0px; }
+.HeaderLink A 	   { color: #003366; }
+.HeaderLink A:Hover{ color: #336699; }
+
+.FilterBoxHide     { float: left; position: absolute; top: 120px; left: 40%; display: none; }
+
+.FilterBoxShow     { float: left; position: absolute; bottom: 2.5em; z-index: 5000;  border: 1px solid #333333; background-color: #F0F0F0; padding: 0.25em 0.5em 0.5em 0.5em; }
+.FilterBoxShow P   { clear: both; text-align: left; padding-top: 0.25em; padding-bottom: 0.25em; margin: 0px; }
+.FilterBoxShow SPAN{ float: left; }
+P.FilterInputs     { padding-top: 2px; padding-bottom: 1px; }
+P.FilterFormat     { font-weight: bold; color: #880000; }
+INPUT.FilterButton { font-size: 1.0em; width: 75px; margin-right: 3px; font-weight:  normal; }
+
+.FilterInfo { }
+.FilterInfo P { margin: 0px; }
+
+/* List Pagination Styles */
+#PaginationContent, #PaginationContentTop { margin-top:3px; border: 1px solid #999999; width: 100%; height: 18px; }
+#Pagination, #PaginationTop { border-right: 1px solid #999999; border-bottom: 1px solid #cdcdcd; border-top: 1px solid #cdcdcd; background-color: #cdcdcd; padding-top: 2px; padding-bottom: 2px; float: left; }
+
+#PageSizeSelector, #PageSizeSelectorTop { padding: 2px; padding-left: 10px; padding-right: 10px; float: left; }
+#PageSizeSelector A, #PageSizeSelectorTop A { color: #003366; font-weight: bold; padding: 2px; text-decoration: none; }
+#PageSizeSelector A:Hover, #PageSizeSelectorTop A:Hover { color: #336699; }
+#PageSizeSelector FONT, #PageSizeSelectorTop FONT { padding: 2px; }
+
+#PageInfo, #PageInfoTop { padding: 2px; float: right; }
+
+#Pagination .TextTDPaginationSelected, #PaginationTop .TextTDPaginationSelected { color: #000000; margin-left: 1px; margin-right: 1px; background-color: #FFFFFF; padding: 2px;}
+#Pagination A.TextTDPaginationSelected, #PaginationTop A.TextTDPaginationSelected {  }
+#Pagination A:Hover.TextTDPaginationSelected, #PaginationTop A:Hover.TextTDPaginationSelected {  }
+#Pagination .TextTDPagination, #PaginationTop .TextTDPagination { color: #555555; padding: 2px; margin-left: 1px; margin-right: 1px; }
+#Pagination A.TextTDPagination, #PaginationTop A.TextTDPagination { color: #003366; text-decoration: none; }
+#Pagination A:Hover.TextTDPagination, #PaginationTop A:Hover.TextTDPagination { background-color: #FFFFFF; }
+
+/* AJAX Check Updater */
+#itemUpdater    { width: 250px; position: absolute; background: #F0F0F0; border: 1px solid #333333; padding: 0px; text-align:center; font-size: 1.0em; color: #333333; z-index: 100; }
+.itemUpdaterHide{ visibility: hidden; position: absolute; top: -300px; }
+.itemUpdaterShow{  }
+#updaterHeader  { width: 100%; height: 15px; background: #cdcdcd; font-size: 12px; line-height: 15px; border-bottom: 1px solid #999999; }
+#updaterHeader .updaterTitle { float: left; color: #333333; font-weight:bold; margin-left:5px; }
+#updaterHeader .updaterClose { filter:alpha(opacity=60); -moz-opacity: 0.6; float:right; }
+#updaterHeader IMG { border-bottom: 1px solid #999999; border-left: 1px solid #999999; }
+
+#legend         { width: 100%; margin-top: 5px; margin-bottom: 5px; }
+.legendSent, .legendReady { width: 10px; height: 15px; line-height:12px; font-size:12px; margin-left: 10px; margin-right: 10px; }
+.legendSent     { background: #99AACC; }
+.legendReady    { background: #AACCBB; }
+
+.itemsFailedShow, #progressBar { width: 100%; height: 15px;  border-top: 1px solid #666666; border-bottom: 1px solid #666666; line-height:10px; text-align:center; }
+.jammedStringShow, #progressBar { width: 100%; height: 15px;  border-top: 1px solid #666666; border-bottom: 1px solid #666666; line-height:10px; text-align:center; }
+#progressSent   { width: 50%; background: #99AACC; }
+#progressReady  { width: 50%; background: #AACCBB; } 
+.itemsFailedHide{ visibility: hidden; position: absolute; top: -1000px; }
+.itemsFailedShow{ background: #CC6666; vertical-align: middle; font-size: 1.0em; color: #333333; border-top: 0px; }
+.jammedStringHide{ visibility: hidden; position: absolute; top: -1000px; }
+.jammedStringShow{ background: #FFFF99; vertical-align: middle; font-size: 1.0em; color: #CC0033; border-top: 0px; }
+#itemUpdater P  { margin: 5px; padding: 0px; }
+.WatermarkButton{ font-size: 1.0em; width: 70px; font-weight: normal; }
