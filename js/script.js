@@ -75,7 +75,7 @@ function rightArrow(that) {
   showHideArrows(root.parentElement, '.arrow-left', 'show')
 }
 function showHideArrows(root, whichArrow, whichDirection) {
-  if (whichDirection == "show") {
+  if (whichDirection === "show") {
       root.querySelector(whichArrow).style.display = "block";
       root.querySelector(whichArrow).classList.remove('hide-element');
   } else { 
@@ -121,11 +121,14 @@ new LuminousGallery(document.querySelectorAll('.lightbox-gallery'), galleryOpts,
    caption: function (trigger) { return trigger.querySelector('img').getAttribute('alt');  } 
 });
 
-document.querySelector('.mobile-menu').addEventListener('click', function() {
+document.querySelector('.mobile-menu').addEventListener('click', showHideMenu);
+document.querySelector('.mobile-menu').addEventListener('blur', showHideMenu);
+
+function showHideMenu() {
    var showHide = document.querySelector('nav ul');
-   if ((showHide.style.display == 'none') || (showHide.style.display == '')) {
+   if ((showHide.style.display === 'none') || (showHide.style.display === '')) {
       showHide.style.display = "block";
    } else {
       showHide.style.display = "none";
    }
-})
+}
