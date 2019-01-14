@@ -61,6 +61,10 @@ h2 {
    letter-spacing: -.1rem;
 }
 
+.welcome h2 {
+   font-size: 2.4rem;
+}
+
 ul + h3, table + h2, table + h3 {
    margin-top: 3rem;
 }
@@ -102,14 +106,13 @@ figure + figure {
 .Résumé h5 {
    float: left;
    margin-left: -22rem;
-   width: 21rem;
-   padding: 0.5rem 1rem;
-   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3e8ed+0,e9ecef+100 */
-   background: #e9ecef; /* Old browsers */
-   background: -moz-linear-gradient(top, #ededed 0%, #e9ecef 100%); /* FF3.6-15 */
-   background: -webkit-linear-gradient(top, #ededed 0%,#e9ecef 100%); /* Chrome10-25,Safari5.1-6 */
-   background: linear-gradient(to bottom, #ededed 0%,#e9ecef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#e9ecef',GradientType=0 ); /* IE6-9 */
+   width: 20rem;
+   padding: 0.5rem;
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3e8ed+0,e9ecef+100 
+   background: #e9ecef; 
+   background: linear-gradient(to bottom, #ededed 0%,#e9ecef 100%);
+   */
+   border-top: 3px solid #ccc;
 }
 
 .Résumé {
@@ -125,7 +128,7 @@ figure + figure {
 }
 
 .Résumé h1 + h5 + ul {
-   margin-top: 2rem;
+   margin-top: 0;
 }
 
 .Résumé h5 + h6 {
@@ -500,18 +503,18 @@ ol + figure {
 
 aside {
    padding: 0.5rem 1rem;
-   margin: 0 0 0.5rem 1.25rem;
+   margin: 0 0 1rem 1.25rem;
    float: right;
    width: 25rem;
    box-shadow: 0 1px 4px #00000044;
 
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9fdff+0,e9ecef+100 */
-background: #e9ecef; /* Old browsers */
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9fdff+0,e9ecef+100 */
+   background: #e9ecef; /* Old browsers */
 
-background: -moz-linear-gradient(top, #f9fdff 0%, #e9ecef 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #f9fdff 0%,#e9ecef 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #f9fdff 0%,#e9ecef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', endColorstr='#e9ecef',GradientType=0 ); /* IE6-9 */
+   background: -moz-linear-gradient(top, #f9fdff 0%, #e9ecef 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(top, #f9fdff 0%,#e9ecef 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(to bottom, #f9fdff 0%,#e9ecef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', endColorstr='#e9ecef',GradientType=0 ); /* IE6-9 */
 }
 
 aside h1 {
@@ -1103,6 +1106,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', end
       float: none;
       margin-left: 0;
       width: 100%;
+      border: none;
    }
    
    .Résumé {
