@@ -125,6 +125,7 @@ document.querySelector('.mobile-menu').addEventListener('click', showHideMenu);
 document.querySelector('.mobile-menu').addEventListener('blur', showHideMenu);
 
 function showHideMenu() {
+   console.log("test")
    var showHide = document.querySelector('nav ul');
    if ((showHide.style.display === 'none') || (showHide.style.display === '')) {
       showHide.style.display = "block";
