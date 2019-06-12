@@ -401,8 +401,9 @@ nav li a:active {
 /* Footer / Sidebar */
 
 footer {
-   text-align: center;
+   text-align: left;
    margin-top: 3rem;
+   margin-bottom: 1rem;
    padding-top: 0;
    font-size: 14px;
    border-top: 1px solid #ccc;
@@ -1032,7 +1033,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', end
       position: absolute;
       top: 4rem;
       right: -4rem;
-      height: 20rem;
+      height: 28rem;
       padding-bottom: 1rem;
       border-radius: 0;
       background: #2E4051;
@@ -1046,11 +1047,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', end
    nav li a {
       color: #fff;
       display: block;
-      line-height: 3.5em;
-      height: 4rem;
-      width: 16rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+      line-height: 6rem;
+      height: 6rem;
+      font-size: 2rem;
+      width: 18rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      transition: none;
    }
    nav li:hover a, nav li a:active {
       background: #F1B51C;
