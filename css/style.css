@@ -10,7 +10,7 @@ html {
    font-size: 62.5%;
 }
 body {
-   font-size: 1.5em;
+   font-size: 1.5rem;
    line-height: 1.5;
    font-weight: 400;
    font-family: "Raleway", Helvetica, Arial, sans-serif;
@@ -64,15 +64,15 @@ h2 {
    font-size: 2.4rem;
 }
 
-ul + h3, table + h2, table + h3 {
+ul + h3, table + h2, table + h3, p + h3 {
    margin-top: 3rem;
 }
 
 h3 {
-   font-size: 2.0rem;
+   font-size: 1.75rem;
    line-height: 1;
-   letter-spacing: -.1rem;
-   font-weight: 500;
+/*   letter-spacing: -.1rem; */
+   font-weight: 700;
 }
 
 h4 {
@@ -123,20 +123,20 @@ figure + figure {
 }
 
 .Résumé h5 + ul {
-   margin-top: 2.75rem;
+   margin-top: 3.75rem;
 }
 
 .Résumé h1 + h5 + ul {
-   margin-top: 0;
+   margin-top: 2.5rem;
 }
 
 .Résumé h5 + h6 {
-   margin-top: 2.2em;
+   margin-top: 2.4em;
    margin-bottom: 1rem;
 }
 
 .Résumé h6 {
-   font-size: 1.5rem;
+   font-size: 1.75rem;
    line-height: 1;
    letter-spacing: 0;
    font-weight: 600;
@@ -1055,6 +1055,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', end
 }
 
 @media print, screen and (max-width:900px) {
+   body {
+      font-size: 1.75rem;
+   }
+
    div.wrapper {
       width: 680px;
    }   
