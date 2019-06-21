@@ -21,7 +21,6 @@ body {
    position: relative;
    width: 1145px;
    margin: 0 auto;
-   *zoom: 1;
 }
 
 .wrapper:before,
@@ -298,10 +297,11 @@ header {
    width: inherit;
    line-height: 50px;
    z-index: 9000;
+   display: flex;
+   justify-content: space-between
 }
 
 header .brand {
-   float: left;
    white-space: nowrap;
    font-size: 2rem;
    font-weight: 500;
@@ -320,6 +320,8 @@ header .subbrand {
    font-size: 1.5rem;
    font-weight: 300;
    margin-left: 2rem;
+   position: relative;
+   bottom: 2px;
 }
 
 header h1 {
@@ -329,7 +331,6 @@ header h1 {
 
 /* Navbar */
 nav {
-   float: right;
    white-space: nowrap;
 }
 
@@ -337,10 +338,9 @@ nav ul {
    list-style: none;
    height: 24px;
    padding: 0;
-   border-radius: 5px;
    width: auto;
    transition: opacity 0.5s ease-in-out;
-   float: right;
+   text-align: center;
 }
 
 nav li {
@@ -365,7 +365,6 @@ nav li a {
    display: none;
    color: #fff;
    text-transform: uppercase;
-   float: right;
    padding-right: 2.5rem;
    transition: all 0.2s ease-in-out;
 }
@@ -868,6 +867,43 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', end
    max-width: 500px;
 }
 
+.mobile-menu-container {
+   display: none;
+   position: absolute;
+   z-index: 100;
+   top: 50px;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: #2E4051;
+}
+
+.mobile-menu-container ul {
+   height: calc(100% - 50px);
+   text-align: center;
+}
+.mobile-menu-container li {
+   display: block;
+   text-align: center;
+   padding: 0;
+   width: 100%;
+}
+.mobile-menu-container li a {
+   color: #fff;
+   display: block;
+   line-height: 6rem;
+   height: 6rem;
+   font-size: 2rem;
+   margin-top: 5rem;
+   margin-bottom: 5rem;
+   transition: none;
+}
+.mobile-menu-container li:hover a, nav li a:active {
+   color: #303030;
+   background: #F1B51C;
+}
+
+
 /* Responsive Adjustments */
 
 @media print, screen and (max-width:1300px) {
@@ -1028,43 +1064,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', end
    .card-group {
       grid-template-columns: auto auto;
    }
-   nav ul {
-      display: none;
-      position: absolute;
-      top: 4rem;
-      right: -4rem;
-      height: 28rem;
-      padding-bottom: 1rem;
-      border-radius: 0;
-      background: #2E4051;
-   }
-   nav li {
-      display: block;
-      text-align: right;
-      padding: 0;
-      width: 100%;
-   }
-   nav li a {
-      color: #fff;
-      display: block;
-      line-height: 6rem;
-      height: 6rem;
-      font-size: 2rem;
-      width: 18rem;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      transition: none;
-   }
-   nav li:hover a, nav li a:active {
-      background: #F1B51C;
-      color: #303030;
-   }
 }
 
 @media print, screen and (max-width:760px) {
-   nav ul {
+/*   nav ul {
       right: -1rem;
-   }
+   } */
 }
 
 @media print, screen and (max-width:720px) {
@@ -1101,9 +1106,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', end
    pre, pre>code {
       word-wrap: normal;
    }
-   nav ul {
+/*   nav ul {
       right: 2rem;
-   }
+   } */
 
    .Résumé h5 {
       float: none;

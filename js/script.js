@@ -121,20 +121,28 @@ new LuminousGallery(document.querySelectorAll(".lightbox-gallery"), galleryOpts,
 document.querySelector(".mobile-menu").addEventListener("click", showHideMenu);
 document.querySelector(".mobile-menu").addEventListener("blur", showHideMenu);
 
-function showHideMenu() {
-   var showHide = document.querySelector("nav ul");
-   if ((showHide.style.display === "none") || (showHide.style.display === "")) {
-      showHide.style.display = "block";
+function showHideMenu(e) {
+   if (document.querySelector(".mobile-menu-container").style.display === "block") {
+      document.querySelector(".mobile-menu-container").style.display = "none";
    } else {
-      showHide.style.display = "none";
+      document.querySelector(".mobile-menu-container").style.display = "block";
    }
 }
 
-document.querySelectorAll("nav > ul > li > a").forEach( elem => {
-   elem.addEventListener("mouseup", chooseMobileMenu);
-   elem.addEventListener("touch", chooseMobileMenu);
+document.querySelectorAll("nav a").forEach( elem => {
+   elem.addEventListener("click", function() {
+      window.location.href = this.getAttribute("href");
+   });
 });
 
-function chooseMobileMenu() {
-   window.location.href = this.getAttribute("href");
-}
+ul = document.createElement("ul");
+document.querySelector(".mobile-menu-container").appendChild(ul);
+document.querySelectorAll("header nav ul li").forEach( el => {
+   li = el.cloneNode(true);
+   document.querySelector(".mobile-menu-container ul").append(li);
+   document.querySelector(".mobile-menu-container ul li:last-child a").addEventListener("mousedown", function(e) {
+      window.location.href = this.getAttribute("href");
+      e.preventDefault();
+   });
+});
+
