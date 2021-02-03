@@ -1,5 +1,47 @@
---- layout: general title: Securing the Application ---
-<aside>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio | Craig Miller</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="/css/luminous-basic.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+</head>
+
+<body>
+    <div class="header-background"></div>
+    <div class="wrapper">
+        <header>
+            <a href="/" class="brand">Craig Miller<span class="subbrand">UX/UI Designer</span></a>
+            <div>
+                <a href="#" class="mobile-menu">Menu<img src="../img/menu-hover.svg"><img src="../img/menu.svg"></a>
+                <nav role="navigation">
+                    <ul>
+                        <li>
+                            <a href="/">welcome</a>
+                        </li>
+                        <li>
+                            <a href="/portfolio">portfolio</a>
+                        </li>
+                        <li>
+                            <a href="/process">process</a>
+                        </li>
+                        <li>
+                            <a href="/resume">résumé</a>
+                        </li>
+                        <li>
+                            <a href="/about">about</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+              <section class="Securing the Application">
+         <h1 class="content">Securing the Application</h1>
+         <aside>
     <h1>Summary</h1>
     <p>Designed the user authentication UI for our mobile application so that it could be added seamlessly into a customer's existing environment. Based on this design, refactored our web application user authentication to be consistent with the mobile app.</p>
     <h1>Roles</h1>
@@ -45,9 +87,9 @@
     By working through these and other scenarios, I began mapping out interactions between the user, screens, and system. Working with the Development team, I drafted, reviewed, and updated the flow until we had a model of the application. The result was
     the following flow diagram:
 </p>
-<figure class="portfolio-item-image lightbox" href="/img/project1/mobile-flow.png">
-    <img id="mobile-flow" src="/img/project1/mobile-flow.png" alt="Mobile client flow diagram">
-    <figcaption class="caption-image">Mobile client flow diagram</figcaption>
+<figure class="portfolio-item-image mobile-size lightbox" href="/img/project1/mobile-flow.png">
+   <img id="mobile-flow" src="/img/project1/mobile-flow.png" alt="Mobile client flow diagram">
+   <figcaption>Mobile client flow diagram</figcaption>
 </figure>
 <p>
     Around the same time as I was working on the flow diagram I also began constructing wireframes of the new and updated screens. As with any project, some of changes resulted in competing designs. To resolve design conflicts, we met as a team to understand
@@ -123,3 +165,26 @@
 <p>
     Once completed, I presented the mock-ups to stakeholders. After some discussion and minor changes, the mock-ups were approved and linked to JIRA stories to begin development.
 </p>
+
+      </section>
+      
+
+
+        <footer>
+            <p>
+                <small>&copy;2020 Craig Miller</small>
+            </p>
+        </footer>
+    </div>
+    <nav role="navigation" class="mobile-menu-container"></nav>
+
+    <a unselectable="on" class="go-to-top go-to-top-hidden">
+        <div class="go-to-top-arrow"></div>Top</a>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/siema.min.js"></script>
+    <script src="/js/luminous.min.js"></script>
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>
