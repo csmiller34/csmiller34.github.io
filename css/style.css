@@ -1269,6 +1269,7 @@ screen and (max-width:700px) {
         margin-left: 0;
         width: 100%;
         border: none;
+        background: #eee;
     }
 
     .Résumé {
@@ -1281,6 +1282,10 @@ screen and (max-width:700px) {
 
     .Résumé h5+ul {
         margin-top: 0;
+    }
+
+    .Résumé h5+ul:last-of-type {
+        margin-top: 0rem;
     }
 
     .Résumé h5+h6 {
