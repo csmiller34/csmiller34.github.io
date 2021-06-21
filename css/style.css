@@ -134,15 +134,20 @@ figure+figure {
 }
 
 .Résumé h5+ul {
-    margin-top: 3.75rem;
+    margin-top: 4.75rem;
 }
 
+.Résumé h5+ul:last-of-type {
+    margin-top: 4rem;
+}
+
+
 .Résumé h1+h5+ul {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
 }
 
 .Résumé h5+h6 {
-    margin-top: 2.4em;
+    margin-top: 2.9em;
     margin-bottom: 1rem;
 }
 
