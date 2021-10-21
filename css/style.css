@@ -17,6 +17,7 @@ body {
     font-weight: 400;
     font-family: "Raleway", Helvetica, Arial, sans-serif;
     transition: 0.3s all ease-in-out;
+    background-color: #fff;
 }
 
 .wrapper {
@@ -118,8 +119,8 @@ figure+figure {
     margin-left: -22rem;
     width: 20rem;
     padding: 0.5rem;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3e8ed+0,e9ecef+100 
-   background: #e9ecef; 
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3e8ed+0,e9ecef+100
+   background: #e9ecef;
    background: linear-gradient(to bottom, #ededed 0%,#e9ecef 100%);
    */
     border-top: 3px solid #ccc;
@@ -322,16 +323,16 @@ th {
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
     z-index: 8000;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#576673+0,2e4051+100 */
-    background: #2E4051;
-    /* Old browsers */
+    background: #03427A;
+    /* Old browsers
     background: -moz-linear-gradient(top, #435362 0%, #2e4051 100%);
-    /* FF3.6-15 */
+     FF3.6-15
     background: -webkit-linear-gradient(top, #435362 0%, #2e4051 100%);
-    /* Chrome10-25,Safari5.1-6 */
+     Chrome10-25,Safari5.1-6
     background: linear-gradient(to bottom, #435362 0%, #2e4051 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+     W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#435362', endColorstr='#2e4051', GradientType=0);
-    /* IE6-9 */
+     IE6-9 */
 }
 
 header {
@@ -369,7 +370,6 @@ header .subbrand {
 header h1 {
     margin-bottom: 2rem;
 }
-
 
 /* Navbar */
 nav {
@@ -566,17 +566,17 @@ aside {
     box-shadow: 0 1px 4px #00000044;
 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9fdff+0,e9ecef+100 */
-    background: #e9ecef;
-    /* Old browsers */
+    background: #F3F5F8;
+    /* Old browsers
 
     background: -moz-linear-gradient(top, #f9fdff 0%, #e9ecef 100%);
-    /* FF3.6-15 */
+    /* FF3.6-15
     background: -webkit-linear-gradient(top, #f9fdff 0%, #e9ecef 100%);
-    /* Chrome10-25,Safari5.1-6 */
+    /* Chrome10-25,Safari5.1-6
     background: linear-gradient(to bottom, #f9fdff 0%, #e9ecef 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9fdff', endColorstr='#e9ecef', GradientType=0);
-    /* IE6-9 */
+    IE6-9 */
 }
 
 aside h1 {
@@ -612,12 +612,13 @@ aside img {
     display: block;
     transition: all 0.2s ease-in-out;
     box-shadow: 0 1px 6px #00000033;
+    background-color: #F3F5F8;
     background-repeat: no-repeat;
     background-position: 1rem 1.25rem;
     background-size: 25px 25px;
     min-width: 200px;
     max-width: 300px;
-    min-height: 100px;
+    min-height: 154px;
     color: #1b2630;
     padding: 1rem 1rem 1rem 5rem;
 }
@@ -914,7 +915,6 @@ figcaption {
     padding-right: 0.5rem;
     font-weight: 600;
 }
-
 
 .welcome {
     padding-top: 5rem;
