@@ -114,60 +114,6 @@ figure+figure {
     margin-top: 2rem;
 }
 
-.Résumé h5 {
-    float: left;
-    margin-left: -22rem;
-    width: 20rem;
-    padding: 0.5rem;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3e8ed+0,e9ecef+100
-   background: #e9ecef;
-   background: linear-gradient(to bottom, #ededed 0%,#e9ecef 100%);
-   */
-    border-top: 3px solid #ccc;
-}
-
-.Résumé {
-    padding-left: 22rem;
-}
-
-.Résumé h1 {
-    margin-left: -22rem;
-}
-
-.Résumé h5+ul {
-    margin-top: 4.8rem;
-}
-
-.Résumé h5+ul:last-of-type {
-    margin-top: 3.75rem;
-}
-
-.Résumé h1+h5+ul {
-    margin-top: 2.9rem;
-}
-
-.Résumé h5+h6 {
-    margin-top: 2.85em;
-    margin-bottom: 1rem;
-}
-
-.Résumé h6 {
-    font-size: 1.75rem;
-    line-height: 1;
-    letter-spacing: 0;
-    font-weight: 600;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-}
-
-.Résumé ul li {
-    margin-bottom: 1rem;
-}
-
-.Résumé ul li ul {
-    margin-top: 1rem;
-}
-
 ul+h6 {
     margin-top: 2rem;
 }
@@ -197,7 +143,7 @@ h6 a:hover {
 }
 
 a {
-    color: #00f;
+    color: #2A74D0;
     text-decoration: none;
 }
 
