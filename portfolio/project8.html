@@ -50,72 +50,63 @@
                 </nav>
             </div>
         </header>
-              <section class="Windows Applications">
-         <h1 class="content">Windows Applications</h1>
+              <section class="Miscellaneous Applications">
+         <h1 class="content">Miscellaneous Applications</h1>
          <aside>
     <h1>Summary</h1>
-    <p>Various MS Windows application design</p>
+    <p>Various application designs with different requirements</p>
     <h1>Roles</h1>
     <p>UI/UX Designer, Python programmer</p>
 </aside>
 
-<p>This is a collection of additional designs I created for various Windows-based products.</p>
+<p>This is a small assortment of applications I worked on for various projects.</p>
 
-<h3>Cash Letter Utility</h3>
+<h3>Designer</h3>
+<p>Designer is a general-purpose front-end UI for several different configuration files. It provides a central location from which administrators and customer support personnel can configure the item processing unit. This project was challenging because we needed to review each configuration file to determine the best way to represent the various settings on the screen. For example, fields with unrestricted values required text inputs while others with restricted values required dropdowns or comboboxes. Still others had a range of values, requiring a data table with cells of dropdowns or input fields.</p>
 
-<p>The following design was for an application that lets users collate a large collection of 
-    individual branch deposits so they can be ingested into the bank's core system.
-</p>
-
-<figure class="portfolio-item-image lightbox" href="/img/project8/00-cashletter.png">
-    <img id="version1" src="/img/project8/00-cashletter.png" alt="Version 1">
-    <figcaption class="caption-image">Cash Letter Utility</figcaption>
-</figure>
-
-<h3>Focus Groups Utility</h3>
-
-<p>This design was for an application that allowed admins to organize branch deposits 
-    according to 'focus groups', which were based on geographic location and time.
-</p>
-
-<figure class="portfolio-item-image lightbox" href="/img/project8/01-focusgroups.png">
-    <img id="version1" src="/img/project8/01-focusgroups.png" alt="Version 1">
-    <figcaption class="caption-image">Focus Groups Utility</figcaption>
-</figure>
-
-<h3>Python Test Utility</h3>
-
-<p>The next design was a utility I wrote in Python with the wxPython UI library to simulate errors coming from the 
-    check processor. The screens themselves could be tailored by device, model, and error code to provide the operator
-    with specific images/videos and recovery/maintenance information.
-</p>
-
-<figure class="portfolio-item-image lightbox" href="/img/project8/02-python-wip.jpg">
-    <img id="version1" src="/img/project8/02-python-wip.jpg" alt="Version 1">
-    <figcaption class="caption-image">Python Test Utility</figcaption>
-</figure>
-
-<h3>Designer Configuration Tool for NCompass</h3>
-
-<p>
-    This last design was for an application that provided a front-end for many different configuration files. This gave the administrator both a single
-    place from which to configure the application as well as provide structure, inline help, and validation.
-</p>
-
-<figure class="portfolio-item-image mobile-size">
+<figure class="portfolio-item-image desktop-size">
     <div class="pager-container siema8a">
         <div class="siema-btn prev"></div>
         <div class="pager"><span class="current-page">1</span>/<span class="total-pages">5</span></div>
         <div class="siema-btn next siema-active"></div>
     </div>
     <div id="siema0" class="siema">
-        <a href="/img/project8/designer1.png" class="lightbox-gallery"><img src="/img/project8/designer1.png" alt="Designer screen 1"></a>
-        <a href="/img/project8/designer2.png" class="lightbox-gallery"><img src="/img/project8/designer2.png" alt="Designer screen 2"></a>
-        <a href="/img/project8/designer3.png" class="lightbox-gallery"><img src="/img/project8/designer3.png" alt="Designer screen 3"></a>
-        <a href="/img/project8/designer4.png" class="lightbox-gallery"><img src="/img/project8/designer4.png" alt="Designer screen 4"></a>
-        <a href="/img/project8/designer5.png" class="lightbox-gallery"><img src="/img/project8/designer5.png" alt="Designer screen 5"></a>
+        <a href="/img/project8/01a-designer.png" class="lightbox-gallery"><img src="/img/project8/01a-designer.png" alt="Designer screen 1"></a>
+        <a href="/img/project8/01b-designer.png" class="lightbox-gallery"><img src="/img/project8/01b-designer.png" alt="Designer screen 2"></a>
+        <a href="/img/project8/01c-designer.png" class="lightbox-gallery"><img src="/img/project8/01c-designer.png" alt="Designer screen 3"></a>
+        <a href="/img/project8/01d-designer.png" class="lightbox-gallery"><img src="/img/project8/01d-designer.png" alt="Designer screen 4"></a>
+        <a href="/img/project8/01e-designer.png" class="lightbox-gallery"><img src="/img/project8/01e-designer.png" alt="Designer screen 5"></a>
     </div>
-    <figcaption>Designer Configuration Tool for NCompass</figcaption>
+    <figcaption>Designer Configuration Tool</figcaption>
+</figure>
+
+<h3>Cash Extraction Utility</h3>
+
+<p>This application enables operators to processes ATM envelope deposits containing cash. Since cash, particularly coins, cannot be physically run through an item processing transport, operators can input the cash, in denominations, along with coins, so that a virtual cash ticket can be created for use on the transport. It was a fairly straightforward application, but we needed to design it to be as efficient as possible since it was used repeatedly to process envelopes in volume.
+</p>
+
+<figure class="portfolio-item-image lightbox" href="/img/project8/02-cashextraction.png">
+    <img id="version1" src="/img/project8/02-cashextraction.png" alt="Cash Extraction screen flow">
+    <figcaption class="caption-image">Cash Extraction Utility</figcaption>
+</figure>
+
+<h3>Management Console</h3>
+<p>This console is for a check processing solution and provides a single view of the system. The landing screen is the dashboard which provides a summary of work in the system in the form of bar charts. Clicking on a bar lets administrators drill down to see a listing of the units of work, and even further down to see the details of each unit of work. Other parts of the application let administrators view system operators, manage parts of the system, and tweak workflow to improve performance. Since I was the only designer, I worked with the development team to whiteboard the basic screen layout and design, then I used Adobe Flex to mock up the screens and flow.</p>
+
+<figure class="portfolio-item-image lightbox" href="/img/project8/03-managementconsole.png">
+    <img id="version1" src="/img/project8/03-managementconsole.png" alt="Management Console screen flow">
+    <figcaption class="caption-image">Management Console</figcaption>
+</figure>
+
+<h3>Python Test Utility</h3>
+
+<p>I developed this utility in Python with the wxPython UI library to test that the correct operator assistance pages appeared for the correct error messages. The screens themselves can be tailored by device, model, and message code to provide the operator
+    with specific images/videos and recovery/maintenance information. I also developed an automated version of this tool which could run through a list of device/model/message codes.
+</p>
+
+<figure class="portfolio-item-image lightbox" href="/img/project8/04-python-wip.png">
+    <img id="version1" src="/img/project8/04-python-wip.png" alt="Python Test Utility diagram">
+    <figcaption class="caption-image">Python Test Utility</figcaption>
 </figure>
 
       </section>
