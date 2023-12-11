@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Hugo Bookshop Starter</title>
+    <link>http://csmiller.ca/jill/projects/</link>
+    <description>Recent content in Projects on Hugo Bookshop Starter</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Jan 2021 05:20:35 +0300</lastBuildDate>
+    <atom:link href="http://csmiller.ca/jill/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clubs</title>
+      <link>http://csmiller.ca/jill/projects/clubs/</link>
+      <pubDate>Sat, 09 Jan 2021 05:20:35 +0300</pubDate>
+      <guid>http://csmiller.ca/jill/projects/clubs/</guid>
+      <description>Write something about your work in clubs</description>
+    </item>
+    <item>
+      <title>Photos</title>
+      <link>http://csmiller.ca/jill/projects/photos/</link>
+      <pubDate>Sat, 09 Jan 2021 05:20:35 +0300</pubDate>
+      <guid>http://csmiller.ca/jill/projects/photos/</guid>
+      <description>These are some of the posters I created as part of the campaign for promoting UW.</description>
+    </item>
+    <item>
+      <title>Spotlight</title>
+      <link>http://csmiller.ca/jill/projects/spotlight/</link>
+      <pubDate>Sat, 09 Jan 2021 05:20:35 +0300</pubDate>
+      <guid>http://csmiller.ca/jill/projects/spotlight/</guid>
+      <description>Write something about the spotlight activities.</description>
+    </item>
+  </channel>
+</rss>
