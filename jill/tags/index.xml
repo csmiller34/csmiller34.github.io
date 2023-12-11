@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hugo Bookshop Starter</title>
-    <link>http://csmiller.ca/jill/tags/</link>
+    <link>https://csmiller.ca/jill/tags/</link>
     <description>Recent content in Tags on Hugo Bookshop Starter</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://csmiller.ca/jill/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://csmiller.ca/jill/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
