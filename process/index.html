@@ -1,152 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/img/favicon.png"><meta name="generator" content="Astro v5.16.8"><meta name="robots" content="noindex"><title>Process | Craig Miller</title><meta name="description" content="UX/UI Designer Portfolio - Craig Miller"><link rel="canonical" href="http://localhost:4321/process/"><meta property="og:title" content="Process | Craig Miller"><meta property="og:description" content="UX/UI Designer Portfolio - Craig Miller"><meta property="og:type" content="website"><meta property="og:url" content="http://localhost:4321/process/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Process | Craig Miller"><meta name="twitter:description" content="UX/UI Designer Portfolio - Craig Miller"><script>
+      // Apply dark mode before render to prevent flash
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.Dt4O2PdW.css">
+<link rel="stylesheet" href="/_astro/adaptive-responsive-design.BC2VKVig.css"></head> <body> <div class="min-h-screen flex flex-col max-w-3xl mx-auto px-6 sm:px-8"> <nav class="py-6 mb-8"> <div class="flex items-center justify-between"> <a href="/" class="text-xl font-bold text-(--color-main) no-underline hover:text-(--color-accent) transition-colors font-serif"> Craig Miller </a> <div class="flex items-center gap-4"> <!-- Desktop nav --> <ul class="hidden sm:flex items-center gap-6 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Projects </a> </li><li class="m-0 p-0"> <a href="/process" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Process </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> <button id="theme-toggle" class="relative w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle dark mode"> <svg class="sun-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <svg class="moon-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> <script>
+  // Theme toggle - runs immediately to avoid FOUC
+  (function() {
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
 
-<head>
-    <meta charset=utf-8 />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex">
-    <title>Portfolio | Craig Miller</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
-    <link rel="stylesheet" href="/css/luminous-basic.min.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="https://cdn.lr-in-prod.com/LogRocket.min.js" crossorigin="anonymous"></script>
-    <script>window.LogRocket && window.LogRocket.init('ktv7of/test');</script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MY2ZZRT3G5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    function getTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
 
-        gtag('config', 'G-MY2ZZRT3G5');
-    </script>
-</head>
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      updateIcons(theme);
+    }
 
-<body>
-    <div class="header-background"></div>
-    <div class="wrapper">
-        <header>
-            <a href="/" class="brand">Craig Miller<span class="subbrand">UX/UI Designer</span></a>
-            <div>
-                <a href="#" class="mobile-menu">Menu<img src="../img/menu-hover.svg"><img src="../img/menu.svg"></a>
-                <nav role="navigation">
-                    <ul>
-                        <li>
-                            <a href="/">welcome</a>
-                        </li>
-                        <li>
-                            <a href="/portfolio">portfolio</a>
-                        </li>
-                        <li>
-                            <a href="/process">process</a>
-                        </li>
-                        <li>
-                            <a href="/resume">résumé</a>
-                        </li>
-                        <li>
-                            <a href="/about">about</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-              <section class="Process">
-         <h1 class="content">Process</h1>
-         <aside>
-    <h1>My UX Process</h1>
-    <img src="/img/process.png" />
-</aside>
+    function updateIcons(theme) {
+      const sunIcon = toggle?.querySelector('.sun-icon');
+      const moonIcon = toggle?.querySelector('.moon-icon');
+      if (!sunIcon || !moonIcon) return;
+      if (theme === 'dark') {
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      }
+    }
 
-<p>
-    My process incorporates the typical UX steps of Exploration, Design, Validation and Development. In many cases, I don't have the opportunity to complete all the steps for a given project. For some, I've carried out general research because the opportunity has presented itself, and it's not tied to a specific project. For others, I was brought in to validate a product that has already been developed. Often in Agile development when we're simply adding a feature to a given project, there isn't time or budget to carry out a full user study. Rather, we take what we've learned in "offline" research along with feedback from subject matter experts to guide the design.
-</p>
+    // Apply immediately
+    applyTheme(getTheme());
 
-<h3>Exploration</h3>
-<p>
-    In my experience, the exploration approach depends on the type of project.
-    New or stand-alone projects typically allot enough time during "Sprint 0" to
-    carry out traditional research tasks. Before conducting research,
-    I make sure we establish some goals which will direct the collection of data. For example, we had one project where we wanted to replace an existing Windows application with a web application. We already had a solid understanding on what the application needed to do and the user's general workflow. But we heard in the field that the customer was experiencing issues that were causing friction to their operations. So, the focus of the research project was to understand the customer's pain points and ensure that we were addressing them in the new project.
-</p>
-<p>
-    For existing products where features are being enhanced or adding, there is generally not enough time between requirements gathering and implementation. In this situation, I draw from whatever resources are available such as customer-facing service engineers, support team members, and findings from previous research activities. Using these sources of information, I make informed design decisions that can be followed up by validation activities.
-</p>
-<p>
-    I've used the following approaches to research customer/user needs.
-</p>
-<ul>
-    <li>Interviews with users, management, and SMEs</li>
-    <li>Surveys</li>
-    <li>Job shadowing</li>
-    <li>Exploratory usability testing</li>
-</ul>
-<p>
-    Once research has been completed, the observations, notes, and feedback are collected and organized via affinity diagrams to instruct in the creation of journey maps, scenario diagrams, and persona development. This information is presented either formally or informally as the customer/user portion of the requirements along with the business and technical ones. during my experience, this information was in the form of specifications -- functional specs and design specs. More recently, these requirements are incorporated into Agile stories.
-</p>
-<h3>Design</h3>
-<p>
-    New product or feature design takes as input the requirements defined
-    earlier and outputs the result as workflow diagrams, wireframes, and/or
-    mock-ups. The kind of output can depend on the experience of the team, the
-    amount of time to spend on design, and the complexity of the project. I
-    generally try to provide the highest fidelity mock-up possible to help development create the product as designed.
-</p>
-<ul>
-    <li>Whiteboard sketches and low fidelity wireframes</li>
-    <li>Mid fidelity Visio/Sketch screens with click-through interaction</li>
-    <li>High fidelity HTML mockups</li>
-</ul>
-<p>
-    For new projects that chart unknown territory, I start with whiteboard sketches. Working with a cross-functional team, we try and work out how an application or process with flow. After several iterations, I develop wireframes to structure the parts of the application. In some cases, I flesh out these wireframes into medium fidelity click-through mock-ups and stop there. Otherwise, I skip the medium fidelity and go directly to the HTML mock-ups. In some cases, where the application is a non-web application, I've used Axure to create the mock-up or create a quick VB app in Visual Studio.
-</p>
-<h3>Validation</h3>
-<p>
-    Validation occurs as part of both design and development. During design, validation ensures that the project stakeholders sign off on the design that it meets their requirements. Then there is the external validation which incorporates technical and tactical components. Technical validation ensures that the design works within the technical constraints and that it supports the workflow scenarios, min-max values, etc. The tactical review ensures that the design is understandable to its audience, its look-and-feel and terminology fits into the user's mental model of the application. Some validation can be conducted early in the design cycle. I have had the opportunity on some projects to incorporate the design into the product early enough to carry out usability testing. Since the front-end of the web application was separate enough from the back end, I could make incremental design changes between usability tests.
-</p>
-<ul>
-    <li>Heuristic evaluation</li>
-    <li>Summative usability testing</li>
-    <li>Ad hoc testing</li>
-    <li>Stakeholder review</li>
-    <li>Usability evaluation</li>
-</ul>
-
-<h3>Development</h3>
-
-<p>
-    Development occurs after the design phase and my role is typically to
-    consult with Engineering to clarify of the design or in some cases refactor
-    the design to work around an unforeseen technical restraint. In cases where
-    we could validate the production-version of the design, we may need to return to the design phase if there are issues or updated requirements needed change.
-</p>
-<p>
-    I am also involved in front-end development tasks such as implementing CSS, HTML, and in some cases, JavaScript tweaks to ensure that presentation side of the application meets design requirements.
-</p>
-
-      </section>
-
-
-        <footer>
-            <p>
-                <small>&copy;2022 Craig Miller</small>
-            </p>
-        </footer>
-    </div>
-    <nav role="navigation" class="mobile-menu-container"></nav>
-
-    <a unselectable="on" class="go-to-top go-to-top-hidden">
-        <div class="go-to-top-arrow"></div>Top
-    </a>
-    <script src="/js/scale.fix.js"></script>
-    <script src="/js/siema.min.js"></script>
-    <script src="/js/luminous.min.js"></script>
-    <script src="/js/script.js"></script>
-
-    <script>
-       var clicky_site_ids = clicky_site_ids || [];
-       clicky_site_ids.push(101323967);
-    </script>
-    <script async src="//static.getclicky.com/js"></script>
-</body>
-
-</html>
+    toggle?.addEventListener('click', () => {
+      const current = html.classList.contains('dark') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  })();
+</script> <!-- Mobile menu button --> <button id="mobile-menu-btn" class="sm:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle menu"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile nav dropdown --> <div id="mobile-menu" class="hidden sm:hidden mt-4 pb-2 border-b border-(--color-border)"> <ul class="flex flex-col gap-3 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Projects </a> </li><li class="m-0 p-0"> <a href="/process" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Process </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> </div> </nav> <script type="module">const e=document.getElementById("mobile-menu-btn"),n=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{n?.classList.toggle("hidden")});</script> <main class="flex-1">  <article class="prose prose-lg max-w-none"> <h1 class="font-serif text-3xl sm:text-4xl font-bold mb-8">Process</h1> <aside class="overflow-hidden"> <h1>UX Process</h1> <div class="flex gap-6 items-start"> <img src="/img/process.png" class="mt-2 max-w-[200px] shrink-0 rounded-md border border-(--color-border)"> <p class="m-0">
+My process incorporates the typical UX steps of Exploration, Design, Validation and Development. In many cases, I don't have the opportunity to complete all the steps for a given project. For some, I've carried out general research because the opportunity has presented itself, and it's not tied to a specific project. For others, I was brought in to validate a product that has already been developed. Often in Agile development when we're simply adding a feature to a given project, there isn't time or budget to carry out a full user study. Rather, we take what we've learned in "offline" research along with feedback from subject matter experts to guide the design.
+</p> </div> </aside> <h3>Exploration</h3> <p>
+In my experience, the exploration approach depends on the type of project.
+			New or stand-alone projects typically allot enough time during "Sprint 0" to
+			carry out traditional research tasks. Before conducting research,
+			I make sure we establish some goals which will direct the collection of data. For example, we had one project where we wanted to replace an existing Windows application with a web application. We already had a solid understanding on what the application needed to do and the user's general workflow. But we heard in the field that the customer was experiencing issues that were causing friction to their operations. So, the focus of the research project was to understand the customer's pain points and ensure that we were addressing them in the new project.
+</p> <p>
+For existing products where features are being enhanced or adding, there is generally not enough time between requirements gathering and implementation. In this situation, I draw from whatever resources are available such as customer-facing service engineers, support team members, and findings from previous research activities. Using these sources of information, I make informed design decisions that can be followed up by validation activities.
+</p> <p>
+I've used the following approaches to research customer/user needs.
+</p> <ul> <li>Interviews with users, management, and SMEs</li> <li>Surveys</li> <li>Job shadowing</li> <li>Exploratory usability testing</li> </ul> <p>
+Once research has been completed, the observations, notes, and feedback are collected and organized via affinity diagrams to instruct in the creation of journey maps, scenario diagrams, and persona development. This information is presented either formally or informally as the customer/user portion of the requirements along with the business and technical ones. during my experience, this information was in the form of specifications -- functional specs and design specs. More recently, these requirements are incorporated into Agile stories.
+</p> <h3>Design</h3> <p>
+New product or feature design takes as input the requirements defined
+			earlier and outputs the result as workflow diagrams, wireframes, and/or
+			mock-ups. The kind of output can depend on the experience of the team, the
+			amount of time to spend on design, and the complexity of the project. I
+			generally try to provide the highest fidelity mock-up possible to help development create the product as designed.
+</p> <ul> <li>Whiteboard sketches and low fidelity wireframes</li> <li>Mid fidelity Visio/Sketch screens with click-through interaction</li> <li>High fidelity HTML mockups</li> </ul> <p>
+For new projects that chart unknown territory, I start with whiteboard sketches. Working with a cross-functional team, we try and work out how an application or process with flow. After several iterations, I develop wireframes to structure the parts of the application. In some cases, I flesh out these wireframes into medium fidelity click-through mock-ups and stop there. Otherwise, I skip the medium fidelity and go directly to the HTML mock-ups. In some cases, where the application is a non-web application, I've used Axure to create the mock-up or create a quick VB app in Visual Studio.
+</p> <h3>Validation</h3> <p>
+Validation occurs as part of both design and development. During design, validation ensures that the project stakeholders sign off on the design that it meets their requirements. Then there is the external validation which incorporates technical and tactical components. Technical validation ensures that the design works within the technical constraints and that it supports the workflow scenarios, min-max values, etc. The tactical review ensures that the design is understandable to its audience, its look-and-feel and terminology fits into the user's mental model of the application. Some validation can be conducted early in the design cycle. I have had the opportunity on some projects to incorporate the design into the product early enough to carry out usability testing. Since the front-end of the web application was separate enough from the back end, I could make incremental design changes between usability tests.
+</p> <ul> <li>Heuristic evaluation</li> <li>Summative usability testing</li> <li>Ad hoc testing</li> <li>Stakeholder review</li> <li>Usability evaluation</li> </ul> <h3>Development</h3> <p>
+Development occurs after the design phase and my role is typically to
+			consult with Engineering to clarify of the design or in some cases refactor
+			the design to work around an unforeseen technical restraint. In cases where
+			we could validate the production-version of the design, we may need to return to the design phase if there are issues or updated requirements needed change.
+</p> <p>
+I am also involved in front-end development tasks such as implementing CSS, HTML, and in some cases, JavaScript tweaks to ensure that presentation side of the application meets design requirements.
+</p> </article>  </main> <footer class="mt-auto pt-8 pb-6 border-t border-(--color-border)"> <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-(--color-muted)"> <span>&copy; 2026 Craig Miller</span> <span>UX/UI Designer</span> </div> </footer> </div> <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.gkuKxL4g.js"></script> </body> </html>

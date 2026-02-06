@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/img/favicon.png"><meta name="generator" content="Astro v5.16.8"><meta name="robots" content="noindex"><title>Securing the Application | Craig Miller</title><meta name="description" content="UX/UI Designer Portfolio - Craig Miller"><link rel="canonical" href="http://localhost:4321/projects/securing-the-application/"><meta property="og:title" content="Securing the Application | Craig Miller"><meta property="og:description" content="UX/UI Designer Portfolio - Craig Miller"><meta property="og:type" content="website"><meta property="og:url" content="http://localhost:4321/projects/securing-the-application/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Securing the Application | Craig Miller"><meta name="twitter:description" content="UX/UI Designer Portfolio - Craig Miller"><script>
+      // Apply dark mode before render to prevent flash
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.Dt4O2PdW.css">
+<style>.carousel-viewport[data-astro-cid-wfe7xcno]{overflow:hidden}.carousel-viewport[data-astro-cid-wfe7xcno] .slide{display:none}.carousel-viewport[data-astro-cid-wfe7xcno] .slide.active{display:flex;justify-content:center}.carousel-viewport[data-astro-cid-wfe7xcno] .slide img{max-width:100%;height:auto}.carousel-controls[data-astro-cid-wfe7xcno]{display:flex;align-items:center;justify-content:center;gap:15px;padding:10px 0}.carousel-btn[data-astro-cid-wfe7xcno]{background:transparent;color:var(--color-accent);border:1px solid var(--color-accent);padding:4px 12px;font-family:inherit;font-size:1rem;cursor:pointer;line-height:1;border-radius:.25rem;transition:background .15s ease}.carousel-btn[data-astro-cid-wfe7xcno]:hover{background:color-mix(in srgb,var(--color-accent) 10%,transparent)}.carousel-btn[data-astro-cid-wfe7xcno]:disabled{opacity:.3;cursor:default}.carousel-btn[data-astro-cid-wfe7xcno]:disabled:hover{background:transparent}.carousel-pager[data-astro-cid-wfe7xcno]{font-family:inherit;color:var(--color-muted);font-size:.875rem}
+</style>
+<link rel="stylesheet" href="/_astro/adaptive-responsive-design.BC2VKVig.css"></head> <body> <div class="min-h-screen flex flex-col max-w-3xl mx-auto px-6 sm:px-8"> <nav class="py-6 mb-8"> <div class="flex items-center justify-between"> <a href="/" class="text-xl font-bold text-(--color-main) no-underline hover:text-(--color-accent) transition-colors font-serif"> Craig Miller </a> <div class="flex items-center gap-4"> <!-- Desktop nav --> <ul class="hidden sm:flex items-center gap-6 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Projects </a> </li><li class="m-0 p-0"> <a href="/process" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Process </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> <button id="theme-toggle" class="relative w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle dark mode"> <svg class="sun-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <svg class="moon-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> <script>
+  // Theme toggle - runs immediately to avoid FOUC
+  (function() {
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    function getTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      updateIcons(theme);
+    }
+
+    function updateIcons(theme) {
+      const sunIcon = toggle?.querySelector('.sun-icon');
+      const moonIcon = toggle?.querySelector('.moon-icon');
+      if (!sunIcon || !moonIcon) return;
+      if (theme === 'dark') {
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      }
+    }
+
+    // Apply immediately
+    applyTheme(getTheme());
+
+    toggle?.addEventListener('click', () => {
+      const current = html.classList.contains('dark') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  })();
+</script> <!-- Mobile menu button --> <button id="mobile-menu-btn" class="sm:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle menu"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile nav dropdown --> <div id="mobile-menu" class="hidden sm:hidden mt-4 pb-2 border-b border-(--color-border)"> <ul class="flex flex-col gap-3 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Projects </a> </li><li class="m-0 p-0"> <a href="/process" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Process </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> </div> </nav> <script type="module">const e=document.getElementById("mobile-menu-btn"),n=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{n?.classList.toggle("hidden")});</script> <main class="flex-1">  <article class="prose prose-lg max-w-none"> <h1 class="font-serif text-3xl sm:text-4xl font-bold mb-8">Securing the Application</h1>  <aside> <h1>Summary</h1> <p>Designed the user authentication UI for our mobile application so that it could be added seamlessly into a customer's existing environment. Based on this design, refactored our web application user authentication to be consistent with the mobile app.</p> <h1>Roles</h1> <p>Researched customers, designed wireframes, developed mock-up, developed CSS.</p> </aside> <p>
+This project had two objectives. The first was to enhance the security of an existing mobile application to meet the customer's security requirements. The second objective was to carry over these security enhancements to an existing desktop web application
+    so that both applications shared the same authentication model. The enhancements included:
+</p> <ul> <li>the forgotten password scenario</li> <li>setting up security challenge questions</li> <li>answering challenge questions</li> <li>allowing for and enforcing a customizable set of password rules</li> </ul> <p>
+Although the mobile solution was targeted at a specific customer, the design needed to flexible and configurable enough to work in the general product which was used by a variety of different customers.
+</p> <h4>Mobile Application</h4> <p>
+The first phase of the project was to enhance the mobile application so that it would operate in the customer's existing security system. We researched at a high level how the customer currently handled authentication, what their back-end systems required, and how our mobile application would interact with it. We reviewed the UI for their other mobile applications to understand the task flow. In one case, we suggested a design improvement&#8212;providing immediate password rule compliance as users type new passwords&#8212;to the UI for changing passwords, which the customer agreed was an improvement to the user experience. The following assets were developed as part of the design:
+</p> <ul> <li>flow diagram</li> <li>UI wireframes</li> </ul> <p>
+I developed the flow diagram by working through various scenarios required by the customer as well as additional ones needed by a general audience. Some of these scenarios included:
+</p> <ul> <li>the forgotten password flow</li> <li>setting up challenge questions with grace period</li> <li>setting up challenge questions with no grace period</li> <li>new user sign-in</li> <li>resetting an existing user's password</li> </ul> <p>
+By working through these and other scenarios, I began mapping out interactions between the user, screens, and system. Working with the Development team, I drafted, reviewed, and updated the flow until we had a model of the application. The result was
+    the following flow diagram:
+</p> <figure class="portfolio-item-image mobile-size lightbox" href="/img/project1/mobile-flow.png"> <img id="mobile-flow" src="/img/project1/mobile-flow.png" alt="Mobile client flow diagram"> <figcaption>Mobile client flow diagram</figcaption> </figure> <p>
+Around the same time as I was working on the flow diagram, I also began constructing wireframes of the new and updated screens. As with any project, some of changes resulted in competing designs. To resolve design conflicts, we met as a team to understand
+    the pros and cons of each one before deciding which approach to take. In some cases, we held design reviews with the customer to better understand their needs and requirements.
+</p> <p>
+An example of a feature with competing designs was in the presentation of the challenge questions to the user. One approach was to display the configured number of security questions in dropdowns on a single screen, which another design was to adapt
+    a wizard approach where each the user selected a question on one screen and then provided the answer on a separate screen.
+</p> <p>
+In the end, we settled on the latter approach because that presentation was more consistent with other parts of the application and would provide more flexibility as to the number of question/answers needed and at what part of the system they were submitted
+    to the authentication system. The resulting wireframes were as follows:
+</p> <figure class="carousel-figure mobile-size" data-astro-cid-wfe7xcno> <div class="carousel" id="mobile-carousel" data-astro-cid-wfe7xcno> <div class="carousel-viewport" data-astro-cid-wfe7xcno>  <div class="slide"><img src="/img/project1/q1.png" alt="Challenge Questions 1 of 8"></div> <div class="slide"><img src="/img/project1/q2.png" alt="Challenge Questions 2 of 8"></div> <div class="slide"><img src="/img/project1/q4.png" alt="Challenge Questions 3 of 8"></div> <div class="slide"><img src="/img/project1/q5.png" alt="Challenge Questions 4 of 8"></div> <div class="slide"><img src="/img/project1/q7.png" alt="Challenge Questions 5 of 8"></div> <div class="slide"><img src="/img/project1/q8.png" alt="Challenge Questions 6 of 8"></div> <div class="slide"><img src="/img/project1/q10.png" alt="Challenge Questions 7 of 8"></div> <div class="slide"><img src="/img/project1/q11.png" alt="Challenge Questions 8 of 8"></div>  </div> <div class="carousel-controls" data-astro-cid-wfe7xcno> <button class="carousel-btn prev" aria-label="Previous slide" data-astro-cid-wfe7xcno>&#8592;</button> <div class="carousel-pager" data-astro-cid-wfe7xcno> <span class="current-page" data-astro-cid-wfe7xcno>1</span>/<span class="total-pages" data-astro-cid-wfe7xcno>1</span> </div> <button class="carousel-btn next" aria-label="Next slide" data-astro-cid-wfe7xcno>&#8594;</button> </div> </div> <figcaption data-astro-cid-wfe7xcno>Mobile client challenge question flow</figcaption> </figure>  <script type="module">document.querySelectorAll(".carousel").forEach(n=>{if(n.hasAttribute("data-init"))return;n.setAttribute("data-init","");const e=n.querySelectorAll(".slide"),i=n.querySelector(".carousel-btn.prev"),l=n.querySelector(".carousel-btn.next"),s=n.querySelector(".current-page"),a=n.querySelector(".total-pages");let t=0;function r(c){e[t].classList.remove("active"),t=c,e[t].classList.add("active"),s.textContent=String(t+1),i.disabled=t===0,l.disabled=t===e.length-1}a.textContent=String(e.length),e.length>0&&e[0].classList.add("active"),i.disabled=!0,l.disabled=e.length<=1,i.addEventListener("click",()=>{t>0&&r(t-1)}),l.addEventListener("click",()=>{t<e.length-1&&r(t+1)})});</script> <p>
+Once we had a set of wireframes, I assembled them in a PowerPoint to present to the customer. This presentation helped them understand not only how the new and update screens looked and behaved but also to ascertain how they would perform with their back-end
+    authentication system. While the customer required some changes, they were pleased with result.
+</p> <h4>Desktop Web Application</h4> <p>
+Like the mobile application, the desktop version of the application required the same flexibility as well as needing to follow a consistent approach as the mobile application and account for the platform differences.
+</p> <p>
+Again, I produced the following artifacts:
+</p> <ul> <li>application flow diagram</li> <li>application UI wireframes</li> </ul> <p>
+I followed a similar approach to creating the desktop web flow to understand and communicate the user and system touchpoints. Fortunately, many of the same design decisions were already answered with the mobile version, so this made the diagramming
+    the desktop web flow easier. The resulting flow is as follows:
+</p> <figure class="portfolio-item-image lightbox" href="/img/project1/desktop-web-flow.png"> <img id="desktop-web-flow" src="/img/project1/desktop-web-flow.png" alt="Desktop web application flow diagram"> <figcaption>Desktop web application flow diagram</figcaption> </figure> <p>
+For the UI wireframes I made flat HTML file versions of the existing application screens. I built up the design using HTML and CSS and added JQuery functions to simulated page flow informed by the flow diagram. These mock-ups were as follows:
+</p> <figure class="carousel-figure desktop-size" data-astro-cid-wfe7xcno> <div class="carousel" id="desktop-carousel" data-astro-cid-wfe7xcno> <div class="carousel-viewport" data-astro-cid-wfe7xcno>  <div class="slide"><img src="/img/project1/wq1.png" alt="Challenge Question Setup - Blank"></div> <div class="slide"><img src="/img/project1/wq2.png" alt="Challenge Question Setup - First Question"></div> <div class="slide"><img src="/img/project1/wq3.png" alt="Challenge Question Setup - Completed Questions"></div> <div class="slide"><img src="/img/project1/wq4.png" alt="Challenge Question Prompt - Answer the Challenge Question"></div>  </div> <div class="carousel-controls" data-astro-cid-wfe7xcno> <button class="carousel-btn prev" aria-label="Previous slide" data-astro-cid-wfe7xcno>&#8592;</button> <div class="carousel-pager" data-astro-cid-wfe7xcno> <span class="current-page" data-astro-cid-wfe7xcno>1</span>/<span class="total-pages" data-astro-cid-wfe7xcno>1</span> </div> <button class="carousel-btn next" aria-label="Next slide" data-astro-cid-wfe7xcno>&#8594;</button> </div> </div> <figcaption data-astro-cid-wfe7xcno>Screen designs for Challenge Question Setup (Desktop web version)</figcaption> </figure>   <p>
+Once completed, I presented the mock-ups to stakeholders. After some discussion and minor changes, the mock-ups were approved and linked to JIRA stories to begin development.
+</p>  </article>  </main> <footer class="mt-auto pt-8 pb-6 border-t border-(--color-border)"> <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-(--color-muted)"> <span>&copy; 2026 Craig Miller</span> <span>UX/UI Designer</span> </div> </footer> </div> <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.gkuKxL4g.js"></script> </body> </html>

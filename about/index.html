@@ -1,119 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/img/favicon.png"><meta name="generator" content="Astro v5.16.8"><meta name="robots" content="noindex"><title>About | Craig Miller</title><meta name="description" content="UX/UI Designer Portfolio - Craig Miller"><link rel="canonical" href="http://localhost:4321/about/"><meta property="og:title" content="About | Craig Miller"><meta property="og:description" content="UX/UI Designer Portfolio - Craig Miller"><meta property="og:type" content="website"><meta property="og:url" content="http://localhost:4321/about/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="About | Craig Miller"><meta name="twitter:description" content="UX/UI Designer Portfolio - Craig Miller"><script>
+      // Apply dark mode before render to prevent flash
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.Dt4O2PdW.css">
+<link rel="stylesheet" href="/_astro/adaptive-responsive-design.BC2VKVig.css"></head> <body> <div class="min-h-screen flex flex-col max-w-3xl mx-auto px-6 sm:px-8"> <nav class="py-6 mb-8"> <div class="flex items-center justify-between"> <a href="/" class="text-xl font-bold text-(--color-main) no-underline hover:text-(--color-accent) transition-colors font-serif"> Craig Miller </a> <div class="flex items-center gap-4"> <!-- Desktop nav --> <ul class="hidden sm:flex items-center gap-6 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Projects </a> </li><li class="m-0 p-0"> <a href="/process" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Process </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> About </a> </li> </ul> <button id="theme-toggle" class="relative w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle dark mode"> <svg class="sun-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <svg class="moon-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> <script>
+  // Theme toggle - runs immediately to avoid FOUC
+  (function() {
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
 
-<head>
-    <meta charset=utf-8 />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex">
-    <title>Portfolio | Craig Miller</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
-    <link rel="stylesheet" href="/css/luminous-basic.min.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="https://cdn.lr-in-prod.com/LogRocket.min.js" crossorigin="anonymous"></script>
-    <script>window.LogRocket && window.LogRocket.init('ktv7of/test');</script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MY2ZZRT3G5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    function getTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
 
-        gtag('config', 'G-MY2ZZRT3G5');
-    </script>
-</head>
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      updateIcons(theme);
+    }
 
-<body>
-    <div class="header-background"></div>
-    <div class="wrapper">
-        <header>
-            <a href="/" class="brand">Craig Miller<span class="subbrand">UX/UI Designer</span></a>
-            <div>
-                <a href="#" class="mobile-menu">Menu<img src="../img/menu-hover.svg"><img src="../img/menu.svg"></a>
-                <nav role="navigation">
-                    <ul>
-                        <li>
-                            <a href="/">welcome</a>
-                        </li>
-                        <li>
-                            <a href="/portfolio">portfolio</a>
-                        </li>
-                        <li>
-                            <a href="/process">process</a>
-                        </li>
-                        <li>
-                            <a href="/resume">résumé</a>
-                        </li>
-                        <li>
-                            <a href="/about">about</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-              <section class="About">
-         <h1 class="content">About</h1>
-         <img class="profile" src="/img/self.jpg" alt="Craig Miller photo">
-<p>
-    I have several years experience as an enterprise UI/UX designer, working on complex native and web- based applications
-    for financial institutions. During this time I followed the standard UX process for delivering high-quality designs on
-    time—Discovery, Design, Validation, and Development. During Discovery, I researched user needs through site visits,
-    interviews, contextual inquiries, and exploratory usability testing. I then synthesized the results into personas,
-    customer journeys, and general customer knowledge which I used to make informed design decisions for new products and
-    features.
-</p>
-<p>
-    During Design, I worked with cross-functional teams, including Product Management, Architecture, and Engineering, and
-    developed wireframes and mockups using tools like Sketch, Invision, Axure, Figma, and HTML/CSS/JavaScript. To create
-    engaging and efficient designs, I drew inspiration from user research, prior work, competitor products, and standard and
-    emerging design patterns.
-</p>
-<p>
-    I have designed software for native desktops, desktop web, and mobile devices, and incorporated adaptive and responsive
-    layouts to ensure web applications support a range of viewports. As part of my role, I have researched and conducted
-    accessibility reviews to ensure that the designs follow WCAG 2.1 guidelines and meet ADA and Section 508 standards. I am
-    quick to learn new tools and technologies and am always looking for ways to reduce design time while improving
-    communication of the design with the team.
-</p>
-<p>
-    As part of Validation, I facilitated design reviews with internal and external stakeholders and conducted both formal
-    and informal testing with users. Using feedback from these sessions, I iterated through further design cycles to ensured
-    that the designs met user needs, business goals and technical requirements.
-</p>
-<p>
-    During Development, I worked closely with Engineering to ensure that the implementation closely followed the design. I
-    contributed to and authored User Stories and Epics for Agile sprints, attended daily standups to address issues,
-    participated in developer reviews, and generally made myself available for developer questions and feedback.
-    Thank you for your time and consideration.
-</p>
-<hr>
-<p>
-    This portfolio site was developed with the <a href="//jekyllrb.com/" target="_blank">jekyll</a> static site generator. It uses vanilla HTML, CSS, and JavaScript with carousel and zoom plugins.
-</p>
+    function updateIcons(theme) {
+      const sunIcon = toggle?.querySelector('.sun-icon');
+      const moonIcon = toggle?.querySelector('.moon-icon');
+      if (!sunIcon || !moonIcon) return;
+      if (theme === 'dark') {
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      }
+    }
 
-      </section>
+    // Apply immediately
+    applyTheme(getTheme());
 
-
-        <footer>
-            <p>
-                <small>&copy;2022 Craig Miller</small>
-            </p>
-        </footer>
-    </div>
-    <nav role="navigation" class="mobile-menu-container"></nav>
-
-    <a unselectable="on" class="go-to-top go-to-top-hidden">
-        <div class="go-to-top-arrow"></div>Top
-    </a>
-    <script src="/js/scale.fix.js"></script>
-    <script src="/js/siema.min.js"></script>
-    <script src="/js/luminous.min.js"></script>
-    <script src="/js/script.js"></script>
-
-    <script>
-       var clicky_site_ids = clicky_site_ids || [];
-       clicky_site_ids.push(101323967);
-    </script>
-    <script async src="//static.getclicky.com/js"></script>
-</body>
-
-</html>
+    toggle?.addEventListener('click', () => {
+      const current = html.classList.contains('dark') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  })();
+</script> <!-- Mobile menu button --> <button id="mobile-menu-btn" class="sm:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle menu"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile nav dropdown --> <div id="mobile-menu" class="hidden sm:hidden mt-4 pb-2 border-b border-(--color-border)"> <ul class="flex flex-col gap-3 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Projects </a> </li><li class="m-0 p-0"> <a href="/process" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Process </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> About </a> </li> </ul> </div> </nav> <script type="module">const e=document.getElementById("mobile-menu-btn"),n=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{n?.classList.toggle("hidden")});</script> <main class="flex-1">  <article class="prose prose-lg max-w-none"> <h1 class="font-serif text-3xl sm:text-4xl font-bold mb-8">About</h1> <img class="profile" src="/img/self.jpg" alt="Craig Miller photo"> <p>
+I have several years experience as an enterprise UI/UX designer, working on complex native and web- based applications
+			for financial institutions. During this time I followed the standard UX process for delivering high-quality designs on
+			time—Discovery, Design, Validation, and Development. During Discovery, I researched user needs through site visits,
+			interviews, contextual inquiries, and exploratory usability testing. I then synthesized the results into personas,
+			customer journeys, and general customer knowledge which I used to make informed design decisions for new products and
+			features.
+</p> <p>
+During Design, I worked with cross-functional teams, including Product Management, Architecture, and Engineering, and
+			developed wireframes and mockups using tools like Sketch, Invision, Axure, Figma, and HTML/CSS/JavaScript. To create
+			engaging and efficient designs, I drew inspiration from user research, prior work, competitor products, and standard and
+			emerging design patterns.
+</p> <p>
+I have designed software for native desktops, desktop web, and mobile devices, and incorporated adaptive and responsive
+			layouts to ensure web applications support a range of viewports. As part of my role, I have researched and conducted
+			accessibility reviews to ensure that the designs follow WCAG 2.1 guidelines and meet ADA and Section 508 standards. I am
+			quick to learn new tools and technologies and am always looking for ways to reduce design time while improving
+			communication of the design with the team.
+</p> <p>
+As part of Validation, I facilitated design reviews with internal and external stakeholders and conducted both formal
+			and informal testing with users. Using feedback from these sessions, I iterated through further design cycles to ensured
+			that the designs met user needs, business goals and technical requirements.
+</p> <p>
+During Development, I worked closely with Engineering to ensure that the implementation closely followed the design. I
+			contributed to and authored User Stories and Epics for Agile sprints, attended daily standups to address issues,
+			participated in developer reviews, and generally made myself available for developer questions and feedback.
+			Thank you for your time and consideration.
+</p> <hr> <p>
+This portfolio site was built with <a href="https://astro.build/" target="_blank">Astro</a>, <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>, and <a href="https://claude.com/claude-code" target="_blank">Claude Code</a>.
+</p> </article>  </main> <footer class="mt-auto pt-8 pb-6 border-t border-(--color-border)"> <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-(--color-muted)"> <span>&copy; 2026 Craig Miller</span> <span>UX/UI Designer</span> </div> </footer> </div> <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.gkuKxL4g.js"></script> </body> </html>

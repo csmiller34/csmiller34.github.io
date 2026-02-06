@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/img/favicon.png"><meta name="generator" content="Astro v5.16.8"><meta name="robots" content="noindex"><title>Branding the Application | Craig Miller</title><meta name="description" content="UX/UI Designer Portfolio - Craig Miller"><link rel="canonical" href="http://localhost:4321/projects/branding-the-application/"><meta property="og:title" content="Branding the Application | Craig Miller"><meta property="og:description" content="UX/UI Designer Portfolio - Craig Miller"><meta property="og:type" content="website"><meta property="og:url" content="http://localhost:4321/projects/branding-the-application/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Branding the Application | Craig Miller"><meta name="twitter:description" content="UX/UI Designer Portfolio - Craig Miller"><script>
+      // Apply dark mode before render to prevent flash
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.Dt4O2PdW.css">
+<style>.carousel-viewport[data-astro-cid-wfe7xcno]{overflow:hidden}.carousel-viewport[data-astro-cid-wfe7xcno] .slide{display:none}.carousel-viewport[data-astro-cid-wfe7xcno] .slide.active{display:flex;justify-content:center}.carousel-viewport[data-astro-cid-wfe7xcno] .slide img{max-width:100%;height:auto}.carousel-controls[data-astro-cid-wfe7xcno]{display:flex;align-items:center;justify-content:center;gap:15px;padding:10px 0}.carousel-btn[data-astro-cid-wfe7xcno]{background:transparent;color:var(--color-accent);border:1px solid var(--color-accent);padding:4px 12px;font-family:inherit;font-size:1rem;cursor:pointer;line-height:1;border-radius:.25rem;transition:background .15s ease}.carousel-btn[data-astro-cid-wfe7xcno]:hover{background:color-mix(in srgb,var(--color-accent) 10%,transparent)}.carousel-btn[data-astro-cid-wfe7xcno]:disabled{opacity:.3;cursor:default}.carousel-btn[data-astro-cid-wfe7xcno]:disabled:hover{background:transparent}.carousel-pager[data-astro-cid-wfe7xcno]{font-family:inherit;color:var(--color-muted);font-size:.875rem}
+</style>
+<link rel="stylesheet" href="/_astro/adaptive-responsive-design.BC2VKVig.css"></head> <body> <div class="min-h-screen flex flex-col max-w-3xl mx-auto px-6 sm:px-8"> <nav class="py-6 mb-8"> <div class="flex items-center justify-between"> <a href="/" class="text-xl font-bold text-(--color-main) no-underline hover:text-(--color-accent) transition-colors font-serif"> Craig Miller </a> <div class="flex items-center gap-4"> <!-- Desktop nav --> <ul class="hidden sm:flex items-center gap-6 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Projects </a> </li><li class="m-0 p-0"> <a href="/process" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Process </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> <button id="theme-toggle" class="relative w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle dark mode"> <svg class="sun-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <svg class="moon-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> <script>
+  // Theme toggle - runs immediately to avoid FOUC
+  (function() {
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    function getTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      updateIcons(theme);
+    }
+
+    function updateIcons(theme) {
+      const sunIcon = toggle?.querySelector('.sun-icon');
+      const moonIcon = toggle?.querySelector('.moon-icon');
+      if (!sunIcon || !moonIcon) return;
+      if (theme === 'dark') {
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      }
+    }
+
+    // Apply immediately
+    applyTheme(getTheme());
+
+    toggle?.addEventListener('click', () => {
+      const current = html.classList.contains('dark') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  })();
+</script> <!-- Mobile menu button --> <button id="mobile-menu-btn" class="sm:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle menu"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile nav dropdown --> <div id="mobile-menu" class="hidden sm:hidden mt-4 pb-2 border-b border-(--color-border)"> <ul class="flex flex-col gap-3 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Projects </a> </li><li class="m-0 p-0"> <a href="/process" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Process </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> </div> </nav> <script type="module">const e=document.getElementById("mobile-menu-btn"),n=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{n?.classList.toggle("hidden")});</script> <main class="flex-1">  <article class="prose prose-lg max-w-none"> <h1 class="font-serif text-3xl sm:text-4xl font-bold mb-8">Branding the Application</h1>  <aside> <h1>Summary</h1> <p>Branded two related projects: the first to create a white-label brand that could be customized for customers without code changes; the second to enable low-tech users to make common branding changes.</p> <h1>Roles</h1> <p>Designed and developed hi-fidelity mock-ups: one in Axure, the other in HTML+CSS+JavaScript.</p> </aside> <p>The two branding projects in this section were enhancements to existing products.</p> <p>For the first project, we wanted to have a single white-label brand for two mobile plugin libraries. One plugin was ours, the other a third party's. The goal of the project was to have a common brand for both plugins (for both iOS and Android) from which Customers could customize as needed to fit their own brand.</p> <p>The second project was to simplify application branding for a desktop web application. While larger customers had the resources to update CSS styles themselves, smaller customers and SaaS host administrators would not necessarily have the resources to make these changes. The goal of this project was to provide a simple, straightforward way to brand basic elements of the application.</p> <h3>White Label Brand</h3> <p>
+The white label brand was to provide a consistent look for two different mobile device plug-ins. One plug-in was a third party product for taking pictures of a cheques which the other one was an in-house product for taking pictures of non-cheque (e.g., remittance coupons) documents. Although the plug-ins were quite different at a code level, we wanted them to share the same look-and-feel.
+    The business requirement was to create a generic brand that could be re-skinned by individual customers to fit their own needs.
+</p> <p>
+To help communicate the design to internal stakeholders, I developed a mockup in Axure. I chose Axure because it let me demonstrate interactions between parts of the plugin in a way that static wireframes could not, and because I was new to the tool and wanted to challenge myself to learn it.
+</p> <figure class="iframe-holder poc"> <iframe src="/img/project6/poc/phone__landscape_.html" frameborder="0" scrolling="no"></iframe> <figcaption>Sample of Axure mock-up to show automatic mode</figcaption> </figure> <p>
+This first mock-up went through a series of reviews by stakeholders and UX team members to gather feedback. I reviewed their input and made updates to the design before presenting it again. One such feedback was a concern about the visibility of the text when it was displayed overtop light-colored documents. Here, I restyled the text so that it had enough contrast to be visible over dark or light documents. Other comments addressed the amount and clarify of text on the help page. As a result, much of it was discarded for more pointed instructions on how to take clear pictures of cheques.
+</p> <p>
+The following screenshots show some of the improvements made to the mock-up following the iterative reviews.
+</p> <figure class="carousel-figure desktop-size" data-astro-cid-wfe7xcno> <div class="carousel" id="capture-carousel" data-astro-cid-wfe7xcno> <div class="carousel-viewport" data-astro-cid-wfe7xcno>  <div class="slide"><img src="/img/project6/poc/auto1.jpg" alt="Updated Main Front Image Capture"></div> <div class="slide"><img src="/img/project6/poc/auto2.png" alt="Updated Main Front Image Help"></div>  </div> <div class="carousel-controls" data-astro-cid-wfe7xcno> <button class="carousel-btn prev" aria-label="Previous slide" data-astro-cid-wfe7xcno>&#8592;</button> <div class="carousel-pager" data-astro-cid-wfe7xcno> <span class="current-page" data-astro-cid-wfe7xcno>1</span>/<span class="total-pages" data-astro-cid-wfe7xcno>1</span> </div> <button class="carousel-btn next" aria-label="Next slide" data-astro-cid-wfe7xcno>&#8594;</button> </div> </div> <figcaption data-astro-cid-wfe7xcno>Updated Automatic capture screens</figcaption> </figure>  <script type="module">document.querySelectorAll(".carousel").forEach(n=>{if(n.hasAttribute("data-init"))return;n.setAttribute("data-init","");const e=n.querySelectorAll(".slide"),i=n.querySelector(".carousel-btn.prev"),l=n.querySelector(".carousel-btn.next"),s=n.querySelector(".current-page"),a=n.querySelector(".total-pages");let t=0;function r(c){e[t].classList.remove("active"),t=c,e[t].classList.add("active"),s.textContent=String(t+1),i.disabled=t===0,l.disabled=t===e.length-1}a.textContent=String(e.length),e.length>0&&e[0].classList.add("active"),i.disabled=!0,l.disabled=e.length<=1,i.addEventListener("click",()=>{t>0&&r(t-1)}),l.addEventListener("click",()=>{t<e.length-1&&r(t+1)})});</script> <h3>Easy Branding</h3> <p>
+The Easy Branding project was to make it easier for non-technical users make branding changes to our desktop web application. I began by researching the kinds of branding carried out most by customers and then prioritizing the most often branded components. To do this, I surveyed several field engineers to understand what their most requested customizations and received a lot of useful feedback, which I turned into a list. I discussed this list with product management and got the go-ahead to begin design. The result was an HTML mockup for a sandbox environment that gave users an opportunity to view and make style changes without impacting the application.
+</p> <p>Here is a small <span class="strong">interactive</span> sample of that mock-up, which lets users try out stylings for application buttons.</p> <figure class="iframe-holder easybrand"> <iframe src="/img/project6/easybrand/easybrand.html" frameborder="0" scrolling="no"></iframe> <figcaption>Excerpt from Easy Branding mock-up</figcaption> </figure>  </article>  </main> <footer class="mt-auto pt-8 pb-6 border-t border-(--color-border)"> <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-(--color-muted)"> <span>&copy; 2026 Craig Miller</span> <span>UX/UI Designer</span> </div> </footer> </div> <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.gkuKxL4g.js"></script> </body> </html>

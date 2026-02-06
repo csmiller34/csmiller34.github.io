@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/img/favicon.png"><meta name="generator" content="Astro v5.16.8"><meta name="robots" content="noindex"><title>Re-purposing the application | Craig Miller</title><meta name="description" content="UX/UI Designer Portfolio - Craig Miller"><link rel="canonical" href="http://localhost:4321/projects/repurposing-the-application/"><meta property="og:title" content="Re-purposing the application | Craig Miller"><meta property="og:description" content="UX/UI Designer Portfolio - Craig Miller"><meta property="og:type" content="website"><meta property="og:url" content="http://localhost:4321/projects/repurposing-the-application/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Re-purposing the application | Craig Miller"><meta name="twitter:description" content="UX/UI Designer Portfolio - Craig Miller"><script>
+      // Apply dark mode before render to prevent flash
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.Dt4O2PdW.css">
+<link rel="stylesheet" href="/_astro/adaptive-responsive-design.BC2VKVig.css"></head> <body> <div class="min-h-screen flex flex-col max-w-3xl mx-auto px-6 sm:px-8"> <nav class="py-6 mb-8"> <div class="flex items-center justify-between"> <a href="/" class="text-xl font-bold text-(--color-main) no-underline hover:text-(--color-accent) transition-colors font-serif"> Craig Miller </a> <div class="flex items-center gap-4"> <!-- Desktop nav --> <ul class="hidden sm:flex items-center gap-6 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Projects </a> </li><li class="m-0 p-0"> <a href="/process" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Process </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> <button id="theme-toggle" class="relative w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle dark mode"> <svg class="sun-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <svg class="moon-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> <script>
+  // Theme toggle - runs immediately to avoid FOUC
+  (function() {
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    function getTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      updateIcons(theme);
+    }
+
+    function updateIcons(theme) {
+      const sunIcon = toggle?.querySelector('.sun-icon');
+      const moonIcon = toggle?.querySelector('.moon-icon');
+      if (!sunIcon || !moonIcon) return;
+      if (theme === 'dark') {
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      }
+    }
+
+    // Apply immediately
+    applyTheme(getTheme());
+
+    toggle?.addEventListener('click', () => {
+      const current = html.classList.contains('dark') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  })();
+</script> <!-- Mobile menu button --> <button id="mobile-menu-btn" class="sm:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle menu"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile nav dropdown --> <div id="mobile-menu" class="hidden sm:hidden mt-4 pb-2 border-b border-(--color-border)"> <ul class="flex flex-col gap-3 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Projects </a> </li><li class="m-0 p-0"> <a href="/process" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Process </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> </div> </nav> <script type="module">const e=document.getElementById("mobile-menu-btn"),n=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{n?.classList.toggle("hidden")});</script> <main class="flex-1">  <article class="prose prose-lg max-w-none"> <h1 class="font-serif text-3xl sm:text-4xl font-bold mb-8">Re-purposing the Application</h1>  <aside> <h1>Summary</h1> <p>A legacy application finds new life as it is incorporated as a first-class citizen in a teller application.</p> <h1>Roles</h1> <p>Designed mockups in Sketch, contributed to AGILE user stories, provided UI feedback to Development, worked with 3rd party design company.</p> </aside> <p>For this project, we wanted to incorporate the core functionality of an existing, legacy application within a full-fledged teller system. The legacy solution was originally targeted for a specific audience, payment operations in a commercial environment.
+    Over time, the application evolved into other environments, namely mobile, consumer, and branch back office. While there was a version that could be used by the branch teller, it was not integrated into the other aspects of the teller's applications.
+    To provide a complete solution, the core functionality of the legacy application was incorporated as piece within the whole application. My role was to work with Development and Product Management to re-design the check scanning application
+    portion of the teller application.</p> <h3>Core Functionality</h3> <p>
+the first step of the process was understanding the core functionality of the check scanning application. I worked with the Product Manager to learn the business requirements of the branch operations and at the same time deconstruct the existing application
+    to determine which functionality should be incorporated and which functionality could be left behind. By reviewing a bank's implementation of our existing product into their own teller system, we came up with a list of MVP features. I then reviewed
+    our existing application to see what was currently available and what required new design.
+</p> <h3>Modern Implementation</h3> <p>
+The new application was to be developed in ReactJS, which provided several new UI components we could incorporate into the design. One of these was inline editing. Where the legacy generally required a round-trip to the server to support field validation,
+    the new application could better support inline editing, which is an important aspect of the check scanning application--correcting field recognition errors. This allowed us to reduce the number of screens and allow for a simplified user workflow.
+</p> <h3>Iterative design</h3> <p>We iterated through the design process several times to review and revise. The first version of the application was little more than a whiteboard sketch of how the application would work.</p> <figure class="portfolio-item-image lightbox" href="/img/project7/version1.png"> <img id="version1" src="/img/project7/version1.png" alt="Version 1"> <figcaption>Version 1</figcaption> </figure> <p>Version 1 was incorporated by a third-party design company who worked with Product Manager, resulting in the following wireframe:</p> <figure class="portfolio-item-image lightbox" href="/img/project7/version2.png"> <img id="version2" src="/img/project7/version2.png" alt="Version 2"> <figcaption>Version 2</figcaption> </figure> <p>At this point, I took ownership of the design. For my first iteration, I tried to keep the existing layout but knew through experience and prior customer feedback that the image needed to be as large as possible. Currently, the screen space allocated
+    for the image was far too narrow for most business-sized cheques. Going with these dimensions, checks would be reduced in height to be almost unreadable. Version 3 was my first update to the mockup.</p> <figure class="portfolio-item-image lightbox" href="/img/project7/version3.png"> <img id="version3" src="/img/project7/version3.png" alt="Version 3"> <figcaption>Version 3</figcaption> </figure> <p>
+The next iteration, Version 4, considered the requirement of different checks having different fields associated with them, so have one table for all items would require so many rows as to necessitate horizontal scrolling. </p> <figure class="portfolio-item-image lightbox" href="/img/project7/version4.png"> <img id="version4" src="/img/project7/version4.png" alt="Version 4"> <figcaption>Version 4</figcaption> </figure> <p>
+A problem with Version 4 was that its layout would provide space for only a few items in the transaction before the user would need to scroll vertically, which would potentially push the image out of view when the user scrolled down to correct a field
+    in the nth row. To resolve these issues, I redesigned the layout of the screen, which placed the light of items to the right of the image, allowed the associated item fields to appear below the image, and increased the size of the image.</p> <figure class="portfolio-item-image lightbox" href="/img/project7/version5.png"> <img id="version5" src="/img/project7/version5.png" alt="Version 5"> <figcaption>Version 5</figcaption> </figure> <p>Version 5 became the framework for the screen from which we incorporated additional elements, including screen space for scanner and item errors. During the implementation phase, I worked with developers to provide further explanation to functionality
+    as well as to work through all the issues, corner-cases, and application quirks to ensure that the design would work. In the end the final design looked as follows, Version 6.</p> <figure class="portfolio-item-image lightbox" href="/img/project7/version6.png"> <img id="version6" src="/img/project7/version6.png" alt="Version 6"> <figcaption>Version 6</figcaption> </figure> <h3>Results</h3> <p>Through multiple iterations we were able to take an initial vision and ensure that the design met business requirements, technical constraints, and customer/user requirements.</p>  </article>  </main> <footer class="mt-auto pt-8 pb-6 border-t border-(--color-border)"> <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-(--color-muted)"> <span>&copy; 2026 Craig Miller</span> <span>UX/UI Designer</span> </div> </footer> </div> <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.gkuKxL4g.js"></script> </body> </html>

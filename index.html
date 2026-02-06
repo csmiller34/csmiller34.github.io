@@ -1,85 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/img/favicon.png"><meta name="generator" content="Astro v5.16.8"><meta name="robots" content="noindex"><title>Craig Miller | UX/UI Designer</title><meta name="description" content="UX/UI Designer Portfolio - Craig Miller"><link rel="canonical" href="http://localhost:4321/"><meta property="og:title" content="Craig Miller | UX/UI Designer"><meta property="og:description" content="UX/UI Designer Portfolio - Craig Miller"><meta property="og:type" content="website"><meta property="og:url" content="http://localhost:4321/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Craig Miller | UX/UI Designer"><meta name="twitter:description" content="UX/UI Designer Portfolio - Craig Miller"><script>
+      // Apply dark mode before render to prevent flash
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.Dt4O2PdW.css">
+<link rel="stylesheet" href="/_astro/adaptive-responsive-design.BC2VKVig.css"></head> <body> <div class="min-h-screen flex flex-col max-w-3xl mx-auto px-6 sm:px-8"> <nav class="py-6 mb-8"> <div class="flex items-center justify-between"> <a href="/" class="text-xl font-bold text-(--color-main) no-underline hover:text-(--color-accent) transition-colors font-serif"> Craig Miller </a> <div class="flex items-center gap-4"> <!-- Desktop nav --> <ul class="hidden sm:flex items-center gap-6 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Projects </a> </li><li class="m-0 p-0"> <a href="/process" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Process </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> <button id="theme-toggle" class="relative w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle dark mode"> <svg class="sun-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <svg class="moon-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> <script>
+  // Theme toggle - runs immediately to avoid FOUC
+  (function() {
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
 
-<head>
-    <meta charset=utf-8 />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex">
-    <title>Portfolio | Craig Miller</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
-    <link rel="stylesheet" href="/css/luminous-basic.min.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="https://cdn.lr-in-prod.com/LogRocket.min.js" crossorigin="anonymous"></script>
-    <script>window.LogRocket && window.LogRocket.init('ktv7of/test');</script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MY2ZZRT3G5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    function getTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
 
-        gtag('config', 'G-MY2ZZRT3G5');
-    </script>
-</head>
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      updateIcons(theme);
+    }
 
-<body>
-    <div class="header-background"></div>
-    <div class="wrapper">
-        <header>
-            <a href="/" class="brand">Craig Miller<span class="subbrand">UX/UI Designer</span></a>
-            <div>
-                <a href="#" class="mobile-menu">Menu<img src="../img/menu-hover.svg"><img src="../img/menu.svg"></a>
-                <nav role="navigation">
-                    <ul>
-                        <li>
-                            <a href="/">welcome</a>
-                        </li>
-                        <li>
-                            <a href="/portfolio">portfolio</a>
-                        </li>
-                        <li>
-                            <a href="/process">process</a>
-                        </li>
-                        <li>
-                            <a href="/resume">résumé</a>
-                        </li>
-                        <li>
-                            <a href="/about">about</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-              <section class="welcome">
-         <h2>Welcome!</h2>
-<p>
-    Thanks very much for taking the time to visit my site. You will find a sampling of my work in the portfolio section. There is also my process and some more information about myself and this site.
-</p>
+    function updateIcons(theme) {
+      const sunIcon = toggle?.querySelector('.sun-icon');
+      const moonIcon = toggle?.querySelector('.moon-icon');
+      if (!sunIcon || !moonIcon) return;
+      if (theme === 'dark') {
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      }
+    }
 
-      </section>
+    // Apply immediately
+    applyTheme(getTheme());
 
-
-        <footer>
-            <p>
-                <small>&copy;2022 Craig Miller</small>
-            </p>
-        </footer>
-    </div>
-    <nav role="navigation" class="mobile-menu-container"></nav>
-
-    <a unselectable="on" class="go-to-top go-to-top-hidden">
-        <div class="go-to-top-arrow"></div>Top
-    </a>
-    <script src="/js/scale.fix.js"></script>
-    <script src="/js/siema.min.js"></script>
-    <script src="/js/luminous.min.js"></script>
-    <script src="/js/script.js"></script>
-
-    <script>
-       var clicky_site_ids = clicky_site_ids || [];
-       clicky_site_ids.push(101323967);
-    </script>
-    <script async src="//static.getclicky.com/js"></script>
-</body>
-
-</html>
+    toggle?.addEventListener('click', () => {
+      const current = html.classList.contains('dark') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  })();
+</script> <!-- Mobile menu button --> <button id="mobile-menu-btn" class="sm:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle menu"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile nav dropdown --> <div id="mobile-menu" class="hidden sm:hidden mt-4 pb-2 border-b border-(--color-border)"> <ul class="flex flex-col gap-3 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Projects </a> </li><li class="m-0 p-0"> <a href="/process" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Process </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> </div> </nav> <script type="module">const e=document.getElementById("mobile-menu-btn"),n=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{n?.classList.toggle("hidden")});</script> <main class="flex-1">  <div class="py-8"> <h1 class="font-serif text-3xl sm:text-4xl font-bold mb-4 text-(--color-main)">Welcome</h1> <p class="text-lg text-(--color-muted) mb-6 leading-relaxed">
+Craig Miller — UX/UI Designer with several years of experience creating intuitive,
+			accessible digital experiences for enterprise applications.
+</p> <p class="text-base text-(--color-main) font-semibold mb-3">Specialties:</p> <ul class="list-disc pl-5 mb-8 space-y-1 text-(--color-main)"> <li>AI-assisted design</li> <li>Wireframing & Prototyping</li> <li>Interaction Design</li> <li>User Research & Testing</li> <li>Accessibility (WCAG Compliance)</li> </ul> <a href="/projects" class="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg border border-(--color-accent) text-(--color-accent) no-underline hover:bg-(--color-accent) hover:text-white transition-colors"> View Projects &rarr; </a> </div>  </main> <footer class="mt-auto pt-8 pb-6 border-t border-(--color-border)"> <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-(--color-muted)"> <span>&copy; 2026 Craig Miller</span> <span>UX/UI Designer</span> </div> </footer> </div> <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.gkuKxL4g.js"></script> </body> </html>
