@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/img/favicon.png"><meta name="generator" content="Astro v6.1.9"><meta name="robots" content="noindex"><title>Documenting the design | Craig Miller</title><meta name="description" content="Annotating your design prototype once it's ready for handoff"><link rel="canonical" href="https://csmiller.ca/blog/documenting-the-design/"><meta property="og:title" content="Documenting the design | Craig Miller"><meta property="og:description" content="Annotating your design prototype once it's ready for handoff"><meta property="og:type" content="website"><meta property="og:url" content="https://csmiller.ca/blog/documenting-the-design/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Documenting the design | Craig Miller"><meta name="twitter:description" content="Annotating your design prototype once it's ready for handoff"><script>
+      // Apply dark mode before render to prevent flash
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.Dt4O2PdW.css">
+<link rel="stylesheet" href="/_astro/BaseLayout.DF5eMqOs.css"></head> <body> <div class="min-h-screen flex flex-col max-w-3xl mx-auto px-6 sm:px-8"> <nav class="py-6 mb-8"> <div class="flex items-center justify-between"> <a href="/" class="text-xl font-bold text-(--color-main) no-underline hover:text-(--color-accent) transition-colors font-serif"> Craig Miller </a> <div class="flex items-center gap-4"> <!-- Desktop nav --> <ul class="hidden sm:flex items-center gap-6 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Projects </a> </li><li class="m-0 p-0"> <a href="/blog" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Blog </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> <button id="theme-toggle" class="relative w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle dark mode"> <svg class="sun-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <svg class="moon-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> <script>
+  // Theme toggle - runs immediately to avoid FOUC
+  (function() {
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    function getTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      updateIcons(theme);
+    }
+
+    function updateIcons(theme) {
+      const sunIcon = toggle?.querySelector('.sun-icon');
+      const moonIcon = toggle?.querySelector('.moon-icon');
+      if (!sunIcon || !moonIcon) return;
+      if (theme === 'dark') {
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      }
+    }
+
+    // Apply immediately
+    applyTheme(getTheme());
+
+    toggle?.addEventListener('click', () => {
+      const current = html.classList.contains('dark') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  })();
+</script> <!-- Mobile menu button --> <button id="mobile-menu-btn" class="sm:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle menu"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile nav dropdown --> <div id="mobile-menu" class="hidden sm:hidden mt-4 pb-2 border-b border-(--color-border)"> <ul class="flex flex-col gap-3 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Projects </a> </li><li class="m-0 p-0"> <a href="/blog" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Blog </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> </div> </nav> <script type="module">const e=document.getElementById("mobile-menu-btn"),n=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{n?.classList.toggle("hidden")});</script> <main class="flex-1">  <article class="prose prose-lg max-w-none"> <header class="not-prose mb-8"> <h1 class="font-serif text-3xl sm:text-4xl font-bold mb-3 text-(--color-main)">Documenting the design</h1> <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-(--color-muted)"> <time datetime="2026-06-15T00:00:00.000Z">June 15, 2026</time> <span aria-hidden="true">·</span> <span>2 min read</span>  </div> <div class="flex flex-wrap gap-2 mt-3"> <span class="text-xs text-(--color-muted)">#design</span><span class="text-xs text-(--color-muted)">#process</span><span class="text-xs text-(--color-muted)">#automation</span><span class="text-xs text-(--color-muted)">#handoff</span> </div> </header>  <p>You’ve been iterating design rounds with an AI and it’s finally been approved by
+stakeholders. You’re ready to hand it off to the developers, but where do you add all
+your comments and notes?</p>
+<h2 id="preparing-for-the-handoff">Preparing for the handoff</h2>
+<p>As nice as it would be to just hand off a link to the prototype, there are no doubt
+many places where you’ll need to add design notes and commentary to the design. While
+there are software tools that will let you do that, it can become costly ensuring
+everyone who needs to access the design and notes can do so. So what I’ve been
+experimenting with is uploading screens to a shared platform such as Figma (or
+Miro), laying out the designs in a screenflow from sign-in to sign-out, with all
+the alternative flows in between.</p>
+<h2 id="manual-vs-automatic-vs-somewhere-in-between">Manual vs automatic vs somewhere in-between</h2>
+<p>The brute force approach to uploading screens to your platform of choice is manually
+copying and pasting each screen as you work through each flow. The benefit of this
+approach is that you capture screens in the state you wish for your particular flow.
+Once you’ve pasted the screen, add a post-it or comment to the pasted item and
+document to your heart’s content.</p>
+<p>If your flow is fairly straightforward and there aren’t a lot of alternative flows,
+you can try automating screen upload by giving your AI the destination URL and
+then simply asking it to push each screen in the flow from start to finish
+to the platform. Grab a coffee and hopefully by the time you return, you’ll see
+the series of screens laid out on the workspace before you. Then it’s a matter of
+rearranging and then adding notes. If there are any screens, or screen states that
+got missed during this process, you can supplement them by adding them manually.</p>
+<p>If you’re using the Figma MCP, your coding agent can apply an overlay to the
+browser. You step through the app, click the area (or whole screen) you want
+captured, and the AI uploads it in the background. This semi-automatic approach
+keeps you in control while saving copy/paste keystrokes.</p>
+<h2 id="how-to-handle-updates">How to handle updates</h2>
+<p>Whichever approach or combination of approaches you use, you’ll now need to update
+screens after the initial creation of the workflows. My typical approach is
+to make updates to the prototype, validate them as per your process and then
+push up revised screens to the platforms. The semi-automatic or manual approach
+probably works best unless you’re needing to replace the entire flow. I’d like
+to experiment with AI to see if it will be able to identify and replace changed
+screens itself. The goal is to keep the design documentation living alongside the
+code, not as a one-time deliverable.</p>
+<blockquote>
+<p><em>This is a ‘timbit’ post — an idea to expand on in the future</em></p>
+</blockquote>  </article>  </main> <footer class="mt-auto pt-8 pb-6 border-t border-(--color-border)"> <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-(--color-muted)"> <div class="flex items-center gap-2"> <span>&copy; 2026 Craig Miller</span> <span aria-hidden="true">·</span> <span>UX/UI Designer</span> </div> <ul class="flex items-center gap-4 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="https://www.linkedin.com/in/csmiller34" class="text-(--color-muted) hover:text-(--color-accent) transition-colors no-underline inline-flex items-center justify-center w-9 h-9 rounded-lg border border-(--color-border) hover:border-(--color-accent)" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn" title="LinkedIn"> <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"></path> </svg>   </a> </li><li class="m-0 p-0"> <a href="https://github.com/csmiller34" class="text-(--color-muted) hover:text-(--color-accent) transition-colors no-underline inline-flex items-center justify-center w-9 h-9 rounded-lg border border-(--color-border) hover:border-(--color-accent)" rel="noopener noreferrer" target="_blank" aria-label="Github" title="Github">  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"></path> </svg>  </a> </li> </ul> </div> </footer> </div> <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.gkuKxL4g.js"></script> </body> </html>

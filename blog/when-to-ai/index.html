@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/img/favicon.png"><meta name="generator" content="Astro v6.1.9"><meta name="robots" content="noindex"><title>When to AI | Craig Miller</title><meta name="description" content="Some musings on what makes a good candidate for AI-assisted prototyping."><link rel="canonical" href="https://csmiller.ca/blog/when-to-ai/"><meta property="og:title" content="When to AI | Craig Miller"><meta property="og:description" content="Some musings on what makes a good candidate for AI-assisted prototyping."><meta property="og:type" content="website"><meta property="og:url" content="https://csmiller.ca/blog/when-to-ai/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="When to AI | Craig Miller"><meta name="twitter:description" content="Some musings on what makes a good candidate for AI-assisted prototyping."><script>
+      // Apply dark mode before render to prevent flash
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.Dt4O2PdW.css">
+<link rel="stylesheet" href="/_astro/BaseLayout.DF5eMqOs.css"></head> <body> <div class="min-h-screen flex flex-col max-w-3xl mx-auto px-6 sm:px-8"> <nav class="py-6 mb-8"> <div class="flex items-center justify-between"> <a href="/" class="text-xl font-bold text-(--color-main) no-underline hover:text-(--color-accent) transition-colors font-serif"> Craig Miller </a> <div class="flex items-center gap-4"> <!-- Desktop nav --> <ul class="hidden sm:flex items-center gap-6 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Projects </a> </li><li class="m-0 p-0"> <a href="/blog" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Blog </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> <button id="theme-toggle" class="relative w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle dark mode"> <svg class="sun-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <svg class="moon-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> <script>
+  // Theme toggle - runs immediately to avoid FOUC
+  (function() {
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    function getTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      updateIcons(theme);
+    }
+
+    function updateIcons(theme) {
+      const sunIcon = toggle?.querySelector('.sun-icon');
+      const moonIcon = toggle?.querySelector('.moon-icon');
+      if (!sunIcon || !moonIcon) return;
+      if (theme === 'dark') {
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      }
+    }
+
+    // Apply immediately
+    applyTheme(getTheme());
+
+    toggle?.addEventListener('click', () => {
+      const current = html.classList.contains('dark') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  })();
+</script> <!-- Mobile menu button --> <button id="mobile-menu-btn" class="sm:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle menu"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile nav dropdown --> <div id="mobile-menu" class="hidden sm:hidden mt-4 pb-2 border-b border-(--color-border)"> <ul class="flex flex-col gap-3 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Projects </a> </li><li class="m-0 p-0"> <a href="/blog" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Blog </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> </div> </nav> <script type="module">const e=document.getElementById("mobile-menu-btn"),n=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{n?.classList.toggle("hidden")});</script> <main class="flex-1">  <article class="prose prose-lg max-w-none"> <header class="not-prose mb-8"> <h1 class="font-serif text-3xl sm:text-4xl font-bold mb-3 text-(--color-main)">When to AI</h1> <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-(--color-muted)"> <time datetime="2026-06-09T00:00:00.000Z">June 9, 2026</time> <span aria-hidden="true">·</span> <span>4 min read</span>  </div> <div class="flex flex-wrap gap-2 mt-3"> <span class="text-xs text-(--color-muted)">#design</span><span class="text-xs text-(--color-muted)">#process</span> </div> </header>  <p>Not every design problem is worth an AI prototype. Here’s how I decide.</p>
+<p>When a new project finds me, I’m often caught between the desire to go all-out AI and the
+lure of the quick one-off wireframe. Out of that tension, I found myself
+trying to articulate when it makes sense to use AI in design and when time and effort are
+better spent on traditional methods. The short version: AI earns its keep when the work
+compounds, and traditional methods win when it doesn’t.</p>
+<h2 id="how-much-time-do-you-have">How much time do you have?</h2>
+<p>Time is the one question that overrides all the others, so it’s always the first one I ask.
+Before investing in setting up the foundation for a
+prototype, I make sure my time expectations match my stakeholders’. If Product is expecting
+something the next day, I start with a Figma wireframe and, depending on scheduling, build it
+out as a prototype when the schedule allows.</p>
+<h2 id="will-it-compound">Will it compound?</h2>
+<p>The trickiest call is whether the work is a one-off, because today’s one-off can easily become
+the launching point for tomorrow’s feature. But building infrastructure for a small throwaway
+change can eat up your time — and your token budget — and a throwaway design rarely earns
+back what you spend prototyping it. I stick to traditional wireframing unless I think it could
+lead to bigger things.</p>
+<p>For a new feature or a change to an existing one, I pay the upfront cost and use AI. My usual
+flow is to discuss requirements with the primary feature owner, typically Product, then create
+a low- to mid-fidelity wireframe to verify design direction. From there I move into an AI
+design tool.</p>
+<p>My general rule of thumb is to reach for a quick wireframe when the design covers an edge
+case — say, the error state when a component hasn’t been configured. Edge cases are one-offs
+by definition; they’ll never compound. On the opposite end, a prototype was definitely the way
+to go when I worked on a large feature adding enhancement tools to an existing video-analysis
+product. With all the different combinations of tools and history, I couldn’t imagine trying
+to cover every scenario in a Figma flow. As a working prototype, it served both to communicate
+the design to stakeholders and to gather customer feedback.</p>
+<h2 id="how-many-states-are-there">How many states are there?</h2>
+<p>As you work through a feature, you might find you need to cover many different states. Covering
+all of them in Figma can be a hair-pulling endeavor: even with variants and component
+properties, you spawn variation after variation, tweak one, and then have to remember to update
+all the others. Moving the design into a tool like
+Claude Code makes this easier — lay out the design once and let the AI handle the variations.
+Newer models are good at tracking a change you make in one state and flagging the other states
+that need the same update.</p>
+<h2 id="is-the-plumbing-in-place">Is the plumbing in place?</h2>
+<p>Finally, consider how much of the core product already exists. If the plumbing is in place —
+shared components, data models, the surrounding screens — then adding a new feature is a light
+lift and AI pays for itself quickly. If you’d be building that foundation from scratch just to
+prototype a single screen, the math changes, and the upfront cost is harder to justify.</p>
+<p>This is also where the edge-case rule bends: once the foundation exists, even a one-off error
+state is cheap enough to add to the prototype.</p>
+<p>One approach I’ve taken is to use whatever spare time I can eke out to slowly build up the
+foundation of the prototype — or, when adding a new design, to take the opportunity to build
+out adjacent screens. It takes a while, but eventually enough of the app exists that adding new
+features is a lot quicker and easier.</p>
+<h2 id="the-throughline">The throughline</h2>
+<p>Schedule permitting, reach for AI when the work builds on itself — when states multiply, when
+features stack on each other, when the foundation gets reused. When it’s a throwaway,
+traditional wireframing is still the faster, cheaper bet.</p>
+<h2 id="a-footnote-on-tools">A footnote on tools</h2>
+<p>There are plenty of AI design tools to choose from — Figma Make, Claude Design, Google
+Stitch — but I’ve gotten accustomed to starting with Claude Code. It runs locally, so the
+prototype lives on my machine and I can always run the app myself, no hosted service required.</p>
+<blockquote>
+<p><em>This is a ‘timbit’ post — an idea to expand on in the future</em></p>
+</blockquote>  </article>  </main> <footer class="mt-auto pt-8 pb-6 border-t border-(--color-border)"> <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-(--color-muted)"> <div class="flex items-center gap-2"> <span>&copy; 2026 Craig Miller</span> <span aria-hidden="true">·</span> <span>UX/UI Designer</span> </div> <ul class="flex items-center gap-4 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="https://www.linkedin.com/in/csmiller34" class="text-(--color-muted) hover:text-(--color-accent) transition-colors no-underline inline-flex items-center justify-center w-9 h-9 rounded-lg border border-(--color-border) hover:border-(--color-accent)" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn" title="LinkedIn"> <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"></path> </svg>   </a> </li><li class="m-0 p-0"> <a href="https://github.com/csmiller34" class="text-(--color-muted) hover:text-(--color-accent) transition-colors no-underline inline-flex items-center justify-center w-9 h-9 rounded-lg border border-(--color-border) hover:border-(--color-accent)" rel="noopener noreferrer" target="_blank" aria-label="Github" title="Github">  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"></path> </svg>  </a> </li> </ul> </div> </footer> </div> <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.gkuKxL4g.js"></script> </body> </html>

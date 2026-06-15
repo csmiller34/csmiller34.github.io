@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/img/favicon.png"><meta name="generator" content="Astro v6.1.9"><meta name="robots" content="noindex"><title>Enhancing Video Forensics | Craig Miller</title><meta name="description" content="UX/UI Designer Portfolio - Craig Miller"><link rel="canonical" href="https://csmiller.ca/projects/enhancing-video-forensics/"><meta property="og:title" content="Enhancing Video Forensics | Craig Miller"><meta property="og:description" content="UX/UI Designer Portfolio - Craig Miller"><meta property="og:type" content="website"><meta property="og:url" content="https://csmiller.ca/projects/enhancing-video-forensics/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Enhancing Video Forensics | Craig Miller"><meta name="twitter:description" content="UX/UI Designer Portfolio - Craig Miller"><script>
+      // Apply dark mode before render to prevent flash
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.Dt4O2PdW.css">
+<link rel="stylesheet" href="/_astro/BaseLayout.DF5eMqOs.css"></head> <body> <div class="min-h-screen flex flex-col max-w-3xl mx-auto px-6 sm:px-8"> <nav class="py-6 mb-8"> <div class="flex items-center justify-between"> <a href="/" class="text-xl font-bold text-(--color-main) no-underline hover:text-(--color-accent) transition-colors font-serif"> Craig Miller </a> <div class="flex items-center gap-4"> <!-- Desktop nav --> <ul class="hidden sm:flex items-center gap-6 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Projects </a> </li><li class="m-0 p-0"> <a href="/blog" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Blog </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> <button id="theme-toggle" class="relative w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle dark mode"> <svg class="sun-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <svg class="moon-icon w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> <script>
+  // Theme toggle - runs immediately to avoid FOUC
+  (function() {
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    function getTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      updateIcons(theme);
+    }
+
+    function updateIcons(theme) {
+      const sunIcon = toggle?.querySelector('.sun-icon');
+      const moonIcon = toggle?.querySelector('.moon-icon');
+      if (!sunIcon || !moonIcon) return;
+      if (theme === 'dark') {
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      }
+    }
+
+    // Apply immediately
+    applyTheme(getTheme());
+
+    toggle?.addEventListener('click', () => {
+      const current = html.classList.contains('dark') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  })();
+</script> <!-- Mobile menu button --> <button id="mobile-menu-btn" class="sm:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-(--color-border) bg-transparent text-(--color-main) hover:bg-(--color-border)/30 transition-colors cursor-pointer" aria-label="Toggle menu"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile nav dropdown --> <div id="mobile-menu" class="hidden sm:hidden mt-4 pb-2 border-b border-(--color-border)"> <ul class="flex flex-col gap-3 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="/projects" class="text-sm font-medium no-underline transition-colors text-(--color-accent)"> Projects </a> </li><li class="m-0 p-0"> <a href="/blog" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Blog </a> </li><li class="m-0 p-0"> <a href="/resume" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> Résumé </a> </li><li class="m-0 p-0"> <a href="/about" class="text-sm font-medium no-underline transition-colors text-(--color-muted) hover:text-(--color-main)"> About </a> </li> </ul> </div> </nav> <script type="module">const e=document.getElementById("mobile-menu-btn"),n=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{n?.classList.toggle("hidden")});</script> <main class="flex-1">  <article class="prose prose-lg max-w-none"> <h1 class="font-serif text-3xl sm:text-4xl font-bold mb-8">Enhancing Video Forensics</h1>  <aside> <h1>Summary</h1> <p>Collaborated with Product Management to integrate video enhancement tools into an existing video forensics platform.</p> <h1>Role</h1> <p>Developed interactive prototype with AI assistance</p> </aside> <p>
+The goal was to develop a framework within an existing video forensics tool that allowed enhancement tools to be added without disrupting the current customer experience. To achieve this, I mapped existing user workflows, then iterated through several designs until arriving at a solution that met business goals, technical constraints, and customer expectations. I had approximately one month to develop working knowledge of video forensics, learn the existing application, and design the enhancements.
+</p> <p>
+Two constraints of this project were:
+</p> <ul> <li>The feature needed to be design-ready within a month</li> <li>I was new to video forensics and wasn't familiar with the existing application</li> </ul> <p>
+To address the constraints, I spent the first few days learning the application, its flow and UI conventions used throughout. As I worked through the application, I researched existing materials about video forensics in the field and posed questions to our internal video forensics specialists.
+</p> <p>Key activities:</p> <ul> <li>Understanding video forensics and business requirements</li> <li>Reviewing competitor offerings and existing workflows</li> <li>Mapping user workflows</li> <li>Building an interactive prototype for feedback from internal video forensics specialists, external customers, and the development team</li> </ul> <h3>Understanding video forensics and the business requirements</h3> <p>
+Since I wasn't familiar with video forensics, I spent the beginning of the project researching and discussing the domain with the product manager and technical specialist. Video forensics differs from general digital forensics: while both share similar goals, video forensic examiners focus on identifying and cataloging video clips, whereas digital forensics examiners require broader skills across different case types.
+</p> <h3>Reviewing competitor offerings and understanding workflows</h3> <p>
+Once I understood video forensics workflows, we discussed the existing application flow and analyzed competitor products. This gave me ideas on how to incorporate enhancement tools organically, allowing users to modify video clips individually or in bulk.
+</p> <h3>Building the prototype</h3> <p>
+Due to limited time and lack of existing Figma components, I prototyped almost exclusively with AI. I started with a screenshot of the existing application, brought it into Figma Make to create a screen using our desktop design system, then exported it via MCP to Claude Code as a starting point to build out sections adjacent to the new enhancement tools.
+</p> <p>
+The first iteration used a modal that allowed users to duplicate a video clip and apply enhancements like blur, brightness/contrast, resize, and crop, then save it as a modified clip or export to file. Since we were working with functional software, Claude could reproduce the video effects we were supporting. I completed this version in about three days.
+</p> <figure class="portfolio-item-image"> <video id="version1" controls preload="metadata" playsinline poster="/img/project10/VF-v1-poster.jpg"> <source src="/img/project10/VF-v1.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> <figcaption>Video forensics mockup v1</figcaption> </figure> <p>
+I met with the product manager and technical specialist for feedback. This approach allowed me to validate—and in some cases correct—assumptions about how the application worked. I spent a few more days refining the design.
+</p> <p>
+The second iteration was reviewed and deemed ready for internal stakeholders and developers. The reviews went well, but the modal approach conflicted with the application's UI toolkit. I worked with Claude to pivot to an inline panel design.
+</p> <figure class="portfolio-item-image"> <video id="version2" controls preload="metadata" playsinline poster="/img/project10/VF-v2-poster.jpg"> <source src="/img/project10/VF-v2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> <figcaption>Video forensics mockup v2</figcaption> </figure> <p>
+Next, I validated the prototype with customers. I shared access credentials with prospective customers who volunteered to review the application and facilitated usability sessions with scripted tasks. This validated our design approach and gave customers an early preview of upcoming features.
+</p> <h3>Results</h3> <p>
+Through initial research and rapid AI-assisted prototyping, we quickly iterated to a solid feature set. The working prototype allowed stakeholders and customers to interact with the design, helping us identify and resolve issues efficiently. We delivered a validated design on time, ready for development.
+</p>  </article>  </main> <footer class="mt-auto pt-8 pb-6 border-t border-(--color-border)"> <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-(--color-muted)"> <div class="flex items-center gap-2"> <span>&copy; 2026 Craig Miller</span> <span aria-hidden="true">·</span> <span>UX/UI Designer</span> </div> <ul class="flex items-center gap-4 list-none m-0 p-0"> <li class="m-0 p-0"> <a href="https://www.linkedin.com/in/csmiller34" class="text-(--color-muted) hover:text-(--color-accent) transition-colors no-underline inline-flex items-center justify-center w-9 h-9 rounded-lg border border-(--color-border) hover:border-(--color-accent)" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn" title="LinkedIn"> <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"></path> </svg>   </a> </li><li class="m-0 p-0"> <a href="https://github.com/csmiller34" class="text-(--color-muted) hover:text-(--color-accent) transition-colors no-underline inline-flex items-center justify-center w-9 h-9 rounded-lg border border-(--color-border) hover:border-(--color-accent)" rel="noopener noreferrer" target="_blank" aria-label="Github" title="Github">  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"></path> </svg>  </a> </li> </ul> </div> </footer> </div> <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.gkuKxL4g.js"></script> </body> </html>
